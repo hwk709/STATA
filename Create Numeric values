@@ -1,0 +1,5712 @@
+
+
+cd "C:\Users\hwk70\OneDrive\stuff\Desktop\stata\CollegeScorecard_Raw_Data"
+set more 1
+
+log using step2-create-numeric-values.log, replace
+
+use step1-read-education-data.dta, clear
+
+
+*gen xxx = real(zip)
+*drop zip
+*ren xxx zip
+gen xxx = real(womenonly)
+drop womenonly
+ren xxx womenonly
+gen xxx = real(wdraw_orig_yr8_rt)
+drop wdraw_orig_yr8_rt
+ren xxx wdraw_orig_yr8_rt
+gen xxx = real(wdraw_orig_yr6_rt)
+drop wdraw_orig_yr6_rt
+ren xxx wdraw_orig_yr6_rt
+gen xxx = real(wdraw_orig_yr4_rt)
+drop wdraw_orig_yr4_rt
+ren xxx wdraw_orig_yr4_rt
+gen xxx = real(wdraw_orig_yr3_rt)
+drop wdraw_orig_yr3_rt
+ren xxx wdraw_orig_yr3_rt
+gen xxx = real(wdraw_orig_yr2_rt)
+drop wdraw_orig_yr2_rt
+ren xxx wdraw_orig_yr2_rt
+gen xxx = real(wdraw_debt_n)
+drop wdraw_debt_n
+ren xxx wdraw_debt_n
+gen xxx = real(wdraw_debt_mdn)
+drop wdraw_debt_mdn
+ren xxx wdraw_debt_mdn
+gen xxx = real(wdraw_4yr_trans_yr8_rt)
+drop wdraw_4yr_trans_yr8_rt
+ren xxx wdraw_4yr_trans_yr8_rt
+gen xxx = real(wdraw_4yr_trans_yr6_rt)
+drop wdraw_4yr_trans_yr6_rt
+ren xxx wdraw_4yr_trans_yr6_rt
+gen xxx = real(wdraw_4yr_trans_yr4_rt)
+drop wdraw_4yr_trans_yr4_rt
+ren xxx wdraw_4yr_trans_yr4_rt
+gen xxx = real(wdraw_4yr_trans_yr3_rt)
+drop wdraw_4yr_trans_yr3_rt
+ren xxx wdraw_4yr_trans_yr3_rt
+gen xxx = real(wdraw_4yr_trans_yr2_rt)
+drop wdraw_4yr_trans_yr2_rt
+ren xxx wdraw_4yr_trans_yr2_rt
+gen xxx = real(wdraw_2yr_trans_yr8_rt)
+drop wdraw_2yr_trans_yr8_rt
+ren xxx wdraw_2yr_trans_yr8_rt
+gen xxx = real(wdraw_2yr_trans_yr6_rt)
+drop wdraw_2yr_trans_yr6_rt
+ren xxx wdraw_2yr_trans_yr6_rt
+gen xxx = real(wdraw_2yr_trans_yr4_rt)
+drop wdraw_2yr_trans_yr4_rt
+ren xxx wdraw_2yr_trans_yr4_rt
+gen xxx = real(wdraw_2yr_trans_yr3_rt)
+drop wdraw_2yr_trans_yr3_rt
+ren xxx wdraw_2yr_trans_yr3_rt
+gen xxx = real(wdraw_2yr_trans_yr2_rt)
+drop wdraw_2yr_trans_yr2_rt
+ren xxx wdraw_2yr_trans_yr2_rt
+gen xxx = real(veteran)
+drop veteran
+ren xxx veteran
+gen xxx = real(unkn_orig_yr8_rt)
+drop unkn_orig_yr8_rt
+ren xxx unkn_orig_yr8_rt
+gen xxx = real(unkn_orig_yr6_rt)
+drop unkn_orig_yr6_rt
+ren xxx unkn_orig_yr6_rt
+gen xxx = real(unkn_orig_yr4_rt)
+drop unkn_orig_yr4_rt
+ren xxx unkn_orig_yr4_rt
+gen xxx = real(unkn_orig_yr3_rt)
+drop unkn_orig_yr3_rt
+ren xxx unkn_orig_yr3_rt
+gen xxx = real(unkn_orig_yr2_rt)
+drop unkn_orig_yr2_rt
+ren xxx unkn_orig_yr2_rt
+gen xxx = real(unkn_4yr_trans_yr8_rt)
+drop unkn_4yr_trans_yr8_rt
+ren xxx unkn_4yr_trans_yr8_rt
+gen xxx = real(unkn_4yr_trans_yr6_rt)
+drop unkn_4yr_trans_yr6_rt
+ren xxx unkn_4yr_trans_yr6_rt
+gen xxx = real(unkn_4yr_trans_yr4_rt)
+drop unkn_4yr_trans_yr4_rt
+ren xxx unkn_4yr_trans_yr4_rt
+gen xxx = real(unkn_4yr_trans_yr3_rt)
+drop unkn_4yr_trans_yr3_rt
+ren xxx unkn_4yr_trans_yr3_rt
+gen xxx = real(unkn_4yr_trans_yr2_rt)
+drop unkn_4yr_trans_yr2_rt
+ren xxx unkn_4yr_trans_yr2_rt
+gen xxx = real(unkn_2yr_trans_yr8_rt)
+drop unkn_2yr_trans_yr8_rt
+ren xxx unkn_2yr_trans_yr8_rt
+gen xxx = real(unkn_2yr_trans_yr6_rt)
+drop unkn_2yr_trans_yr6_rt
+ren xxx unkn_2yr_trans_yr6_rt
+gen xxx = real(unkn_2yr_trans_yr4_rt)
+drop unkn_2yr_trans_yr4_rt
+ren xxx unkn_2yr_trans_yr4_rt
+gen xxx = real(unkn_2yr_trans_yr3_rt)
+drop unkn_2yr_trans_yr3_rt
+ren xxx unkn_2yr_trans_yr3_rt
+gen xxx = real(unkn_2yr_trans_yr2_rt)
+drop unkn_2yr_trans_yr2_rt
+ren xxx unkn_2yr_trans_yr2_rt
+gen xxx = real(unemp_rate)
+drop unemp_rate
+ren xxx unemp_rate
+gen xxx = real(ugnonds)
+drop ugnonds
+ren xxx ugnonds
+gen xxx = real(ugds_women)
+drop ugds_women
+ren xxx ugds_women
+gen xxx = real(ugds_whitenh)
+drop ugds_whitenh
+ren xxx ugds_whitenh
+gen xxx = real(ugds_white)
+drop ugds_white
+ren xxx ugds_white
+gen xxx = real(ugds_unkn)
+drop ugds_unkn
+ren xxx ugds_unkn
+gen xxx = real(ugds_nra)
+drop ugds_nra
+ren xxx ugds_nra
+gen xxx = real(ugds_nhpi)
+drop ugds_nhpi
+ren xxx ugds_nhpi
+gen xxx = real(ugds_men)
+drop ugds_men
+ren xxx ugds_men
+gen xxx = real(ugds_hispold)
+drop ugds_hispold
+ren xxx ugds_hispold
+gen xxx = real(ugds_hisp)
+drop ugds_hisp
+ren xxx ugds_hisp
+gen xxx = real(ugds_blacknh)
+drop ugds_blacknh
+ren xxx ugds_blacknh
+gen xxx = real(ugds_black)
+drop ugds_black
+ren xxx ugds_black
+gen xxx = real(ugds_asian)
+drop ugds_asian
+ren xxx ugds_asian
+gen xxx = real(ugds_api)
+drop ugds_api
+ren xxx ugds_api
+gen xxx = real(ugds_aianold)
+drop ugds_aianold
+ren xxx ugds_aianold
+gen xxx = real(ugds_aian)
+drop ugds_aian
+ren xxx ugds_aian
+gen xxx = real(ugds_2mor)
+drop ugds_2mor
+ren xxx ugds_2mor
+gen xxx = real(ugds)
+drop ugds
+ren xxx ugds
+gen xxx = real(ug25abv)
+drop ug25abv
+ren xxx ug25abv
+gen xxx = real(ug_whitenh)
+drop ug_whitenh
+ren xxx ug_whitenh
+gen xxx = real(ug_unkn)
+drop ug_unkn
+ren xxx ug_unkn
+gen xxx = real(ug_nra)
+drop ug_nra
+ren xxx ug_nra
+gen xxx = real(ug_hispold)
+drop ug_hispold
+ren xxx ug_hispold
+gen xxx = real(ug_blacknh)
+drop ug_blacknh
+ren xxx ug_blacknh
+gen xxx = real(ug_api)
+drop ug_api
+ren xxx ug_api
+gen xxx = real(ug_aianold)
+drop ug_aianold
+ren xxx ug_aianold
+gen xxx = real(ug)
+drop ug
+ren xxx ug
+gen xxx = real(tuitionfee_prog)
+drop tuitionfee_prog
+ren xxx tuitionfee_prog
+gen xxx = real(tuitionfee_out)
+drop tuitionfee_out
+ren xxx tuitionfee_out
+gen xxx = real(tuitionfee_in)
+drop tuitionfee_in
+ren xxx tuitionfee_in
+gen xxx = real(tuitfte)
+drop tuitfte
+ren xxx tuitfte
+gen xxx = real(tribal)
+drop tribal
+ren xxx tribal
+gen xxx = real(trans_l4_pooled_supp)
+drop trans_l4_pooled_supp
+ren xxx trans_l4_pooled_supp
+gen xxx = real(trans_l4_pooled)
+drop trans_l4_pooled
+ren xxx trans_l4_pooled
+gen xxx = real(trans_l4)
+drop trans_l4
+ren xxx trans_l4
+gen xxx = real(trans_4_pooled_supp)
+drop trans_4_pooled_supp
+ren xxx trans_4_pooled_supp
+gen xxx = real(trans_4_pooled)
+drop trans_4_pooled
+ren xxx trans_4_pooled
+gen xxx = real(trans_4)
+drop trans_4
+ren xxx trans_4
+gen xxx = real(t4approvaldate)
+drop t4approvaldate
+ren xxx t4approvaldate
+*gen xxx = real(stabbr)
+*drop stabbr
+*ren xxx stabbr
+*gen xxx = real(st_fips)
+*drop st_fips
+*ren xxx st_fips
+gen xxx = real(separ_dt_n)
+drop separ_dt_n
+ren xxx separ_dt_n
+gen xxx = real(separ_dt_mdn)
+drop separ_dt_mdn
+ren xxx separ_dt_mdn
+gen xxx = real(sd_earn_wne_p9)
+drop sd_earn_wne_p9
+ren xxx sd_earn_wne_p9
+gen xxx = real(sd_earn_wne_p8)
+drop sd_earn_wne_p8
+ren xxx sd_earn_wne_p8
+gen xxx = real(sd_earn_wne_p7)
+drop sd_earn_wne_p7
+ren xxx sd_earn_wne_p7
+gen xxx = real(sd_earn_wne_p6)
+drop sd_earn_wne_p6
+ren xxx sd_earn_wne_p6
+gen xxx = real(sd_earn_wne_p10)
+drop sd_earn_wne_p10
+ren xxx sd_earn_wne_p10
+gen xxx = real(sch_deg)
+drop sch_deg
+ren xxx sch_deg
+gen xxx = real(satwrmid)
+drop satwrmid
+ren xxx satwrmid
+gen xxx = real(satwr75)
+drop satwr75
+ren xxx satwr75
+gen xxx = real(satwr25)
+drop satwr25
+ren xxx satwr25
+gen xxx = real(satvrmid)
+drop satvrmid
+ren xxx satvrmid
+gen xxx = real(satvr75)
+drop satvr75
+ren xxx satvr75
+gen xxx = real(satvr25)
+drop satvr25
+ren xxx satvr25
+gen xxx = real(satmtmid)
+drop satmtmid
+ren xxx satmtmid
+gen xxx = real(satmt75)
+drop satmt75
+ren xxx satmt75
+gen xxx = real(satmt25)
+drop satmt25
+ren xxx satmt25
+gen xxx = real(sat_avg_all)
+drop sat_avg_all
+ren xxx sat_avg_all
+gen xxx = real(sat_avg)
+drop sat_avg
+ren xxx sat_avg
+gen xxx = real(rpy_7yr_rt)
+drop rpy_7yr_rt
+ren xxx rpy_7yr_rt
+gen xxx = real(rpy_7yr_n)
+drop rpy_7yr_n
+ren xxx rpy_7yr_n
+gen xxx = real(rpy_5yr_rt)
+drop rpy_5yr_rt
+ren xxx rpy_5yr_rt
+gen xxx = real(rpy_5yr_n)
+drop rpy_5yr_n
+ren xxx rpy_5yr_n
+gen xxx = real(rpy_3yr_rt_supp)
+drop rpy_3yr_rt_supp
+ren xxx rpy_3yr_rt_supp
+gen xxx = real(rpy_3yr_rt)
+drop rpy_3yr_rt
+ren xxx rpy_3yr_rt
+gen xxx = real(rpy_3yr_n)
+drop rpy_3yr_n
+ren xxx rpy_3yr_n
+gen xxx = real(rpy_1yr_rt)
+drop rpy_1yr_rt
+ren xxx rpy_1yr_rt
+gen xxx = real(rpy_1yr_n)
+drop rpy_1yr_n
+ren xxx rpy_1yr_n
+gen xxx = real(ret_ptl4_pooled_supp)
+drop ret_ptl4_pooled_supp
+ren xxx ret_ptl4_pooled_supp
+gen xxx = real(ret_ptl4_pooled)
+drop ret_ptl4_pooled
+ren xxx ret_ptl4_pooled
+gen xxx = real(ret_ptl4)
+drop ret_ptl4
+ren xxx ret_ptl4
+gen xxx = real(ret_pt4_pooled_supp)
+drop ret_pt4_pooled_supp
+ren xxx ret_pt4_pooled_supp
+gen xxx = real(ret_pt4_pooled)
+drop ret_pt4_pooled
+ren xxx ret_pt4_pooled
+gen xxx = real(ret_pt4)
+drop ret_pt4
+ren xxx ret_pt4
+gen xxx = real(ret_pt_denl4_pooled)
+drop ret_pt_denl4_pooled
+ren xxx ret_pt_denl4_pooled
+gen xxx = real(ret_pt_den4_pooled)
+drop ret_pt_den4_pooled
+ren xxx ret_pt_den4_pooled
+gen xxx = real(ret_ftl4_pooled_supp)
+drop ret_ftl4_pooled_supp
+ren xxx ret_ftl4_pooled_supp
+gen xxx = real(ret_ftl4_pooled)
+drop ret_ftl4_pooled
+ren xxx ret_ftl4_pooled
+gen xxx = real(ret_ftl4)
+drop ret_ftl4
+ren xxx ret_ftl4
+gen xxx = real(ret_ft4_pooled_supp)
+drop ret_ft4_pooled_supp
+ren xxx ret_ft4_pooled_supp
+gen xxx = real(ret_ft4_pooled)
+drop ret_ft4_pooled
+ren xxx ret_ft4_pooled
+gen xxx = real(ret_ft4)
+drop ret_ft4
+ren xxx ret_ft4
+gen xxx = real(ret_ft_denl4_pooled)
+drop ret_ft_denl4_pooled
+ren xxx ret_ft_denl4_pooled
+gen xxx = real(ret_ft_den4_pooled)
+drop ret_ft_den4_pooled
+ren xxx ret_ft_den4_pooled
+gen xxx = real(repay_dt_n)
+drop repay_dt_n
+ren xxx repay_dt_n
+gen xxx = real(repay_dt_mdn)
+drop repay_dt_mdn
+ren xxx repay_dt_mdn
+gen xxx = real(relaffil)
+drop relaffil
+ren xxx relaffil
+*gen xxx = real(region)
+*drop region
+*ren xxx region
+*gen xxx = real(preddeg)
+*drop preddeg
+*ren xxx preddeg
+gen xxx = real(pptug_ef2)
+drop pptug_ef2
+ren xxx pptug_ef2
+gen xxx = real(pptug_ef)
+drop pptug_ef
+ren xxx pptug_ef
+gen xxx = real(poverty_rate)
+drop poverty_rate
+ren xxx poverty_rate
+gen xxx = real(poolyrsret_pt)
+drop poolyrsret_pt
+ren xxx poolyrsret_pt
+gen xxx = real(poolyrsret_ft)
+drop poolyrsret_ft
+ren xxx poolyrsret_ft
+gen xxx = real(poolyrsom_ptnft)
+drop poolyrsom_ptnft
+ren xxx poolyrsom_ptnft
+gen xxx = real(poolyrsom_ptft)
+drop poolyrsom_ptft
+ren xxx poolyrsom_ptft
+gen xxx = real(poolyrsom_ftnft)
+drop poolyrsom_ftnft
+ren xxx poolyrsom_ftnft
+gen xxx = real(poolyrsom_ftft)
+drop poolyrsom_ftft
+ren xxx poolyrsom_ftft
+gen xxx = real(poolyrs200)
+drop poolyrs200
+ren xxx poolyrs200
+gen xxx = real(poolyrs100)
+drop poolyrs100
+ren xxx poolyrs100
+gen xxx = real(poolyrs)
+drop poolyrs
+ren xxx poolyrs
+gen xxx = real(pftftug1_ef)
+drop pftftug1_ef
+ren xxx pftftug1_ef
+gen xxx = real(pftfac)
+drop pftfac
+ren xxx pftfac
+gen xxx = real(pell_yr8_n)
+drop pell_yr8_n
+ren xxx pell_yr8_n
+gen xxx = real(pell_yr6_n)
+drop pell_yr6_n
+ren xxx pell_yr6_n
+gen xxx = real(pell_yr4_n)
+drop pell_yr4_n
+ren xxx pell_yr4_n
+gen xxx = real(pell_yr3_n)
+drop pell_yr3_n
+ren xxx pell_yr3_n
+gen xxx = real(pell_yr2_n)
+drop pell_yr2_n
+ren xxx pell_yr2_n
+gen xxx = real(pell_wdraw_orig_yr8_rt)
+drop pell_wdraw_orig_yr8_rt
+ren xxx pell_wdraw_orig_yr8_rt
+gen xxx = real(pell_wdraw_orig_yr6_rt)
+drop pell_wdraw_orig_yr6_rt
+ren xxx pell_wdraw_orig_yr6_rt
+gen xxx = real(pell_wdraw_orig_yr4_rt)
+drop pell_wdraw_orig_yr4_rt
+ren xxx pell_wdraw_orig_yr4_rt
+gen xxx = real(pell_wdraw_orig_yr3_rt)
+drop pell_wdraw_orig_yr3_rt
+ren xxx pell_wdraw_orig_yr3_rt
+gen xxx = real(pell_wdraw_orig_yr2_rt)
+drop pell_wdraw_orig_yr2_rt
+ren xxx pell_wdraw_orig_yr2_rt
+gen xxx = real(pell_wdraw_4yr_trans_yr8_rt)
+drop pell_wdraw_4yr_trans_yr8_rt
+ren xxx pell_wdraw_4yr_trans_yr8_rt
+gen xxx = real(pell_wdraw_4yr_trans_yr6_rt)
+drop pell_wdraw_4yr_trans_yr6_rt
+ren xxx pell_wdraw_4yr_trans_yr6_rt
+gen xxx = real(pell_wdraw_4yr_trans_yr4_rt)
+drop pell_wdraw_4yr_trans_yr4_rt
+ren xxx pell_wdraw_4yr_trans_yr4_rt
+gen xxx = real(pell_wdraw_4yr_trans_yr3_rt)
+drop pell_wdraw_4yr_trans_yr3_rt
+ren xxx pell_wdraw_4yr_trans_yr3_rt
+gen xxx = real(pell_wdraw_4yr_trans_yr2_rt)
+drop pell_wdraw_4yr_trans_yr2_rt
+ren xxx pell_wdraw_4yr_trans_yr2_rt
+gen xxx = real(pell_wdraw_2yr_trans_yr8_rt)
+drop pell_wdraw_2yr_trans_yr8_rt
+ren xxx pell_wdraw_2yr_trans_yr8_rt
+gen xxx = real(pell_wdraw_2yr_trans_yr6_rt)
+drop pell_wdraw_2yr_trans_yr6_rt
+ren xxx pell_wdraw_2yr_trans_yr6_rt
+gen xxx = real(pell_wdraw_2yr_trans_yr4_rt)
+drop pell_wdraw_2yr_trans_yr4_rt
+ren xxx pell_wdraw_2yr_trans_yr4_rt
+gen xxx = real(pell_wdraw_2yr_trans_yr3_rt)
+drop pell_wdraw_2yr_trans_yr3_rt
+ren xxx pell_wdraw_2yr_trans_yr3_rt
+gen xxx = real(pell_wdraw_2yr_trans_yr2_rt)
+drop pell_wdraw_2yr_trans_yr2_rt
+ren xxx pell_wdraw_2yr_trans_yr2_rt
+gen xxx = real(pell_unkn_orig_yr8_rt)
+drop pell_unkn_orig_yr8_rt
+ren xxx pell_unkn_orig_yr8_rt
+gen xxx = real(pell_unkn_orig_yr6_rt)
+drop pell_unkn_orig_yr6_rt
+ren xxx pell_unkn_orig_yr6_rt
+gen xxx = real(pell_unkn_orig_yr4_rt)
+drop pell_unkn_orig_yr4_rt
+ren xxx pell_unkn_orig_yr4_rt
+gen xxx = real(pell_unkn_orig_yr3_rt)
+drop pell_unkn_orig_yr3_rt
+ren xxx pell_unkn_orig_yr3_rt
+gen xxx = real(pell_unkn_orig_yr2_rt)
+drop pell_unkn_orig_yr2_rt
+ren xxx pell_unkn_orig_yr2_rt
+gen xxx = real(pell_unkn_4yr_trans_yr8_rt)
+drop pell_unkn_4yr_trans_yr8_rt
+ren xxx pell_unkn_4yr_trans_yr8_rt
+gen xxx = real(pell_unkn_4yr_trans_yr6_rt)
+drop pell_unkn_4yr_trans_yr6_rt
+ren xxx pell_unkn_4yr_trans_yr6_rt
+gen xxx = real(pell_unkn_4yr_trans_yr4_rt)
+drop pell_unkn_4yr_trans_yr4_rt
+ren xxx pell_unkn_4yr_trans_yr4_rt
+gen xxx = real(pell_unkn_4yr_trans_yr3_rt)
+drop pell_unkn_4yr_trans_yr3_rt
+ren xxx pell_unkn_4yr_trans_yr3_rt
+gen xxx = real(pell_unkn_4yr_trans_yr2_rt)
+drop pell_unkn_4yr_trans_yr2_rt
+ren xxx pell_unkn_4yr_trans_yr2_rt
+gen xxx = real(pell_unkn_2yr_trans_yr8_rt)
+drop pell_unkn_2yr_trans_yr8_rt
+ren xxx pell_unkn_2yr_trans_yr8_rt
+gen xxx = real(pell_unkn_2yr_trans_yr6_rt)
+drop pell_unkn_2yr_trans_yr6_rt
+ren xxx pell_unkn_2yr_trans_yr6_rt
+gen xxx = real(pell_unkn_2yr_trans_yr4_rt)
+drop pell_unkn_2yr_trans_yr4_rt
+ren xxx pell_unkn_2yr_trans_yr4_rt
+gen xxx = real(pell_unkn_2yr_trans_yr3_rt)
+drop pell_unkn_2yr_trans_yr3_rt
+ren xxx pell_unkn_2yr_trans_yr3_rt
+gen xxx = real(pell_unkn_2yr_trans_yr2_rt)
+drop pell_unkn_2yr_trans_yr2_rt
+ren xxx pell_unkn_2yr_trans_yr2_rt
+gen xxx = real(pell_rpy_7yr_rt)
+drop pell_rpy_7yr_rt
+ren xxx pell_rpy_7yr_rt
+gen xxx = real(pell_rpy_7yr_n)
+drop pell_rpy_7yr_n
+ren xxx pell_rpy_7yr_n
+gen xxx = real(pell_rpy_5yr_rt)
+drop pell_rpy_5yr_rt
+ren xxx pell_rpy_5yr_rt
+gen xxx = real(pell_rpy_5yr_n)
+drop pell_rpy_5yr_n
+ren xxx pell_rpy_5yr_n
+gen xxx = real(pell_rpy_3yr_rt_supp)
+drop pell_rpy_3yr_rt_supp
+ren xxx pell_rpy_3yr_rt_supp
+gen xxx = real(pell_rpy_3yr_rt)
+drop pell_rpy_3yr_rt
+ren xxx pell_rpy_3yr_rt
+gen xxx = real(pell_rpy_3yr_n)
+drop pell_rpy_3yr_n
+ren xxx pell_rpy_3yr_n
+gen xxx = real(pell_rpy_1yr_rt)
+drop pell_rpy_1yr_rt
+ren xxx pell_rpy_1yr_rt
+gen xxx = real(pell_rpy_1yr_n)
+drop pell_rpy_1yr_n
+ren xxx pell_rpy_1yr_n
+gen xxx = real(pell_ever)
+drop pell_ever
+ren xxx pell_ever
+gen xxx = real(pell_enrl_orig_yr8_rt)
+drop pell_enrl_orig_yr8_rt
+ren xxx pell_enrl_orig_yr8_rt
+gen xxx = real(pell_enrl_orig_yr6_rt)
+drop pell_enrl_orig_yr6_rt
+ren xxx pell_enrl_orig_yr6_rt
+gen xxx = real(pell_enrl_orig_yr4_rt)
+drop pell_enrl_orig_yr4_rt
+ren xxx pell_enrl_orig_yr4_rt
+gen xxx = real(pell_enrl_orig_yr3_rt)
+drop pell_enrl_orig_yr3_rt
+ren xxx pell_enrl_orig_yr3_rt
+gen xxx = real(pell_enrl_orig_yr2_rt)
+drop pell_enrl_orig_yr2_rt
+ren xxx pell_enrl_orig_yr2_rt
+gen xxx = real(pell_enrl_4yr_trans_yr8_rt)
+drop pell_enrl_4yr_trans_yr8_rt
+ren xxx pell_enrl_4yr_trans_yr8_rt
+gen xxx = real(pell_enrl_4yr_trans_yr6_rt)
+drop pell_enrl_4yr_trans_yr6_rt
+ren xxx pell_enrl_4yr_trans_yr6_rt
+gen xxx = real(pell_enrl_4yr_trans_yr4_rt)
+drop pell_enrl_4yr_trans_yr4_rt
+ren xxx pell_enrl_4yr_trans_yr4_rt
+gen xxx = real(pell_enrl_4yr_trans_yr3_rt)
+drop pell_enrl_4yr_trans_yr3_rt
+ren xxx pell_enrl_4yr_trans_yr3_rt
+gen xxx = real(pell_enrl_4yr_trans_yr2_rt)
+drop pell_enrl_4yr_trans_yr2_rt
+ren xxx pell_enrl_4yr_trans_yr2_rt
+gen xxx = real(pell_enrl_2yr_trans_yr8_rt)
+drop pell_enrl_2yr_trans_yr8_rt
+ren xxx pell_enrl_2yr_trans_yr8_rt
+gen xxx = real(pell_enrl_2yr_trans_yr6_rt)
+drop pell_enrl_2yr_trans_yr6_rt
+ren xxx pell_enrl_2yr_trans_yr6_rt
+gen xxx = real(pell_enrl_2yr_trans_yr4_rt)
+drop pell_enrl_2yr_trans_yr4_rt
+ren xxx pell_enrl_2yr_trans_yr4_rt
+gen xxx = real(pell_enrl_2yr_trans_yr3_rt)
+drop pell_enrl_2yr_trans_yr3_rt
+ren xxx pell_enrl_2yr_trans_yr3_rt
+gen xxx = real(pell_enrl_2yr_trans_yr2_rt)
+drop pell_enrl_2yr_trans_yr2_rt
+ren xxx pell_enrl_2yr_trans_yr2_rt
+gen xxx = real(pell_debt_n)
+drop pell_debt_n
+ren xxx pell_debt_n
+gen xxx = real(pell_debt_mdn)
+drop pell_debt_mdn
+ren xxx pell_debt_mdn
+gen xxx = real(pell_death_yr8_rt)
+drop pell_death_yr8_rt
+ren xxx pell_death_yr8_rt
+gen xxx = real(pell_death_yr6_rt)
+drop pell_death_yr6_rt
+ren xxx pell_death_yr6_rt
+gen xxx = real(pell_death_yr4_rt)
+drop pell_death_yr4_rt
+ren xxx pell_death_yr4_rt
+gen xxx = real(pell_death_yr3_rt)
+drop pell_death_yr3_rt
+ren xxx pell_death_yr3_rt
+gen xxx = real(pell_death_yr2_rt)
+drop pell_death_yr2_rt
+ren xxx pell_death_yr2_rt
+gen xxx = real(pell_comp_orig_yr8_rt)
+drop pell_comp_orig_yr8_rt
+ren xxx pell_comp_orig_yr8_rt
+gen xxx = real(pell_comp_orig_yr6_rt)
+drop pell_comp_orig_yr6_rt
+ren xxx pell_comp_orig_yr6_rt
+gen xxx = real(pell_comp_orig_yr4_rt)
+drop pell_comp_orig_yr4_rt
+ren xxx pell_comp_orig_yr4_rt
+gen xxx = real(pell_comp_orig_yr3_rt)
+drop pell_comp_orig_yr3_rt
+ren xxx pell_comp_orig_yr3_rt
+gen xxx = real(pell_comp_orig_yr2_rt)
+drop pell_comp_orig_yr2_rt
+ren xxx pell_comp_orig_yr2_rt
+gen xxx = real(pell_comp_4yr_trans_yr8_rt)
+drop pell_comp_4yr_trans_yr8_rt
+ren xxx pell_comp_4yr_trans_yr8_rt
+gen xxx = real(pell_comp_4yr_trans_yr6_rt)
+drop pell_comp_4yr_trans_yr6_rt
+ren xxx pell_comp_4yr_trans_yr6_rt
+gen xxx = real(pell_comp_4yr_trans_yr4_rt)
+drop pell_comp_4yr_trans_yr4_rt
+ren xxx pell_comp_4yr_trans_yr4_rt
+gen xxx = real(pell_comp_4yr_trans_yr3_rt)
+drop pell_comp_4yr_trans_yr3_rt
+ren xxx pell_comp_4yr_trans_yr3_rt
+gen xxx = real(pell_comp_4yr_trans_yr2_rt)
+drop pell_comp_4yr_trans_yr2_rt
+ren xxx pell_comp_4yr_trans_yr2_rt
+gen xxx = real(pell_comp_2yr_trans_yr8_rt)
+drop pell_comp_2yr_trans_yr8_rt
+ren xxx pell_comp_2yr_trans_yr8_rt
+gen xxx = real(pell_comp_2yr_trans_yr6_rt)
+drop pell_comp_2yr_trans_yr6_rt
+ren xxx pell_comp_2yr_trans_yr6_rt
+gen xxx = real(pell_comp_2yr_trans_yr4_rt)
+drop pell_comp_2yr_trans_yr4_rt
+ren xxx pell_comp_2yr_trans_yr4_rt
+gen xxx = real(pell_comp_2yr_trans_yr3_rt)
+drop pell_comp_2yr_trans_yr3_rt
+ren xxx pell_comp_2yr_trans_yr3_rt
+gen xxx = real(pell_comp_2yr_trans_yr2_rt)
+drop pell_comp_2yr_trans_yr2_rt
+ren xxx pell_comp_2yr_trans_yr2_rt
+gen xxx = real(pctpell)
+drop pctpell
+ren xxx pctpell
+gen xxx = real(pctfloan)
+drop pctfloan
+ren xxx pctfloan
+gen xxx = real(pct90_earn_wne_p8)
+drop pct90_earn_wne_p8
+ren xxx pct90_earn_wne_p8
+gen xxx = real(pct90_earn_wne_p6)
+drop pct90_earn_wne_p6
+ren xxx pct90_earn_wne_p6
+gen xxx = real(pct90_earn_wne_p10)
+drop pct90_earn_wne_p10
+ren xxx pct90_earn_wne_p10
+gen xxx = real(pct75_earn_wne_p8)
+drop pct75_earn_wne_p8
+ren xxx pct75_earn_wne_p8
+gen xxx = real(pct75_earn_wne_p6)
+drop pct75_earn_wne_p6
+ren xxx pct75_earn_wne_p6
+gen xxx = real(pct75_earn_wne_p10)
+drop pct75_earn_wne_p10
+ren xxx pct75_earn_wne_p10
+gen xxx = real(pct25_earn_wne_p8)
+drop pct25_earn_wne_p8
+ren xxx pct25_earn_wne_p8
+gen xxx = real(pct25_earn_wne_p6)
+drop pct25_earn_wne_p6
+ren xxx pct25_earn_wne_p6
+gen xxx = real(pct25_earn_wne_p10)
+drop pct25_earn_wne_p10
+ren xxx pct25_earn_wne_p10
+gen xxx = real(pct10_earn_wne_p8)
+drop pct10_earn_wne_p8
+ren xxx pct10_earn_wne_p8
+gen xxx = real(pct10_earn_wne_p6)
+drop pct10_earn_wne_p6
+ren xxx pct10_earn_wne_p6
+gen xxx = real(pct10_earn_wne_p10)
+drop pct10_earn_wne_p10
+ren xxx pct10_earn_wne_p10
+gen xxx = real(pct_white)
+drop pct_white
+ren xxx pct_white
+gen xxx = real(pct_hispanic)
+drop pct_hispanic
+ren xxx pct_hispanic
+gen xxx = real(pct_grad_prof)
+drop pct_grad_prof
+ren xxx pct_grad_prof
+gen xxx = real(pct_born_us)
+drop pct_born_us
+ren xxx pct_born_us
+gen xxx = real(pct_black)
+drop pct_black
+ren xxx pct_black
+gen xxx = real(pct_ba)
+drop pct_ba
+ren xxx pct_ba
+gen xxx = real(pct_asian)
+drop pct_asian
+ren xxx pct_asian
+gen xxx = real(pcip54)
+drop pcip54
+ren xxx pcip54
+gen xxx = real(pcip52)
+drop pcip52
+ren xxx pcip52
+gen xxx = real(pcip51)
+drop pcip51
+ren xxx pcip51
+gen xxx = real(pcip50)
+drop pcip50
+ren xxx pcip50
+gen xxx = real(pcip49)
+drop pcip49
+ren xxx pcip49
+gen xxx = real(pcip48)
+drop pcip48
+ren xxx pcip48
+gen xxx = real(pcip47)
+drop pcip47
+ren xxx pcip47
+gen xxx = real(pcip46)
+drop pcip46
+ren xxx pcip46
+gen xxx = real(pcip45)
+drop pcip45
+ren xxx pcip45
+gen xxx = real(pcip44)
+drop pcip44
+ren xxx pcip44
+gen xxx = real(pcip43)
+drop pcip43
+ren xxx pcip43
+gen xxx = real(pcip42)
+drop pcip42
+ren xxx pcip42
+gen xxx = real(pcip41)
+drop pcip41
+ren xxx pcip41
+gen xxx = real(pcip40)
+drop pcip40
+ren xxx pcip40
+gen xxx = real(pcip39)
+drop pcip39
+ren xxx pcip39
+gen xxx = real(pcip38)
+drop pcip38
+ren xxx pcip38
+gen xxx = real(pcip31)
+drop pcip31
+ren xxx pcip31
+gen xxx = real(pcip30)
+drop pcip30
+ren xxx pcip30
+gen xxx = real(pcip29)
+drop pcip29
+ren xxx pcip29
+gen xxx = real(pcip27)
+drop pcip27
+ren xxx pcip27
+gen xxx = real(pcip26)
+drop pcip26
+ren xxx pcip26
+gen xxx = real(pcip25)
+drop pcip25
+ren xxx pcip25
+gen xxx = real(pcip24)
+drop pcip24
+ren xxx pcip24
+gen xxx = real(pcip23)
+drop pcip23
+ren xxx pcip23
+gen xxx = real(pcip22)
+drop pcip22
+ren xxx pcip22
+gen xxx = real(pcip19)
+drop pcip19
+ren xxx pcip19
+gen xxx = real(pcip16)
+drop pcip16
+ren xxx pcip16
+gen xxx = real(pcip15)
+drop pcip15
+ren xxx pcip15
+gen xxx = real(pcip14)
+drop pcip14
+ren xxx pcip14
+gen xxx = real(pcip13)
+drop pcip13
+ren xxx pcip13
+gen xxx = real(pcip12)
+drop pcip12
+ren xxx pcip12
+gen xxx = real(pcip11)
+drop pcip11
+ren xxx pcip11
+gen xxx = real(pcip10)
+drop pcip10
+ren xxx pcip10
+gen xxx = real(pcip09)
+drop pcip09
+ren xxx pcip09
+gen xxx = real(pcip05)
+drop pcip05
+ren xxx pcip05
+gen xxx = real(pcip04)
+drop pcip04
+ren xxx pcip04
+gen xxx = real(pcip03)
+drop pcip03
+ren xxx pcip03
+gen xxx = real(pcip01)
+drop pcip01
+ren xxx pcip01
+gen xxx = real(pbi)
+drop pbi
+ren xxx pbi
+gen xxx = real(par_ed_pct_ps)
+drop par_ed_pct_ps
+ren xxx par_ed_pct_ps
+gen xxx = real(par_ed_pct_ms)
+drop par_ed_pct_ms
+ren xxx par_ed_pct_ms
+gen xxx = real(par_ed_pct_hs)
+drop par_ed_pct_hs
+ren xxx par_ed_pct_hs
+gen xxx = real(par_ed_pct_1stgen)
+drop par_ed_pct_1stgen
+ren xxx par_ed_pct_1stgen
+gen xxx = real(par_ed_n)
+drop par_ed_n
+ren xxx par_ed_n
+gen xxx = real(overall_yr8_n)
+drop overall_yr8_n
+ren xxx overall_yr8_n
+gen xxx = real(overall_yr6_n)
+drop overall_yr6_n
+ren xxx overall_yr6_n
+gen xxx = real(overall_yr4_n)
+drop overall_yr4_n
+ren xxx overall_yr4_n
+gen xxx = real(overall_yr3_n)
+drop overall_yr3_n
+ren xxx overall_yr3_n
+gen xxx = real(overall_yr2_n)
+drop overall_yr2_n
+ren xxx overall_yr2_n
+gen xxx = real(openadmp)
+drop openadmp
+ren xxx openadmp
+*gen xxx = real(opeid6)
+*drop opeid6
+*ren xxx opeid6
+*gen xxx = real(opeid)
+*drop opeid
+*ren xxx opeid
+gen xxx = real(omenryp8_ptnft_pooled_supp)
+drop omenryp8_ptnft_pooled_supp
+ren xxx omenryp8_ptnft_pooled_supp
+gen xxx = real(omenryp8_ptnft_pooled)
+drop omenryp8_ptnft_pooled
+ren xxx omenryp8_ptnft_pooled
+gen xxx = real(omenryp8_ptnft)
+drop omenryp8_ptnft
+ren xxx omenryp8_ptnft
+gen xxx = real(omenryp8_ptft_pooled_supp)
+drop omenryp8_ptft_pooled_supp
+ren xxx omenryp8_ptft_pooled_supp
+gen xxx = real(omenryp8_ptft_pooled)
+drop omenryp8_ptft_pooled
+ren xxx omenryp8_ptft_pooled
+gen xxx = real(omenryp8_ptft)
+drop omenryp8_ptft
+ren xxx omenryp8_ptft
+gen xxx = real(omenryp8_ftnft_pooled_supp)
+drop omenryp8_ftnft_pooled_supp
+ren xxx omenryp8_ftnft_pooled_supp
+gen xxx = real(omenryp8_ftnft_pooled)
+drop omenryp8_ftnft_pooled
+ren xxx omenryp8_ftnft_pooled
+gen xxx = real(omenryp8_ftnft)
+drop omenryp8_ftnft
+ren xxx omenryp8_ftnft
+gen xxx = real(omenryp8_ftft_pooled_supp)
+drop omenryp8_ftft_pooled_supp
+ren xxx omenryp8_ftft_pooled_supp
+gen xxx = real(omenryp8_ftft_pooled)
+drop omenryp8_ftft_pooled
+ren xxx omenryp8_ftft_pooled
+gen xxx = real(omenryp8_ftft)
+drop omenryp8_ftft
+ren xxx omenryp8_ftft
+gen xxx = real(omenrup8_ptnft_pooled_supp)
+drop omenrup8_ptnft_pooled_supp
+ren xxx omenrup8_ptnft_pooled_supp
+gen xxx = real(omenrup8_ptnft_pooled)
+drop omenrup8_ptnft_pooled
+ren xxx omenrup8_ptnft_pooled
+gen xxx = real(omenrup8_ptnft)
+drop omenrup8_ptnft
+ren xxx omenrup8_ptnft
+gen xxx = real(omenrup8_ptft_pooled_supp)
+drop omenrup8_ptft_pooled_supp
+ren xxx omenrup8_ptft_pooled_supp
+gen xxx = real(omenrup8_ptft_pooled)
+drop omenrup8_ptft_pooled
+ren xxx omenrup8_ptft_pooled
+gen xxx = real(omenrup8_ptft)
+drop omenrup8_ptft
+ren xxx omenrup8_ptft
+gen xxx = real(omenrup8_ftnft_pooled_supp)
+drop omenrup8_ftnft_pooled_supp
+ren xxx omenrup8_ftnft_pooled_supp
+gen xxx = real(omenrup8_ftnft_pooled)
+drop omenrup8_ftnft_pooled
+ren xxx omenrup8_ftnft_pooled
+gen xxx = real(omenrup8_ftnft)
+drop omenrup8_ftnft
+ren xxx omenrup8_ftnft
+gen xxx = real(omenrup8_ftft_pooled_supp)
+drop omenrup8_ftft_pooled_supp
+ren xxx omenrup8_ftft_pooled_supp
+gen xxx = real(omenrup8_ftft_pooled)
+drop omenrup8_ftft_pooled
+ren xxx omenrup8_ftft_pooled
+gen xxx = real(omenrup8_ftft)
+drop omenrup8_ftft
+ren xxx omenrup8_ftft
+gen xxx = real(omenrap8_ptnft_pooled_supp)
+drop omenrap8_ptnft_pooled_supp
+ren xxx omenrap8_ptnft_pooled_supp
+gen xxx = real(omenrap8_ptnft_pooled)
+drop omenrap8_ptnft_pooled
+ren xxx omenrap8_ptnft_pooled
+gen xxx = real(omenrap8_ptnft)
+drop omenrap8_ptnft
+ren xxx omenrap8_ptnft
+gen xxx = real(omenrap8_ptft_pooled_supp)
+drop omenrap8_ptft_pooled_supp
+ren xxx omenrap8_ptft_pooled_supp
+gen xxx = real(omenrap8_ptft_pooled)
+drop omenrap8_ptft_pooled
+ren xxx omenrap8_ptft_pooled
+gen xxx = real(omenrap8_ptft)
+drop omenrap8_ptft
+ren xxx omenrap8_ptft
+gen xxx = real(omenrap8_ftnft_pooled_supp)
+drop omenrap8_ftnft_pooled_supp
+ren xxx omenrap8_ftnft_pooled_supp
+gen xxx = real(omenrap8_ftnft_pooled)
+drop omenrap8_ftnft_pooled
+ren xxx omenrap8_ftnft_pooled
+gen xxx = real(omenrap8_ftnft)
+drop omenrap8_ftnft
+ren xxx omenrap8_ftnft
+gen xxx = real(omenrap8_ftft_pooled_supp)
+drop omenrap8_ftft_pooled_supp
+ren xxx omenrap8_ftft_pooled_supp
+gen xxx = real(omenrap8_ftft_pooled)
+drop omenrap8_ftft_pooled
+ren xxx omenrap8_ftft_pooled
+gen xxx = real(omenrap8_ftft)
+drop omenrap8_ftft
+ren xxx omenrap8_ftft
+gen xxx = real(omawdp8_ptnft_pooled_supp)
+drop omawdp8_ptnft_pooled_supp
+ren xxx omawdp8_ptnft_pooled_supp
+gen xxx = real(omawdp8_ptnft_pooled)
+drop omawdp8_ptnft_pooled
+ren xxx omawdp8_ptnft_pooled
+gen xxx = real(omawdp8_ptnft)
+drop omawdp8_ptnft
+ren xxx omawdp8_ptnft
+gen xxx = real(omawdp8_ptft_pooled_supp)
+drop omawdp8_ptft_pooled_supp
+ren xxx omawdp8_ptft_pooled_supp
+gen xxx = real(omawdp8_ptft_pooled)
+drop omawdp8_ptft_pooled
+ren xxx omawdp8_ptft_pooled
+gen xxx = real(omawdp8_ptft)
+drop omawdp8_ptft
+ren xxx omawdp8_ptft
+gen xxx = real(omawdp8_ftnft_pooled_supp)
+drop omawdp8_ftnft_pooled_supp
+ren xxx omawdp8_ftnft_pooled_supp
+gen xxx = real(omawdp8_ftnft_pooled)
+drop omawdp8_ftnft_pooled
+ren xxx omawdp8_ftnft_pooled
+gen xxx = real(omawdp8_ftnft)
+drop omawdp8_ftnft
+ren xxx omawdp8_ftnft
+gen xxx = real(omawdp8_ftft_pooled_supp)
+drop omawdp8_ftft_pooled_supp
+ren xxx omawdp8_ftft_pooled_supp
+gen xxx = real(omawdp8_ftft_pooled)
+drop omawdp8_ftft_pooled
+ren xxx omawdp8_ftft_pooled
+gen xxx = real(omawdp8_ftft)
+drop omawdp8_ftft
+ren xxx omawdp8_ftft
+gen xxx = real(omawdp6_ptnft_pooled_supp)
+drop omawdp6_ptnft_pooled_supp
+ren xxx omawdp6_ptnft_pooled_supp
+gen xxx = real(omawdp6_ptnft_pooled)
+drop omawdp6_ptnft_pooled
+ren xxx omawdp6_ptnft_pooled
+gen xxx = real(omawdp6_ptnft)
+drop omawdp6_ptnft
+ren xxx omawdp6_ptnft
+gen xxx = real(omawdp6_ptft_pooled_supp)
+drop omawdp6_ptft_pooled_supp
+ren xxx omawdp6_ptft_pooled_supp
+gen xxx = real(omawdp6_ptft_pooled)
+drop omawdp6_ptft_pooled
+ren xxx omawdp6_ptft_pooled
+gen xxx = real(omawdp6_ptft)
+drop omawdp6_ptft
+ren xxx omawdp6_ptft
+gen xxx = real(omawdp6_ftnft_pooled_supp)
+drop omawdp6_ftnft_pooled_supp
+ren xxx omawdp6_ftnft_pooled_supp
+gen xxx = real(omawdp6_ftnft_pooled)
+drop omawdp6_ftnft_pooled
+ren xxx omawdp6_ftnft_pooled
+gen xxx = real(omawdp6_ftnft)
+drop omawdp6_ftnft
+ren xxx omawdp6_ftnft
+gen xxx = real(omawdp6_ftft_pooled_supp)
+drop omawdp6_ftft_pooled_supp
+ren xxx omawdp6_ftft_pooled_supp
+gen xxx = real(omawdp6_ftft_pooled)
+drop omawdp6_ftft_pooled
+ren xxx omawdp6_ftft_pooled
+gen xxx = real(omawdp6_ftft)
+drop omawdp6_ftft
+ren xxx omawdp6_ftft
+gen xxx = real(omacht8_ptnft_pooled)
+drop omacht8_ptnft_pooled
+ren xxx omacht8_ptnft_pooled
+gen xxx = real(omacht8_ptnft)
+drop omacht8_ptnft
+ren xxx omacht8_ptnft
+gen xxx = real(omacht8_ptft_pooled)
+drop omacht8_ptft_pooled
+ren xxx omacht8_ptft_pooled
+gen xxx = real(omacht8_ptft)
+drop omacht8_ptft
+ren xxx omacht8_ptft
+gen xxx = real(omacht8_ftnft_pooled)
+drop omacht8_ftnft_pooled
+ren xxx omacht8_ftnft_pooled
+gen xxx = real(omacht8_ftnft)
+drop omacht8_ftnft
+ren xxx omacht8_ftnft
+gen xxx = real(omacht8_ftft_pooled)
+drop omacht8_ftft_pooled
+ren xxx omacht8_ftft_pooled
+gen xxx = real(omacht8_ftft)
+drop omacht8_ftft
+ren xxx omacht8_ftft
+gen xxx = real(omacht6_ptnft_pooled)
+drop omacht6_ptnft_pooled
+ren xxx omacht6_ptnft_pooled
+gen xxx = real(omacht6_ptnft)
+drop omacht6_ptnft
+ren xxx omacht6_ptnft
+gen xxx = real(omacht6_ptft_pooled)
+drop omacht6_ptft_pooled
+ren xxx omacht6_ptft_pooled
+gen xxx = real(omacht6_ptft)
+drop omacht6_ptft
+ren xxx omacht6_ptft
+gen xxx = real(omacht6_ftnft_pooled)
+drop omacht6_ftnft_pooled
+ren xxx omacht6_ftnft_pooled
+gen xxx = real(omacht6_ftnft)
+drop omacht6_ftnft
+ren xxx omacht6_ftnft
+gen xxx = real(omacht6_ftft_pooled)
+drop omacht6_ftft_pooled
+ren xxx omacht6_ftft_pooled
+gen xxx = real(omacht6_ftft)
+drop omacht6_ftft
+ren xxx omacht6_ftft
+*gen xxx = real(numbranch)
+*drop numbranch
+*ren xxx numbranch
+gen xxx = real(num45_pub)
+drop num45_pub
+ren xxx num45_pub
+gen xxx = real(num45_prog)
+drop num45_prog
+ren xxx num45_prog
+gen xxx = real(num45_priv)
+drop num45_priv
+ren xxx num45_priv
+gen xxx = real(num45_other)
+drop num45_other
+ren xxx num45_other
+gen xxx = real(num44_pub)
+drop num44_pub
+ren xxx num44_pub
+gen xxx = real(num44_prog)
+drop num44_prog
+ren xxx num44_prog
+gen xxx = real(num44_priv)
+drop num44_priv
+ren xxx num44_priv
+gen xxx = real(num44_other)
+drop num44_other
+ren xxx num44_other
+gen xxx = real(num43_pub)
+drop num43_pub
+ren xxx num43_pub
+gen xxx = real(num43_prog)
+drop num43_prog
+ren xxx num43_prog
+gen xxx = real(num43_priv)
+drop num43_priv
+ren xxx num43_priv
+gen xxx = real(num43_other)
+drop num43_other
+ren xxx num43_other
+gen xxx = real(num42_pub)
+drop num42_pub
+ren xxx num42_pub
+gen xxx = real(num42_prog)
+drop num42_prog
+ren xxx num42_prog
+gen xxx = real(num42_priv)
+drop num42_priv
+ren xxx num42_priv
+gen xxx = real(num42_other)
+drop num42_other
+ren xxx num42_other
+gen xxx = real(num41_pub)
+drop num41_pub
+ren xxx num41_pub
+gen xxx = real(num41_prog)
+drop num41_prog
+ren xxx num41_prog
+gen xxx = real(num41_priv)
+drop num41_priv
+ren xxx num41_priv
+gen xxx = real(num41_other)
+drop num41_other
+ren xxx num41_other
+gen xxx = real(num4_pub)
+drop num4_pub
+ren xxx num4_pub
+gen xxx = real(num4_prog)
+drop num4_prog
+ren xxx num4_prog
+gen xxx = real(num4_priv)
+drop num4_priv
+ren xxx num4_priv
+gen xxx = real(num4_other)
+drop num4_other
+ren xxx num4_other
+gen xxx = real(npt45_pub)
+drop npt45_pub
+ren xxx npt45_pub
+gen xxx = real(npt45_prog)
+drop npt45_prog
+ren xxx npt45_prog
+gen xxx = real(npt45_priv)
+drop npt45_priv
+ren xxx npt45_priv
+gen xxx = real(npt45_other)
+drop npt45_other
+ren xxx npt45_other
+gen xxx = real(npt44_pub)
+drop npt44_pub
+ren xxx npt44_pub
+gen xxx = real(npt44_prog)
+drop npt44_prog
+ren xxx npt44_prog
+gen xxx = real(npt44_priv)
+drop npt44_priv
+ren xxx npt44_priv
+gen xxx = real(npt44_other)
+drop npt44_other
+ren xxx npt44_other
+gen xxx = real(npt43_pub)
+drop npt43_pub
+ren xxx npt43_pub
+gen xxx = real(npt43_prog)
+drop npt43_prog
+ren xxx npt43_prog
+gen xxx = real(npt43_priv)
+drop npt43_priv
+ren xxx npt43_priv
+gen xxx = real(npt43_other)
+drop npt43_other
+ren xxx npt43_other
+gen xxx = real(npt42_pub)
+drop npt42_pub
+ren xxx npt42_pub
+gen xxx = real(npt42_prog)
+drop npt42_prog
+ren xxx npt42_prog
+gen xxx = real(npt42_priv)
+drop npt42_priv
+ren xxx npt42_priv
+gen xxx = real(npt42_other)
+drop npt42_other
+ren xxx npt42_other
+gen xxx = real(npt41_pub)
+drop npt41_pub
+ren xxx npt41_pub
+gen xxx = real(npt41_prog)
+drop npt41_prog
+ren xxx npt41_prog
+gen xxx = real(npt41_priv)
+drop npt41_priv
+ren xxx npt41_priv
+gen xxx = real(npt41_other)
+drop npt41_other
+ren xxx npt41_other
+gen xxx = real(npt4_pub)
+drop npt4_pub
+ren xxx npt4_pub
+gen xxx = real(npt4_prog)
+drop npt4_prog
+ren xxx npt4_prog
+gen xxx = real(npt4_priv)
+drop npt4_priv
+ren xxx npt4_priv
+gen xxx = real(npt4_other)
+drop npt4_other
+ren xxx npt4_other
+gen xxx = real(npt4_75up_pub)
+drop npt4_75up_pub
+ren xxx npt4_75up_pub
+gen xxx = real(npt4_75up_prog)
+drop npt4_75up_prog
+ren xxx npt4_75up_prog
+gen xxx = real(npt4_75up_priv)
+drop npt4_75up_priv
+ren xxx npt4_75up_priv
+gen xxx = real(npt4_75up_other)
+drop npt4_75up_other
+ren xxx npt4_75up_other
+gen xxx = real(npt4_3075_pub)
+drop npt4_3075_pub
+ren xxx npt4_3075_pub
+gen xxx = real(npt4_3075_prog)
+drop npt4_3075_prog
+ren xxx npt4_3075_prog
+gen xxx = real(npt4_3075_priv)
+drop npt4_3075_priv
+ren xxx npt4_3075_priv
+gen xxx = real(npt4_3075_other)
+drop npt4_3075_other
+ren xxx npt4_3075_other
+gen xxx = real(npt4_048_pub)
+drop npt4_048_pub
+ren xxx npt4_048_pub
+gen xxx = real(npt4_048_prog)
+drop npt4_048_prog
+ren xxx npt4_048_prog
+gen xxx = real(npt4_048_priv)
+drop npt4_048_priv
+ren xxx npt4_048_priv
+gen xxx = real(npt4_048_other)
+drop npt4_048_other
+ren xxx npt4_048_other
+gen xxx = real(npcurl)
+drop npcurl
+ren xxx npcurl
+gen xxx = real(notfirstgen_rpy_7yr_rt)
+drop notfirstgen_rpy_7yr_rt
+ren xxx notfirstgen_rpy_7yr_rt
+gen xxx = real(notfirstgen_rpy_7yr_n)
+drop notfirstgen_rpy_7yr_n
+ren xxx notfirstgen_rpy_7yr_n
+gen xxx = real(notfirstgen_rpy_5yr_rt)
+drop notfirstgen_rpy_5yr_rt
+ren xxx notfirstgen_rpy_5yr_rt
+gen xxx = real(notfirstgen_rpy_5yr_n)
+drop notfirstgen_rpy_5yr_n
+ren xxx notfirstgen_rpy_5yr_n
+gen xxx = real(notfirstgen_rpy_3yr_rt_supp)
+drop notfirstgen_rpy_3yr_rt_supp
+ren xxx notfirstgen_rpy_3yr_rt_supp
+gen xxx = real(notfirstgen_rpy_3yr_rt)
+drop notfirstgen_rpy_3yr_rt
+ren xxx notfirstgen_rpy_3yr_rt
+gen xxx = real(notfirstgen_rpy_3yr_n)
+drop notfirstgen_rpy_3yr_n
+ren xxx notfirstgen_rpy_3yr_n
+gen xxx = real(notfirstgen_rpy_1yr_rt)
+drop notfirstgen_rpy_1yr_rt
+ren xxx notfirstgen_rpy_1yr_rt
+gen xxx = real(notfirstgen_rpy_1yr_n)
+drop notfirstgen_rpy_1yr_n
+ren xxx notfirstgen_rpy_1yr_n
+gen xxx = real(notfirstgen_debt_n)
+drop notfirstgen_debt_n
+ren xxx notfirstgen_debt_n
+gen xxx = real(notfirstgen_debt_mdn)
+drop notfirstgen_debt_mdn
+ren xxx notfirstgen_debt_mdn
+gen xxx = real(not1stgen_yr8_n)
+drop not1stgen_yr8_n
+ren xxx not1stgen_yr8_n
+gen xxx = real(not1stgen_yr6_n)
+drop not1stgen_yr6_n
+ren xxx not1stgen_yr6_n
+gen xxx = real(not1stgen_yr4_n)
+drop not1stgen_yr4_n
+ren xxx not1stgen_yr4_n
+gen xxx = real(not1stgen_yr3_n)
+drop not1stgen_yr3_n
+ren xxx not1stgen_yr3_n
+gen xxx = real(not1stgen_yr2_n)
+drop not1stgen_yr2_n
+ren xxx not1stgen_yr2_n
+gen xxx = real(not1stgen_wdraw_orig_yr8_rt)
+drop not1stgen_wdraw_orig_yr8_rt
+ren xxx not1stgen_wdraw_orig_yr8_rt
+gen xxx = real(not1stgen_wdraw_orig_yr6_rt)
+drop not1stgen_wdraw_orig_yr6_rt
+ren xxx not1stgen_wdraw_orig_yr6_rt
+gen xxx = real(not1stgen_wdraw_orig_yr4_rt)
+drop not1stgen_wdraw_orig_yr4_rt
+ren xxx not1stgen_wdraw_orig_yr4_rt
+gen xxx = real(not1stgen_wdraw_orig_yr3_rt)
+drop not1stgen_wdraw_orig_yr3_rt
+ren xxx not1stgen_wdraw_orig_yr3_rt
+gen xxx = real(not1stgen_wdraw_orig_yr2_rt)
+drop not1stgen_wdraw_orig_yr2_rt
+ren xxx not1stgen_wdraw_orig_yr2_rt
+gen xxx = real(not1stgen_wdraw_4yr_trans_yr8_rt)
+drop not1stgen_wdraw_4yr_trans_yr8_rt
+ren xxx not1stgen_wdraw_4yr_trans_yr8_rt
+gen xxx = real(not1stgen_wdraw_4yr_trans_yr6_rt)
+drop not1stgen_wdraw_4yr_trans_yr6_rt
+ren xxx not1stgen_wdraw_4yr_trans_yr6_rt
+gen xxx = real(not1stgen_wdraw_4yr_trans_yr4_rt)
+drop not1stgen_wdraw_4yr_trans_yr4_rt
+ren xxx not1stgen_wdraw_4yr_trans_yr4_rt
+gen xxx = real(not1stgen_wdraw_4yr_trans_yr3_rt)
+drop not1stgen_wdraw_4yr_trans_yr3_rt
+ren xxx not1stgen_wdraw_4yr_trans_yr3_rt
+gen xxx = real(not1stgen_wdraw_4yr_trans_yr2_rt)
+drop not1stgen_wdraw_4yr_trans_yr2_rt
+ren xxx not1stgen_wdraw_4yr_trans_yr2_rt
+gen xxx = real(not1stgen_wdraw_2yr_trans_yr8_rt)
+drop not1stgen_wdraw_2yr_trans_yr8_rt
+ren xxx not1stgen_wdraw_2yr_trans_yr8_rt
+gen xxx = real(not1stgen_wdraw_2yr_trans_yr6_rt)
+drop not1stgen_wdraw_2yr_trans_yr6_rt
+ren xxx not1stgen_wdraw_2yr_trans_yr6_rt
+gen xxx = real(not1stgen_wdraw_2yr_trans_yr4_rt)
+drop not1stgen_wdraw_2yr_trans_yr4_rt
+ren xxx not1stgen_wdraw_2yr_trans_yr4_rt
+gen xxx = real(not1stgen_wdraw_2yr_trans_yr3_rt)
+drop not1stgen_wdraw_2yr_trans_yr3_rt
+ren xxx not1stgen_wdraw_2yr_trans_yr3_rt
+gen xxx = real(not1stgen_wdraw_2yr_trans_yr2_rt)
+drop not1stgen_wdraw_2yr_trans_yr2_rt
+ren xxx not1stgen_wdraw_2yr_trans_yr2_rt
+gen xxx = real(not1stgen_unkn_orig_yr8_rt)
+drop not1stgen_unkn_orig_yr8_rt
+ren xxx not1stgen_unkn_orig_yr8_rt
+gen xxx = real(not1stgen_unkn_orig_yr6_rt)
+drop not1stgen_unkn_orig_yr6_rt
+ren xxx not1stgen_unkn_orig_yr6_rt
+gen xxx = real(not1stgen_unkn_orig_yr4_rt)
+drop not1stgen_unkn_orig_yr4_rt
+ren xxx not1stgen_unkn_orig_yr4_rt
+gen xxx = real(not1stgen_unkn_orig_yr3_rt)
+drop not1stgen_unkn_orig_yr3_rt
+ren xxx not1stgen_unkn_orig_yr3_rt
+gen xxx = real(not1stgen_unkn_orig_yr2_rt)
+drop not1stgen_unkn_orig_yr2_rt
+ren xxx not1stgen_unkn_orig_yr2_rt
+gen xxx = real(not1stgen_unkn_4yr_trans_yr8_rt)
+drop not1stgen_unkn_4yr_trans_yr8_rt
+ren xxx not1stgen_unkn_4yr_trans_yr8_rt
+gen xxx = real(not1stgen_unkn_4yr_trans_yr6_rt)
+drop not1stgen_unkn_4yr_trans_yr6_rt
+ren xxx not1stgen_unkn_4yr_trans_yr6_rt
+gen xxx = real(not1stgen_unkn_4yr_trans_yr4_rt)
+drop not1stgen_unkn_4yr_trans_yr4_rt
+ren xxx not1stgen_unkn_4yr_trans_yr4_rt
+gen xxx = real(not1stgen_unkn_4yr_trans_yr3_rt)
+drop not1stgen_unkn_4yr_trans_yr3_rt
+ren xxx not1stgen_unkn_4yr_trans_yr3_rt
+gen xxx = real(not1stgen_unkn_4yr_trans_yr2_rt)
+drop not1stgen_unkn_4yr_trans_yr2_rt
+ren xxx not1stgen_unkn_4yr_trans_yr2_rt
+gen xxx = real(not1stgen_unkn_2yr_trans_yr8_rt)
+drop not1stgen_unkn_2yr_trans_yr8_rt
+ren xxx not1stgen_unkn_2yr_trans_yr8_rt
+gen xxx = real(not1stgen_unkn_2yr_trans_yr6_rt)
+drop not1stgen_unkn_2yr_trans_yr6_rt
+ren xxx not1stgen_unkn_2yr_trans_yr6_rt
+gen xxx = real(not1stgen_unkn_2yr_trans_yr4_rt)
+drop not1stgen_unkn_2yr_trans_yr4_rt
+ren xxx not1stgen_unkn_2yr_trans_yr4_rt
+gen xxx = real(not1stgen_unkn_2yr_trans_yr3_rt)
+drop not1stgen_unkn_2yr_trans_yr3_rt
+ren xxx not1stgen_unkn_2yr_trans_yr3_rt
+gen xxx = real(not1stgen_unkn_2yr_trans_yr2_rt)
+drop not1stgen_unkn_2yr_trans_yr2_rt
+ren xxx not1stgen_unkn_2yr_trans_yr2_rt
+gen xxx = real(not1stgen_enrl_orig_yr8_rt)
+drop not1stgen_enrl_orig_yr8_rt
+ren xxx not1stgen_enrl_orig_yr8_rt
+gen xxx = real(not1stgen_enrl_orig_yr6_rt)
+drop not1stgen_enrl_orig_yr6_rt
+ren xxx not1stgen_enrl_orig_yr6_rt
+gen xxx = real(not1stgen_enrl_orig_yr4_rt)
+drop not1stgen_enrl_orig_yr4_rt
+ren xxx not1stgen_enrl_orig_yr4_rt
+gen xxx = real(not1stgen_enrl_orig_yr3_rt)
+drop not1stgen_enrl_orig_yr3_rt
+ren xxx not1stgen_enrl_orig_yr3_rt
+gen xxx = real(not1stgen_enrl_orig_yr2_rt)
+drop not1stgen_enrl_orig_yr2_rt
+ren xxx not1stgen_enrl_orig_yr2_rt
+gen xxx = real(not1stgen_enrl_4yr_trans_yr8_rt)
+drop not1stgen_enrl_4yr_trans_yr8_rt
+ren xxx not1stgen_enrl_4yr_trans_yr8_rt
+gen xxx = real(not1stgen_enrl_4yr_trans_yr6_rt)
+drop not1stgen_enrl_4yr_trans_yr6_rt
+ren xxx not1stgen_enrl_4yr_trans_yr6_rt
+gen xxx = real(not1stgen_enrl_4yr_trans_yr4_rt)
+drop not1stgen_enrl_4yr_trans_yr4_rt
+ren xxx not1stgen_enrl_4yr_trans_yr4_rt
+gen xxx = real(not1stgen_enrl_4yr_trans_yr3_rt)
+drop not1stgen_enrl_4yr_trans_yr3_rt
+ren xxx not1stgen_enrl_4yr_trans_yr3_rt
+gen xxx = real(not1stgen_enrl_4yr_trans_yr2_rt)
+drop not1stgen_enrl_4yr_trans_yr2_rt
+ren xxx not1stgen_enrl_4yr_trans_yr2_rt
+gen xxx = real(not1stgen_enrl_2yr_trans_yr8_rt)
+drop not1stgen_enrl_2yr_trans_yr8_rt
+ren xxx not1stgen_enrl_2yr_trans_yr8_rt
+gen xxx = real(not1stgen_enrl_2yr_trans_yr6_rt)
+drop not1stgen_enrl_2yr_trans_yr6_rt
+ren xxx not1stgen_enrl_2yr_trans_yr6_rt
+gen xxx = real(not1stgen_enrl_2yr_trans_yr4_rt)
+drop not1stgen_enrl_2yr_trans_yr4_rt
+ren xxx not1stgen_enrl_2yr_trans_yr4_rt
+gen xxx = real(not1stgen_enrl_2yr_trans_yr3_rt)
+drop not1stgen_enrl_2yr_trans_yr3_rt
+ren xxx not1stgen_enrl_2yr_trans_yr3_rt
+gen xxx = real(not1stgen_enrl_2yr_trans_yr2_rt)
+drop not1stgen_enrl_2yr_trans_yr2_rt
+ren xxx not1stgen_enrl_2yr_trans_yr2_rt
+gen xxx = real(not1stgen_death_yr8_rt)
+drop not1stgen_death_yr8_rt
+ren xxx not1stgen_death_yr8_rt
+gen xxx = real(not1stgen_death_yr6_rt)
+drop not1stgen_death_yr6_rt
+ren xxx not1stgen_death_yr6_rt
+gen xxx = real(not1stgen_death_yr4_rt)
+drop not1stgen_death_yr4_rt
+ren xxx not1stgen_death_yr4_rt
+gen xxx = real(not1stgen_death_yr3_rt)
+drop not1stgen_death_yr3_rt
+ren xxx not1stgen_death_yr3_rt
+gen xxx = real(not1stgen_death_yr2_rt)
+drop not1stgen_death_yr2_rt
+ren xxx not1stgen_death_yr2_rt
+gen xxx = real(not1stgen_comp_orig_yr8_rt)
+drop not1stgen_comp_orig_yr8_rt
+ren xxx not1stgen_comp_orig_yr8_rt
+gen xxx = real(not1stgen_comp_orig_yr6_rt)
+drop not1stgen_comp_orig_yr6_rt
+ren xxx not1stgen_comp_orig_yr6_rt
+gen xxx = real(not1stgen_comp_orig_yr4_rt)
+drop not1stgen_comp_orig_yr4_rt
+ren xxx not1stgen_comp_orig_yr4_rt
+gen xxx = real(not1stgen_comp_orig_yr3_rt)
+drop not1stgen_comp_orig_yr3_rt
+ren xxx not1stgen_comp_orig_yr3_rt
+gen xxx = real(not1stgen_comp_orig_yr2_rt)
+drop not1stgen_comp_orig_yr2_rt
+ren xxx not1stgen_comp_orig_yr2_rt
+gen xxx = real(not1stgen_comp_4yr_trans_yr8_rt)
+drop not1stgen_comp_4yr_trans_yr8_rt
+ren xxx not1stgen_comp_4yr_trans_yr8_rt
+gen xxx = real(not1stgen_comp_4yr_trans_yr6_rt)
+drop not1stgen_comp_4yr_trans_yr6_rt
+ren xxx not1stgen_comp_4yr_trans_yr6_rt
+gen xxx = real(not1stgen_comp_4yr_trans_yr4_rt)
+drop not1stgen_comp_4yr_trans_yr4_rt
+ren xxx not1stgen_comp_4yr_trans_yr4_rt
+gen xxx = real(not1stgen_comp_4yr_trans_yr3_rt)
+drop not1stgen_comp_4yr_trans_yr3_rt
+ren xxx not1stgen_comp_4yr_trans_yr3_rt
+gen xxx = real(not1stgen_comp_4yr_trans_yr2_rt)
+drop not1stgen_comp_4yr_trans_yr2_rt
+ren xxx not1stgen_comp_4yr_trans_yr2_rt
+gen xxx = real(not1stgen_comp_2yr_trans_yr8_rt)
+drop not1stgen_comp_2yr_trans_yr8_rt
+ren xxx not1stgen_comp_2yr_trans_yr8_rt
+gen xxx = real(not1stgen_comp_2yr_trans_yr6_rt)
+drop not1stgen_comp_2yr_trans_yr6_rt
+ren xxx not1stgen_comp_2yr_trans_yr6_rt
+gen xxx = real(not1stgen_comp_2yr_trans_yr4_rt)
+drop not1stgen_comp_2yr_trans_yr4_rt
+ren xxx not1stgen_comp_2yr_trans_yr4_rt
+gen xxx = real(not1stgen_comp_2yr_trans_yr3_rt)
+drop not1stgen_comp_2yr_trans_yr3_rt
+ren xxx not1stgen_comp_2yr_trans_yr3_rt
+gen xxx = real(not1stgen_comp_2yr_trans_yr2_rt)
+drop not1stgen_comp_2yr_trans_yr2_rt
+ren xxx not1stgen_comp_2yr_trans_yr2_rt
+gen xxx = real(nopell_yr8_n)
+drop nopell_yr8_n
+ren xxx nopell_yr8_n
+gen xxx = real(nopell_yr6_n)
+drop nopell_yr6_n
+ren xxx nopell_yr6_n
+gen xxx = real(nopell_yr4_n)
+drop nopell_yr4_n
+ren xxx nopell_yr4_n
+gen xxx = real(nopell_yr3_n)
+drop nopell_yr3_n
+ren xxx nopell_yr3_n
+gen xxx = real(nopell_yr2_n)
+drop nopell_yr2_n
+ren xxx nopell_yr2_n
+gen xxx = real(nopell_wdraw_orig_yr8_rt)
+drop nopell_wdraw_orig_yr8_rt
+ren xxx nopell_wdraw_orig_yr8_rt
+gen xxx = real(nopell_wdraw_orig_yr6_rt)
+drop nopell_wdraw_orig_yr6_rt
+ren xxx nopell_wdraw_orig_yr6_rt
+gen xxx = real(nopell_wdraw_orig_yr4_rt)
+drop nopell_wdraw_orig_yr4_rt
+ren xxx nopell_wdraw_orig_yr4_rt
+gen xxx = real(nopell_wdraw_orig_yr3_rt)
+drop nopell_wdraw_orig_yr3_rt
+ren xxx nopell_wdraw_orig_yr3_rt
+gen xxx = real(nopell_wdraw_orig_yr2_rt)
+drop nopell_wdraw_orig_yr2_rt
+ren xxx nopell_wdraw_orig_yr2_rt
+gen xxx = real(nopell_wdraw_4yr_trans_yr8_rt)
+drop nopell_wdraw_4yr_trans_yr8_rt
+ren xxx nopell_wdraw_4yr_trans_yr8_rt
+gen xxx = real(nopell_wdraw_4yr_trans_yr6_rt)
+drop nopell_wdraw_4yr_trans_yr6_rt
+ren xxx nopell_wdraw_4yr_trans_yr6_rt
+gen xxx = real(nopell_wdraw_4yr_trans_yr4_rt)
+drop nopell_wdraw_4yr_trans_yr4_rt
+ren xxx nopell_wdraw_4yr_trans_yr4_rt
+gen xxx = real(nopell_wdraw_4yr_trans_yr3_rt)
+drop nopell_wdraw_4yr_trans_yr3_rt
+ren xxx nopell_wdraw_4yr_trans_yr3_rt
+gen xxx = real(nopell_wdraw_4yr_trans_yr2_rt)
+drop nopell_wdraw_4yr_trans_yr2_rt
+ren xxx nopell_wdraw_4yr_trans_yr2_rt
+gen xxx = real(nopell_wdraw_2yr_trans_yr8_rt)
+drop nopell_wdraw_2yr_trans_yr8_rt
+ren xxx nopell_wdraw_2yr_trans_yr8_rt
+gen xxx = real(nopell_wdraw_2yr_trans_yr6_rt)
+drop nopell_wdraw_2yr_trans_yr6_rt
+ren xxx nopell_wdraw_2yr_trans_yr6_rt
+gen xxx = real(nopell_wdraw_2yr_trans_yr4_rt)
+drop nopell_wdraw_2yr_trans_yr4_rt
+ren xxx nopell_wdraw_2yr_trans_yr4_rt
+gen xxx = real(nopell_wdraw_2yr_trans_yr3_rt)
+drop nopell_wdraw_2yr_trans_yr3_rt
+ren xxx nopell_wdraw_2yr_trans_yr3_rt
+gen xxx = real(nopell_wdraw_2yr_trans_yr2_rt)
+drop nopell_wdraw_2yr_trans_yr2_rt
+ren xxx nopell_wdraw_2yr_trans_yr2_rt
+gen xxx = real(nopell_unkn_orig_yr8_rt)
+drop nopell_unkn_orig_yr8_rt
+ren xxx nopell_unkn_orig_yr8_rt
+gen xxx = real(nopell_unkn_orig_yr6_rt)
+drop nopell_unkn_orig_yr6_rt
+ren xxx nopell_unkn_orig_yr6_rt
+gen xxx = real(nopell_unkn_orig_yr4_rt)
+drop nopell_unkn_orig_yr4_rt
+ren xxx nopell_unkn_orig_yr4_rt
+gen xxx = real(nopell_unkn_orig_yr3_rt)
+drop nopell_unkn_orig_yr3_rt
+ren xxx nopell_unkn_orig_yr3_rt
+gen xxx = real(nopell_unkn_orig_yr2_rt)
+drop nopell_unkn_orig_yr2_rt
+ren xxx nopell_unkn_orig_yr2_rt
+gen xxx = real(nopell_unkn_4yr_trans_yr8_rt)
+drop nopell_unkn_4yr_trans_yr8_rt
+ren xxx nopell_unkn_4yr_trans_yr8_rt
+gen xxx = real(nopell_unkn_4yr_trans_yr6_rt)
+drop nopell_unkn_4yr_trans_yr6_rt
+ren xxx nopell_unkn_4yr_trans_yr6_rt
+gen xxx = real(nopell_unkn_4yr_trans_yr4_rt)
+drop nopell_unkn_4yr_trans_yr4_rt
+ren xxx nopell_unkn_4yr_trans_yr4_rt
+gen xxx = real(nopell_unkn_4yr_trans_yr3_rt)
+drop nopell_unkn_4yr_trans_yr3_rt
+ren xxx nopell_unkn_4yr_trans_yr3_rt
+gen xxx = real(nopell_unkn_4yr_trans_yr2_rt)
+drop nopell_unkn_4yr_trans_yr2_rt
+ren xxx nopell_unkn_4yr_trans_yr2_rt
+gen xxx = real(nopell_unkn_2yr_trans_yr8_rt)
+drop nopell_unkn_2yr_trans_yr8_rt
+ren xxx nopell_unkn_2yr_trans_yr8_rt
+gen xxx = real(nopell_unkn_2yr_trans_yr6_rt)
+drop nopell_unkn_2yr_trans_yr6_rt
+ren xxx nopell_unkn_2yr_trans_yr6_rt
+gen xxx = real(nopell_unkn_2yr_trans_yr4_rt)
+drop nopell_unkn_2yr_trans_yr4_rt
+ren xxx nopell_unkn_2yr_trans_yr4_rt
+gen xxx = real(nopell_unkn_2yr_trans_yr3_rt)
+drop nopell_unkn_2yr_trans_yr3_rt
+ren xxx nopell_unkn_2yr_trans_yr3_rt
+gen xxx = real(nopell_unkn_2yr_trans_yr2_rt)
+drop nopell_unkn_2yr_trans_yr2_rt
+ren xxx nopell_unkn_2yr_trans_yr2_rt
+gen xxx = real(nopell_rpy_7yr_rt)
+drop nopell_rpy_7yr_rt
+ren xxx nopell_rpy_7yr_rt
+gen xxx = real(nopell_rpy_7yr_n)
+drop nopell_rpy_7yr_n
+ren xxx nopell_rpy_7yr_n
+gen xxx = real(nopell_rpy_5yr_rt)
+drop nopell_rpy_5yr_rt
+ren xxx nopell_rpy_5yr_rt
+gen xxx = real(nopell_rpy_5yr_n)
+drop nopell_rpy_5yr_n
+ren xxx nopell_rpy_5yr_n
+gen xxx = real(nopell_rpy_3yr_rt_supp)
+drop nopell_rpy_3yr_rt_supp
+ren xxx nopell_rpy_3yr_rt_supp
+gen xxx = real(nopell_rpy_3yr_rt)
+drop nopell_rpy_3yr_rt
+ren xxx nopell_rpy_3yr_rt
+gen xxx = real(nopell_rpy_3yr_n)
+drop nopell_rpy_3yr_n
+ren xxx nopell_rpy_3yr_n
+gen xxx = real(nopell_rpy_1yr_rt)
+drop nopell_rpy_1yr_rt
+ren xxx nopell_rpy_1yr_rt
+gen xxx = real(nopell_rpy_1yr_n)
+drop nopell_rpy_1yr_n
+ren xxx nopell_rpy_1yr_n
+gen xxx = real(nopell_enrl_orig_yr8_rt)
+drop nopell_enrl_orig_yr8_rt
+ren xxx nopell_enrl_orig_yr8_rt
+gen xxx = real(nopell_enrl_orig_yr6_rt)
+drop nopell_enrl_orig_yr6_rt
+ren xxx nopell_enrl_orig_yr6_rt
+gen xxx = real(nopell_enrl_orig_yr4_rt)
+drop nopell_enrl_orig_yr4_rt
+ren xxx nopell_enrl_orig_yr4_rt
+gen xxx = real(nopell_enrl_orig_yr3_rt)
+drop nopell_enrl_orig_yr3_rt
+ren xxx nopell_enrl_orig_yr3_rt
+gen xxx = real(nopell_enrl_orig_yr2_rt)
+drop nopell_enrl_orig_yr2_rt
+ren xxx nopell_enrl_orig_yr2_rt
+gen xxx = real(nopell_enrl_4yr_trans_yr8_rt)
+drop nopell_enrl_4yr_trans_yr8_rt
+ren xxx nopell_enrl_4yr_trans_yr8_rt
+gen xxx = real(nopell_enrl_4yr_trans_yr6_rt)
+drop nopell_enrl_4yr_trans_yr6_rt
+ren xxx nopell_enrl_4yr_trans_yr6_rt
+gen xxx = real(nopell_enrl_4yr_trans_yr4_rt)
+drop nopell_enrl_4yr_trans_yr4_rt
+ren xxx nopell_enrl_4yr_trans_yr4_rt
+gen xxx = real(nopell_enrl_4yr_trans_yr3_rt)
+drop nopell_enrl_4yr_trans_yr3_rt
+ren xxx nopell_enrl_4yr_trans_yr3_rt
+gen xxx = real(nopell_enrl_4yr_trans_yr2_rt)
+drop nopell_enrl_4yr_trans_yr2_rt
+ren xxx nopell_enrl_4yr_trans_yr2_rt
+gen xxx = real(nopell_enrl_2yr_trans_yr8_rt)
+drop nopell_enrl_2yr_trans_yr8_rt
+ren xxx nopell_enrl_2yr_trans_yr8_rt
+gen xxx = real(nopell_enrl_2yr_trans_yr6_rt)
+drop nopell_enrl_2yr_trans_yr6_rt
+ren xxx nopell_enrl_2yr_trans_yr6_rt
+gen xxx = real(nopell_enrl_2yr_trans_yr4_rt)
+drop nopell_enrl_2yr_trans_yr4_rt
+ren xxx nopell_enrl_2yr_trans_yr4_rt
+gen xxx = real(nopell_enrl_2yr_trans_yr3_rt)
+drop nopell_enrl_2yr_trans_yr3_rt
+ren xxx nopell_enrl_2yr_trans_yr3_rt
+gen xxx = real(nopell_enrl_2yr_trans_yr2_rt)
+drop nopell_enrl_2yr_trans_yr2_rt
+ren xxx nopell_enrl_2yr_trans_yr2_rt
+gen xxx = real(nopell_debt_n)
+drop nopell_debt_n
+ren xxx nopell_debt_n
+gen xxx = real(nopell_debt_mdn)
+drop nopell_debt_mdn
+ren xxx nopell_debt_mdn
+gen xxx = real(nopell_death_yr8_rt)
+drop nopell_death_yr8_rt
+ren xxx nopell_death_yr8_rt
+gen xxx = real(nopell_death_yr6_rt)
+drop nopell_death_yr6_rt
+ren xxx nopell_death_yr6_rt
+gen xxx = real(nopell_death_yr4_rt)
+drop nopell_death_yr4_rt
+ren xxx nopell_death_yr4_rt
+gen xxx = real(nopell_death_yr3_rt)
+drop nopell_death_yr3_rt
+ren xxx nopell_death_yr3_rt
+gen xxx = real(nopell_death_yr2_rt)
+drop nopell_death_yr2_rt
+ren xxx nopell_death_yr2_rt
+gen xxx = real(nopell_comp_orig_yr8_rt)
+drop nopell_comp_orig_yr8_rt
+ren xxx nopell_comp_orig_yr8_rt
+gen xxx = real(nopell_comp_orig_yr6_rt)
+drop nopell_comp_orig_yr6_rt
+ren xxx nopell_comp_orig_yr6_rt
+gen xxx = real(nopell_comp_orig_yr4_rt)
+drop nopell_comp_orig_yr4_rt
+ren xxx nopell_comp_orig_yr4_rt
+gen xxx = real(nopell_comp_orig_yr3_rt)
+drop nopell_comp_orig_yr3_rt
+ren xxx nopell_comp_orig_yr3_rt
+gen xxx = real(nopell_comp_orig_yr2_rt)
+drop nopell_comp_orig_yr2_rt
+ren xxx nopell_comp_orig_yr2_rt
+gen xxx = real(nopell_comp_4yr_trans_yr8_rt)
+drop nopell_comp_4yr_trans_yr8_rt
+ren xxx nopell_comp_4yr_trans_yr8_rt
+gen xxx = real(nopell_comp_4yr_trans_yr6_rt)
+drop nopell_comp_4yr_trans_yr6_rt
+ren xxx nopell_comp_4yr_trans_yr6_rt
+gen xxx = real(nopell_comp_4yr_trans_yr4_rt)
+drop nopell_comp_4yr_trans_yr4_rt
+ren xxx nopell_comp_4yr_trans_yr4_rt
+gen xxx = real(nopell_comp_4yr_trans_yr3_rt)
+drop nopell_comp_4yr_trans_yr3_rt
+ren xxx nopell_comp_4yr_trans_yr3_rt
+gen xxx = real(nopell_comp_4yr_trans_yr2_rt)
+drop nopell_comp_4yr_trans_yr2_rt
+ren xxx nopell_comp_4yr_trans_yr2_rt
+gen xxx = real(nopell_comp_2yr_trans_yr8_rt)
+drop nopell_comp_2yr_trans_yr8_rt
+ren xxx nopell_comp_2yr_trans_yr8_rt
+gen xxx = real(nopell_comp_2yr_trans_yr6_rt)
+drop nopell_comp_2yr_trans_yr6_rt
+ren xxx nopell_comp_2yr_trans_yr6_rt
+gen xxx = real(nopell_comp_2yr_trans_yr4_rt)
+drop nopell_comp_2yr_trans_yr4_rt
+ren xxx nopell_comp_2yr_trans_yr4_rt
+gen xxx = real(nopell_comp_2yr_trans_yr3_rt)
+drop nopell_comp_2yr_trans_yr3_rt
+ren xxx nopell_comp_2yr_trans_yr3_rt
+gen xxx = real(nopell_comp_2yr_trans_yr2_rt)
+drop nopell_comp_2yr_trans_yr2_rt
+ren xxx nopell_comp_2yr_trans_yr2_rt
+gen xxx = real(noncom_rpy_7yr_rt)
+drop noncom_rpy_7yr_rt
+ren xxx noncom_rpy_7yr_rt
+gen xxx = real(noncom_rpy_7yr_n)
+drop noncom_rpy_7yr_n
+ren xxx noncom_rpy_7yr_n
+gen xxx = real(noncom_rpy_5yr_rt)
+drop noncom_rpy_5yr_rt
+ren xxx noncom_rpy_5yr_rt
+gen xxx = real(noncom_rpy_5yr_n)
+drop noncom_rpy_5yr_n
+ren xxx noncom_rpy_5yr_n
+gen xxx = real(noncom_rpy_3yr_rt_supp)
+drop noncom_rpy_3yr_rt_supp
+ren xxx noncom_rpy_3yr_rt_supp
+gen xxx = real(noncom_rpy_3yr_rt)
+drop noncom_rpy_3yr_rt
+ren xxx noncom_rpy_3yr_rt
+gen xxx = real(noncom_rpy_3yr_n)
+drop noncom_rpy_3yr_n
+ren xxx noncom_rpy_3yr_n
+gen xxx = real(noncom_rpy_1yr_rt)
+drop noncom_rpy_1yr_rt
+ren xxx noncom_rpy_1yr_rt
+gen xxx = real(noncom_rpy_1yr_n)
+drop noncom_rpy_1yr_n
+ren xxx noncom_rpy_1yr_n
+gen xxx = real(noloan_yr8_n)
+drop noloan_yr8_n
+ren xxx noloan_yr8_n
+gen xxx = real(noloan_yr6_n)
+drop noloan_yr6_n
+ren xxx noloan_yr6_n
+gen xxx = real(noloan_yr4_n)
+drop noloan_yr4_n
+ren xxx noloan_yr4_n
+gen xxx = real(noloan_yr3_n)
+drop noloan_yr3_n
+ren xxx noloan_yr3_n
+gen xxx = real(noloan_yr2_n)
+drop noloan_yr2_n
+ren xxx noloan_yr2_n
+gen xxx = real(noloan_wdraw_orig_yr8_rt)
+drop noloan_wdraw_orig_yr8_rt
+ren xxx noloan_wdraw_orig_yr8_rt
+gen xxx = real(noloan_wdraw_orig_yr6_rt)
+drop noloan_wdraw_orig_yr6_rt
+ren xxx noloan_wdraw_orig_yr6_rt
+gen xxx = real(noloan_wdraw_orig_yr4_rt)
+drop noloan_wdraw_orig_yr4_rt
+ren xxx noloan_wdraw_orig_yr4_rt
+gen xxx = real(noloan_wdraw_orig_yr3_rt)
+drop noloan_wdraw_orig_yr3_rt
+ren xxx noloan_wdraw_orig_yr3_rt
+gen xxx = real(noloan_wdraw_orig_yr2_rt)
+drop noloan_wdraw_orig_yr2_rt
+ren xxx noloan_wdraw_orig_yr2_rt
+gen xxx = real(noloan_wdraw_4yr_trans_yr8_rt)
+drop noloan_wdraw_4yr_trans_yr8_rt
+ren xxx noloan_wdraw_4yr_trans_yr8_rt
+gen xxx = real(noloan_wdraw_4yr_trans_yr6_rt)
+drop noloan_wdraw_4yr_trans_yr6_rt
+ren xxx noloan_wdraw_4yr_trans_yr6_rt
+gen xxx = real(noloan_wdraw_4yr_trans_yr4_rt)
+drop noloan_wdraw_4yr_trans_yr4_rt
+ren xxx noloan_wdraw_4yr_trans_yr4_rt
+gen xxx = real(noloan_wdraw_4yr_trans_yr3_rt)
+drop noloan_wdraw_4yr_trans_yr3_rt
+ren xxx noloan_wdraw_4yr_trans_yr3_rt
+gen xxx = real(noloan_wdraw_4yr_trans_yr2_rt)
+drop noloan_wdraw_4yr_trans_yr2_rt
+ren xxx noloan_wdraw_4yr_trans_yr2_rt
+gen xxx = real(noloan_wdraw_2yr_trans_yr8_rt)
+drop noloan_wdraw_2yr_trans_yr8_rt
+ren xxx noloan_wdraw_2yr_trans_yr8_rt
+gen xxx = real(noloan_wdraw_2yr_trans_yr6_rt)
+drop noloan_wdraw_2yr_trans_yr6_rt
+ren xxx noloan_wdraw_2yr_trans_yr6_rt
+gen xxx = real(noloan_wdraw_2yr_trans_yr4_rt)
+drop noloan_wdraw_2yr_trans_yr4_rt
+ren xxx noloan_wdraw_2yr_trans_yr4_rt
+gen xxx = real(noloan_wdraw_2yr_trans_yr3_rt)
+drop noloan_wdraw_2yr_trans_yr3_rt
+ren xxx noloan_wdraw_2yr_trans_yr3_rt
+gen xxx = real(noloan_wdraw_2yr_trans_yr2_rt)
+drop noloan_wdraw_2yr_trans_yr2_rt
+ren xxx noloan_wdraw_2yr_trans_yr2_rt
+gen xxx = real(noloan_unkn_orig_yr8_rt)
+drop noloan_unkn_orig_yr8_rt
+ren xxx noloan_unkn_orig_yr8_rt
+gen xxx = real(noloan_unkn_orig_yr6_rt)
+drop noloan_unkn_orig_yr6_rt
+ren xxx noloan_unkn_orig_yr6_rt
+gen xxx = real(noloan_unkn_orig_yr4_rt)
+drop noloan_unkn_orig_yr4_rt
+ren xxx noloan_unkn_orig_yr4_rt
+gen xxx = real(noloan_unkn_orig_yr3_rt)
+drop noloan_unkn_orig_yr3_rt
+ren xxx noloan_unkn_orig_yr3_rt
+gen xxx = real(noloan_unkn_orig_yr2_rt)
+drop noloan_unkn_orig_yr2_rt
+ren xxx noloan_unkn_orig_yr2_rt
+gen xxx = real(noloan_unkn_4yr_trans_yr8_rt)
+drop noloan_unkn_4yr_trans_yr8_rt
+ren xxx noloan_unkn_4yr_trans_yr8_rt
+gen xxx = real(noloan_unkn_4yr_trans_yr6_rt)
+drop noloan_unkn_4yr_trans_yr6_rt
+ren xxx noloan_unkn_4yr_trans_yr6_rt
+gen xxx = real(noloan_unkn_4yr_trans_yr4_rt)
+drop noloan_unkn_4yr_trans_yr4_rt
+ren xxx noloan_unkn_4yr_trans_yr4_rt
+gen xxx = real(noloan_unkn_4yr_trans_yr3_rt)
+drop noloan_unkn_4yr_trans_yr3_rt
+ren xxx noloan_unkn_4yr_trans_yr3_rt
+gen xxx = real(noloan_unkn_4yr_trans_yr2_rt)
+drop noloan_unkn_4yr_trans_yr2_rt
+ren xxx noloan_unkn_4yr_trans_yr2_rt
+gen xxx = real(noloan_unkn_2yr_trans_yr8_rt)
+drop noloan_unkn_2yr_trans_yr8_rt
+ren xxx noloan_unkn_2yr_trans_yr8_rt
+gen xxx = real(noloan_unkn_2yr_trans_yr6_rt)
+drop noloan_unkn_2yr_trans_yr6_rt
+ren xxx noloan_unkn_2yr_trans_yr6_rt
+gen xxx = real(noloan_unkn_2yr_trans_yr4_rt)
+drop noloan_unkn_2yr_trans_yr4_rt
+ren xxx noloan_unkn_2yr_trans_yr4_rt
+gen xxx = real(noloan_unkn_2yr_trans_yr3_rt)
+drop noloan_unkn_2yr_trans_yr3_rt
+ren xxx noloan_unkn_2yr_trans_yr3_rt
+gen xxx = real(noloan_unkn_2yr_trans_yr2_rt)
+drop noloan_unkn_2yr_trans_yr2_rt
+ren xxx noloan_unkn_2yr_trans_yr2_rt
+gen xxx = real(noloan_enrl_orig_yr8_rt)
+drop noloan_enrl_orig_yr8_rt
+ren xxx noloan_enrl_orig_yr8_rt
+gen xxx = real(noloan_enrl_orig_yr6_rt)
+drop noloan_enrl_orig_yr6_rt
+ren xxx noloan_enrl_orig_yr6_rt
+gen xxx = real(noloan_enrl_orig_yr4_rt)
+drop noloan_enrl_orig_yr4_rt
+ren xxx noloan_enrl_orig_yr4_rt
+gen xxx = real(noloan_enrl_orig_yr3_rt)
+drop noloan_enrl_orig_yr3_rt
+ren xxx noloan_enrl_orig_yr3_rt
+gen xxx = real(noloan_enrl_orig_yr2_rt)
+drop noloan_enrl_orig_yr2_rt
+ren xxx noloan_enrl_orig_yr2_rt
+gen xxx = real(noloan_enrl_4yr_trans_yr8_rt)
+drop noloan_enrl_4yr_trans_yr8_rt
+ren xxx noloan_enrl_4yr_trans_yr8_rt
+gen xxx = real(noloan_enrl_4yr_trans_yr6_rt)
+drop noloan_enrl_4yr_trans_yr6_rt
+ren xxx noloan_enrl_4yr_trans_yr6_rt
+gen xxx = real(noloan_enrl_4yr_trans_yr4_rt)
+drop noloan_enrl_4yr_trans_yr4_rt
+ren xxx noloan_enrl_4yr_trans_yr4_rt
+gen xxx = real(noloan_enrl_4yr_trans_yr3_rt)
+drop noloan_enrl_4yr_trans_yr3_rt
+ren xxx noloan_enrl_4yr_trans_yr3_rt
+gen xxx = real(noloan_enrl_4yr_trans_yr2_rt)
+drop noloan_enrl_4yr_trans_yr2_rt
+ren xxx noloan_enrl_4yr_trans_yr2_rt
+gen xxx = real(noloan_enrl_2yr_trans_yr8_rt)
+drop noloan_enrl_2yr_trans_yr8_rt
+ren xxx noloan_enrl_2yr_trans_yr8_rt
+gen xxx = real(noloan_enrl_2yr_trans_yr6_rt)
+drop noloan_enrl_2yr_trans_yr6_rt
+ren xxx noloan_enrl_2yr_trans_yr6_rt
+gen xxx = real(noloan_enrl_2yr_trans_yr4_rt)
+drop noloan_enrl_2yr_trans_yr4_rt
+ren xxx noloan_enrl_2yr_trans_yr4_rt
+gen xxx = real(noloan_enrl_2yr_trans_yr3_rt)
+drop noloan_enrl_2yr_trans_yr3_rt
+ren xxx noloan_enrl_2yr_trans_yr3_rt
+gen xxx = real(noloan_enrl_2yr_trans_yr2_rt)
+drop noloan_enrl_2yr_trans_yr2_rt
+ren xxx noloan_enrl_2yr_trans_yr2_rt
+gen xxx = real(noloan_death_yr8_rt)
+drop noloan_death_yr8_rt
+ren xxx noloan_death_yr8_rt
+gen xxx = real(noloan_death_yr6_rt)
+drop noloan_death_yr6_rt
+ren xxx noloan_death_yr6_rt
+gen xxx = real(noloan_death_yr4_rt)
+drop noloan_death_yr4_rt
+ren xxx noloan_death_yr4_rt
+gen xxx = real(noloan_death_yr3_rt)
+drop noloan_death_yr3_rt
+ren xxx noloan_death_yr3_rt
+gen xxx = real(noloan_death_yr2_rt)
+drop noloan_death_yr2_rt
+ren xxx noloan_death_yr2_rt
+gen xxx = real(noloan_comp_orig_yr8_rt)
+drop noloan_comp_orig_yr8_rt
+ren xxx noloan_comp_orig_yr8_rt
+gen xxx = real(noloan_comp_orig_yr6_rt)
+drop noloan_comp_orig_yr6_rt
+ren xxx noloan_comp_orig_yr6_rt
+gen xxx = real(noloan_comp_orig_yr4_rt)
+drop noloan_comp_orig_yr4_rt
+ren xxx noloan_comp_orig_yr4_rt
+gen xxx = real(noloan_comp_orig_yr3_rt)
+drop noloan_comp_orig_yr3_rt
+ren xxx noloan_comp_orig_yr3_rt
+gen xxx = real(noloan_comp_orig_yr2_rt)
+drop noloan_comp_orig_yr2_rt
+ren xxx noloan_comp_orig_yr2_rt
+gen xxx = real(noloan_comp_4yr_trans_yr8_rt)
+drop noloan_comp_4yr_trans_yr8_rt
+ren xxx noloan_comp_4yr_trans_yr8_rt
+gen xxx = real(noloan_comp_4yr_trans_yr6_rt)
+drop noloan_comp_4yr_trans_yr6_rt
+ren xxx noloan_comp_4yr_trans_yr6_rt
+gen xxx = real(noloan_comp_4yr_trans_yr4_rt)
+drop noloan_comp_4yr_trans_yr4_rt
+ren xxx noloan_comp_4yr_trans_yr4_rt
+gen xxx = real(noloan_comp_4yr_trans_yr3_rt)
+drop noloan_comp_4yr_trans_yr3_rt
+ren xxx noloan_comp_4yr_trans_yr3_rt
+gen xxx = real(noloan_comp_4yr_trans_yr2_rt)
+drop noloan_comp_4yr_trans_yr2_rt
+ren xxx noloan_comp_4yr_trans_yr2_rt
+gen xxx = real(noloan_comp_2yr_trans_yr8_rt)
+drop noloan_comp_2yr_trans_yr8_rt
+ren xxx noloan_comp_2yr_trans_yr8_rt
+gen xxx = real(noloan_comp_2yr_trans_yr6_rt)
+drop noloan_comp_2yr_trans_yr6_rt
+ren xxx noloan_comp_2yr_trans_yr6_rt
+gen xxx = real(noloan_comp_2yr_trans_yr4_rt)
+drop noloan_comp_2yr_trans_yr4_rt
+ren xxx noloan_comp_2yr_trans_yr4_rt
+gen xxx = real(noloan_comp_2yr_trans_yr3_rt)
+drop noloan_comp_2yr_trans_yr3_rt
+ren xxx noloan_comp_2yr_trans_yr3_rt
+gen xxx = real(noloan_comp_2yr_trans_yr2_rt)
+drop noloan_comp_2yr_trans_yr2_rt
+ren xxx noloan_comp_2yr_trans_yr2_rt
+gen xxx = real(nanti)
+drop nanti
+ren xxx nanti
+gen xxx = real(mn_earn_wne_p9)
+drop mn_earn_wne_p9
+ren xxx mn_earn_wne_p9
+gen xxx = real(mn_earn_wne_p8)
+drop mn_earn_wne_p8
+ren xxx mn_earn_wne_p8
+gen xxx = real(mn_earn_wne_p7)
+drop mn_earn_wne_p7
+ren xxx mn_earn_wne_p7
+gen xxx = real(mn_earn_wne_p6)
+drop mn_earn_wne_p6
+ren xxx mn_earn_wne_p6
+gen xxx = real(mn_earn_wne_p10)
+drop mn_earn_wne_p10
+ren xxx mn_earn_wne_p10
+gen xxx = real(mn_earn_wne_male1_p6)
+drop mn_earn_wne_male1_p6
+ren xxx mn_earn_wne_male1_p6
+gen xxx = real(mn_earn_wne_male1_p10)
+drop mn_earn_wne_male1_p10
+ren xxx mn_earn_wne_male1_p10
+gen xxx = real(mn_earn_wne_male0_p6)
+drop mn_earn_wne_male0_p6
+ren xxx mn_earn_wne_male0_p6
+gen xxx = real(mn_earn_wne_male0_p10)
+drop mn_earn_wne_male0_p10
+ren xxx mn_earn_wne_male0_p10
+gen xxx = real(mn_earn_wne_indep1_p6)
+drop mn_earn_wne_indep1_p6
+ren xxx mn_earn_wne_indep1_p6
+gen xxx = real(mn_earn_wne_indep1_p10)
+drop mn_earn_wne_indep1_p10
+ren xxx mn_earn_wne_indep1_p10
+gen xxx = real(mn_earn_wne_indep0_p6)
+drop mn_earn_wne_indep0_p6
+ren xxx mn_earn_wne_indep0_p6
+gen xxx = real(mn_earn_wne_indep0_p10)
+drop mn_earn_wne_indep0_p10
+ren xxx mn_earn_wne_indep0_p10
+gen xxx = real(mn_earn_wne_indep0_inc1_p6)
+drop mn_earn_wne_indep0_inc1_p6
+ren xxx mn_earn_wne_indep0_inc1_p6
+gen xxx = real(mn_earn_wne_indep0_inc1_p10)
+drop mn_earn_wne_indep0_inc1_p10
+ren xxx mn_earn_wne_indep0_inc1_p10
+gen xxx = real(mn_earn_wne_inc3_p6)
+drop mn_earn_wne_inc3_p6
+ren xxx mn_earn_wne_inc3_p6
+gen xxx = real(mn_earn_wne_inc3_p10)
+drop mn_earn_wne_inc3_p10
+ren xxx mn_earn_wne_inc3_p10
+gen xxx = real(mn_earn_wne_inc2_p6)
+drop mn_earn_wne_inc2_p6
+ren xxx mn_earn_wne_inc2_p6
+gen xxx = real(mn_earn_wne_inc2_p10)
+drop mn_earn_wne_inc2_p10
+ren xxx mn_earn_wne_inc2_p10
+gen xxx = real(mn_earn_wne_inc1_p6)
+drop mn_earn_wne_inc1_p6
+ren xxx mn_earn_wne_inc1_p6
+gen xxx = real(mn_earn_wne_inc1_p10)
+drop mn_earn_wne_inc1_p10
+ren xxx mn_earn_wne_inc1_p10
+gen xxx = real(menonly)
+drop menonly
+ren xxx menonly
+gen xxx = real(median_hh_inc)
+drop median_hh_inc
+ren xxx median_hh_inc
+gen xxx = real(md_inc_yr8_n)
+drop md_inc_yr8_n
+ren xxx md_inc_yr8_n
+gen xxx = real(md_inc_yr6_n)
+drop md_inc_yr6_n
+ren xxx md_inc_yr6_n
+gen xxx = real(md_inc_yr4_n)
+drop md_inc_yr4_n
+ren xxx md_inc_yr4_n
+gen xxx = real(md_inc_yr3_n)
+drop md_inc_yr3_n
+ren xxx md_inc_yr3_n
+gen xxx = real(md_inc_yr2_n)
+drop md_inc_yr2_n
+ren xxx md_inc_yr2_n
+gen xxx = real(md_inc_wdraw_orig_yr8_rt)
+drop md_inc_wdraw_orig_yr8_rt
+ren xxx md_inc_wdraw_orig_yr8_rt
+gen xxx = real(md_inc_wdraw_orig_yr6_rt)
+drop md_inc_wdraw_orig_yr6_rt
+ren xxx md_inc_wdraw_orig_yr6_rt
+gen xxx = real(md_inc_wdraw_orig_yr4_rt)
+drop md_inc_wdraw_orig_yr4_rt
+ren xxx md_inc_wdraw_orig_yr4_rt
+gen xxx = real(md_inc_wdraw_orig_yr3_rt)
+drop md_inc_wdraw_orig_yr3_rt
+ren xxx md_inc_wdraw_orig_yr3_rt
+gen xxx = real(md_inc_wdraw_orig_yr2_rt)
+drop md_inc_wdraw_orig_yr2_rt
+ren xxx md_inc_wdraw_orig_yr2_rt
+gen xxx = real(md_inc_wdraw_4yr_trans_yr8_rt)
+drop md_inc_wdraw_4yr_trans_yr8_rt
+ren xxx md_inc_wdraw_4yr_trans_yr8_rt
+gen xxx = real(md_inc_wdraw_4yr_trans_yr6_rt)
+drop md_inc_wdraw_4yr_trans_yr6_rt
+ren xxx md_inc_wdraw_4yr_trans_yr6_rt
+gen xxx = real(md_inc_wdraw_4yr_trans_yr4_rt)
+drop md_inc_wdraw_4yr_trans_yr4_rt
+ren xxx md_inc_wdraw_4yr_trans_yr4_rt
+gen xxx = real(md_inc_wdraw_4yr_trans_yr3_rt)
+drop md_inc_wdraw_4yr_trans_yr3_rt
+ren xxx md_inc_wdraw_4yr_trans_yr3_rt
+gen xxx = real(md_inc_wdraw_4yr_trans_yr2_rt)
+drop md_inc_wdraw_4yr_trans_yr2_rt
+ren xxx md_inc_wdraw_4yr_trans_yr2_rt
+gen xxx = real(md_inc_wdraw_2yr_trans_yr8_rt)
+drop md_inc_wdraw_2yr_trans_yr8_rt
+ren xxx md_inc_wdraw_2yr_trans_yr8_rt
+gen xxx = real(md_inc_wdraw_2yr_trans_yr6_rt)
+drop md_inc_wdraw_2yr_trans_yr6_rt
+ren xxx md_inc_wdraw_2yr_trans_yr6_rt
+gen xxx = real(md_inc_wdraw_2yr_trans_yr4_rt)
+drop md_inc_wdraw_2yr_trans_yr4_rt
+ren xxx md_inc_wdraw_2yr_trans_yr4_rt
+gen xxx = real(md_inc_wdraw_2yr_trans_yr3_rt)
+drop md_inc_wdraw_2yr_trans_yr3_rt
+ren xxx md_inc_wdraw_2yr_trans_yr3_rt
+gen xxx = real(md_inc_wdraw_2yr_trans_yr2_rt)
+drop md_inc_wdraw_2yr_trans_yr2_rt
+ren xxx md_inc_wdraw_2yr_trans_yr2_rt
+gen xxx = real(md_inc_unkn_orig_yr8_rt)
+drop md_inc_unkn_orig_yr8_rt
+ren xxx md_inc_unkn_orig_yr8_rt
+gen xxx = real(md_inc_unkn_orig_yr6_rt)
+drop md_inc_unkn_orig_yr6_rt
+ren xxx md_inc_unkn_orig_yr6_rt
+gen xxx = real(md_inc_unkn_orig_yr4_rt)
+drop md_inc_unkn_orig_yr4_rt
+ren xxx md_inc_unkn_orig_yr4_rt
+gen xxx = real(md_inc_unkn_orig_yr3_rt)
+drop md_inc_unkn_orig_yr3_rt
+ren xxx md_inc_unkn_orig_yr3_rt
+gen xxx = real(md_inc_unkn_orig_yr2_rt)
+drop md_inc_unkn_orig_yr2_rt
+ren xxx md_inc_unkn_orig_yr2_rt
+gen xxx = real(md_inc_unkn_4yr_trans_yr8_rt)
+drop md_inc_unkn_4yr_trans_yr8_rt
+ren xxx md_inc_unkn_4yr_trans_yr8_rt
+gen xxx = real(md_inc_unkn_4yr_trans_yr6_rt)
+drop md_inc_unkn_4yr_trans_yr6_rt
+ren xxx md_inc_unkn_4yr_trans_yr6_rt
+gen xxx = real(md_inc_unkn_4yr_trans_yr4_rt)
+drop md_inc_unkn_4yr_trans_yr4_rt
+ren xxx md_inc_unkn_4yr_trans_yr4_rt
+gen xxx = real(md_inc_unkn_4yr_trans_yr3_rt)
+drop md_inc_unkn_4yr_trans_yr3_rt
+ren xxx md_inc_unkn_4yr_trans_yr3_rt
+gen xxx = real(md_inc_unkn_4yr_trans_yr2_rt)
+drop md_inc_unkn_4yr_trans_yr2_rt
+ren xxx md_inc_unkn_4yr_trans_yr2_rt
+gen xxx = real(md_inc_unkn_2yr_trans_yr8_rt)
+drop md_inc_unkn_2yr_trans_yr8_rt
+ren xxx md_inc_unkn_2yr_trans_yr8_rt
+gen xxx = real(md_inc_unkn_2yr_trans_yr6_rt)
+drop md_inc_unkn_2yr_trans_yr6_rt
+ren xxx md_inc_unkn_2yr_trans_yr6_rt
+gen xxx = real(md_inc_unkn_2yr_trans_yr4_rt)
+drop md_inc_unkn_2yr_trans_yr4_rt
+ren xxx md_inc_unkn_2yr_trans_yr4_rt
+gen xxx = real(md_inc_unkn_2yr_trans_yr3_rt)
+drop md_inc_unkn_2yr_trans_yr3_rt
+ren xxx md_inc_unkn_2yr_trans_yr3_rt
+gen xxx = real(md_inc_unkn_2yr_trans_yr2_rt)
+drop md_inc_unkn_2yr_trans_yr2_rt
+ren xxx md_inc_unkn_2yr_trans_yr2_rt
+gen xxx = real(md_inc_rpy_7yr_rt)
+drop md_inc_rpy_7yr_rt
+ren xxx md_inc_rpy_7yr_rt
+gen xxx = real(md_inc_rpy_7yr_n)
+drop md_inc_rpy_7yr_n
+ren xxx md_inc_rpy_7yr_n
+gen xxx = real(md_inc_rpy_5yr_rt)
+drop md_inc_rpy_5yr_rt
+ren xxx md_inc_rpy_5yr_rt
+gen xxx = real(md_inc_rpy_5yr_n)
+drop md_inc_rpy_5yr_n
+ren xxx md_inc_rpy_5yr_n
+gen xxx = real(md_inc_rpy_3yr_rt_supp)
+drop md_inc_rpy_3yr_rt_supp
+ren xxx md_inc_rpy_3yr_rt_supp
+gen xxx = real(md_inc_rpy_3yr_rt)
+drop md_inc_rpy_3yr_rt
+ren xxx md_inc_rpy_3yr_rt
+gen xxx = real(md_inc_rpy_3yr_n)
+drop md_inc_rpy_3yr_n
+ren xxx md_inc_rpy_3yr_n
+gen xxx = real(md_inc_rpy_1yr_rt)
+drop md_inc_rpy_1yr_rt
+ren xxx md_inc_rpy_1yr_rt
+gen xxx = real(md_inc_rpy_1yr_n)
+drop md_inc_rpy_1yr_n
+ren xxx md_inc_rpy_1yr_n
+gen xxx = real(md_inc_enrl_orig_yr8_rt)
+drop md_inc_enrl_orig_yr8_rt
+ren xxx md_inc_enrl_orig_yr8_rt
+gen xxx = real(md_inc_enrl_orig_yr6_rt)
+drop md_inc_enrl_orig_yr6_rt
+ren xxx md_inc_enrl_orig_yr6_rt
+gen xxx = real(md_inc_enrl_orig_yr4_rt)
+drop md_inc_enrl_orig_yr4_rt
+ren xxx md_inc_enrl_orig_yr4_rt
+gen xxx = real(md_inc_enrl_orig_yr3_rt)
+drop md_inc_enrl_orig_yr3_rt
+ren xxx md_inc_enrl_orig_yr3_rt
+gen xxx = real(md_inc_enrl_orig_yr2_rt)
+drop md_inc_enrl_orig_yr2_rt
+ren xxx md_inc_enrl_orig_yr2_rt
+gen xxx = real(md_inc_enrl_4yr_trans_yr8_rt)
+drop md_inc_enrl_4yr_trans_yr8_rt
+ren xxx md_inc_enrl_4yr_trans_yr8_rt
+gen xxx = real(md_inc_enrl_4yr_trans_yr6_rt)
+drop md_inc_enrl_4yr_trans_yr6_rt
+ren xxx md_inc_enrl_4yr_trans_yr6_rt
+gen xxx = real(md_inc_enrl_4yr_trans_yr4_rt)
+drop md_inc_enrl_4yr_trans_yr4_rt
+ren xxx md_inc_enrl_4yr_trans_yr4_rt
+gen xxx = real(md_inc_enrl_4yr_trans_yr3_rt)
+drop md_inc_enrl_4yr_trans_yr3_rt
+ren xxx md_inc_enrl_4yr_trans_yr3_rt
+gen xxx = real(md_inc_enrl_4yr_trans_yr2_rt)
+drop md_inc_enrl_4yr_trans_yr2_rt
+ren xxx md_inc_enrl_4yr_trans_yr2_rt
+gen xxx = real(md_inc_enrl_2yr_trans_yr8_rt)
+drop md_inc_enrl_2yr_trans_yr8_rt
+ren xxx md_inc_enrl_2yr_trans_yr8_rt
+gen xxx = real(md_inc_enrl_2yr_trans_yr6_rt)
+drop md_inc_enrl_2yr_trans_yr6_rt
+ren xxx md_inc_enrl_2yr_trans_yr6_rt
+gen xxx = real(md_inc_enrl_2yr_trans_yr4_rt)
+drop md_inc_enrl_2yr_trans_yr4_rt
+ren xxx md_inc_enrl_2yr_trans_yr4_rt
+gen xxx = real(md_inc_enrl_2yr_trans_yr3_rt)
+drop md_inc_enrl_2yr_trans_yr3_rt
+ren xxx md_inc_enrl_2yr_trans_yr3_rt
+gen xxx = real(md_inc_enrl_2yr_trans_yr2_rt)
+drop md_inc_enrl_2yr_trans_yr2_rt
+ren xxx md_inc_enrl_2yr_trans_yr2_rt
+gen xxx = real(md_inc_debt_n)
+drop md_inc_debt_n
+ren xxx md_inc_debt_n
+gen xxx = real(md_inc_debt_mdn)
+drop md_inc_debt_mdn
+ren xxx md_inc_debt_mdn
+gen xxx = real(md_inc_death_yr8_rt)
+drop md_inc_death_yr8_rt
+ren xxx md_inc_death_yr8_rt
+gen xxx = real(md_inc_death_yr6_rt)
+drop md_inc_death_yr6_rt
+ren xxx md_inc_death_yr6_rt
+gen xxx = real(md_inc_death_yr4_rt)
+drop md_inc_death_yr4_rt
+ren xxx md_inc_death_yr4_rt
+gen xxx = real(md_inc_death_yr3_rt)
+drop md_inc_death_yr3_rt
+ren xxx md_inc_death_yr3_rt
+gen xxx = real(md_inc_death_yr2_rt)
+drop md_inc_death_yr2_rt
+ren xxx md_inc_death_yr2_rt
+gen xxx = real(md_inc_comp_orig_yr8_rt)
+drop md_inc_comp_orig_yr8_rt
+ren xxx md_inc_comp_orig_yr8_rt
+gen xxx = real(md_inc_comp_orig_yr6_rt)
+drop md_inc_comp_orig_yr6_rt
+ren xxx md_inc_comp_orig_yr6_rt
+gen xxx = real(md_inc_comp_orig_yr4_rt)
+drop md_inc_comp_orig_yr4_rt
+ren xxx md_inc_comp_orig_yr4_rt
+gen xxx = real(md_inc_comp_orig_yr3_rt)
+drop md_inc_comp_orig_yr3_rt
+ren xxx md_inc_comp_orig_yr3_rt
+gen xxx = real(md_inc_comp_orig_yr2_rt)
+drop md_inc_comp_orig_yr2_rt
+ren xxx md_inc_comp_orig_yr2_rt
+gen xxx = real(md_inc_comp_4yr_trans_yr8_rt)
+drop md_inc_comp_4yr_trans_yr8_rt
+ren xxx md_inc_comp_4yr_trans_yr8_rt
+gen xxx = real(md_inc_comp_4yr_trans_yr6_rt)
+drop md_inc_comp_4yr_trans_yr6_rt
+ren xxx md_inc_comp_4yr_trans_yr6_rt
+gen xxx = real(md_inc_comp_4yr_trans_yr4_rt)
+drop md_inc_comp_4yr_trans_yr4_rt
+ren xxx md_inc_comp_4yr_trans_yr4_rt
+gen xxx = real(md_inc_comp_4yr_trans_yr3_rt)
+drop md_inc_comp_4yr_trans_yr3_rt
+ren xxx md_inc_comp_4yr_trans_yr3_rt
+gen xxx = real(md_inc_comp_4yr_trans_yr2_rt)
+drop md_inc_comp_4yr_trans_yr2_rt
+ren xxx md_inc_comp_4yr_trans_yr2_rt
+gen xxx = real(md_inc_comp_2yr_trans_yr8_rt)
+drop md_inc_comp_2yr_trans_yr8_rt
+ren xxx md_inc_comp_2yr_trans_yr8_rt
+gen xxx = real(md_inc_comp_2yr_trans_yr6_rt)
+drop md_inc_comp_2yr_trans_yr6_rt
+ren xxx md_inc_comp_2yr_trans_yr6_rt
+gen xxx = real(md_inc_comp_2yr_trans_yr4_rt)
+drop md_inc_comp_2yr_trans_yr4_rt
+ren xxx md_inc_comp_2yr_trans_yr4_rt
+gen xxx = real(md_inc_comp_2yr_trans_yr3_rt)
+drop md_inc_comp_2yr_trans_yr3_rt
+ren xxx md_inc_comp_2yr_trans_yr3_rt
+gen xxx = real(md_inc_comp_2yr_trans_yr2_rt)
+drop md_inc_comp_2yr_trans_yr2_rt
+ren xxx md_inc_comp_2yr_trans_yr2_rt
+gen xxx = real(md_faminc)
+drop md_faminc
+ren xxx md_faminc
+gen xxx = real(md_earn_wne_p8)
+drop md_earn_wne_p8
+ren xxx md_earn_wne_p8
+gen xxx = real(md_earn_wne_p6)
+drop md_earn_wne_p6
+ren xxx md_earn_wne_p6
+gen xxx = real(md_earn_wne_p10)
+drop md_earn_wne_p10
+ren xxx md_earn_wne_p10
+gen xxx = real(married)
+drop married
+ren xxx married
+gen xxx = real(male_yr8_n)
+drop male_yr8_n
+ren xxx male_yr8_n
+gen xxx = real(male_yr6_n)
+drop male_yr6_n
+ren xxx male_yr6_n
+gen xxx = real(male_yr4_n)
+drop male_yr4_n
+ren xxx male_yr4_n
+gen xxx = real(male_yr3_n)
+drop male_yr3_n
+ren xxx male_yr3_n
+gen xxx = real(male_yr2_n)
+drop male_yr2_n
+ren xxx male_yr2_n
+gen xxx = real(male_wdraw_orig_yr8_rt)
+drop male_wdraw_orig_yr8_rt
+ren xxx male_wdraw_orig_yr8_rt
+gen xxx = real(male_wdraw_orig_yr6_rt)
+drop male_wdraw_orig_yr6_rt
+ren xxx male_wdraw_orig_yr6_rt
+gen xxx = real(male_wdraw_orig_yr4_rt)
+drop male_wdraw_orig_yr4_rt
+ren xxx male_wdraw_orig_yr4_rt
+gen xxx = real(male_wdraw_orig_yr3_rt)
+drop male_wdraw_orig_yr3_rt
+ren xxx male_wdraw_orig_yr3_rt
+gen xxx = real(male_wdraw_orig_yr2_rt)
+drop male_wdraw_orig_yr2_rt
+ren xxx male_wdraw_orig_yr2_rt
+gen xxx = real(male_wdraw_4yr_trans_yr8_rt)
+drop male_wdraw_4yr_trans_yr8_rt
+ren xxx male_wdraw_4yr_trans_yr8_rt
+gen xxx = real(male_wdraw_4yr_trans_yr6_rt)
+drop male_wdraw_4yr_trans_yr6_rt
+ren xxx male_wdraw_4yr_trans_yr6_rt
+gen xxx = real(male_wdraw_4yr_trans_yr4_rt)
+drop male_wdraw_4yr_trans_yr4_rt
+ren xxx male_wdraw_4yr_trans_yr4_rt
+gen xxx = real(male_wdraw_4yr_trans_yr3_rt)
+drop male_wdraw_4yr_trans_yr3_rt
+ren xxx male_wdraw_4yr_trans_yr3_rt
+gen xxx = real(male_wdraw_4yr_trans_yr2_rt)
+drop male_wdraw_4yr_trans_yr2_rt
+ren xxx male_wdraw_4yr_trans_yr2_rt
+gen xxx = real(male_wdraw_2yr_trans_yr8_rt)
+drop male_wdraw_2yr_trans_yr8_rt
+ren xxx male_wdraw_2yr_trans_yr8_rt
+gen xxx = real(male_wdraw_2yr_trans_yr6_rt)
+drop male_wdraw_2yr_trans_yr6_rt
+ren xxx male_wdraw_2yr_trans_yr6_rt
+gen xxx = real(male_wdraw_2yr_trans_yr4_rt)
+drop male_wdraw_2yr_trans_yr4_rt
+ren xxx male_wdraw_2yr_trans_yr4_rt
+gen xxx = real(male_wdraw_2yr_trans_yr3_rt)
+drop male_wdraw_2yr_trans_yr3_rt
+ren xxx male_wdraw_2yr_trans_yr3_rt
+gen xxx = real(male_wdraw_2yr_trans_yr2_rt)
+drop male_wdraw_2yr_trans_yr2_rt
+ren xxx male_wdraw_2yr_trans_yr2_rt
+gen xxx = real(male_unkn_orig_yr8_rt)
+drop male_unkn_orig_yr8_rt
+ren xxx male_unkn_orig_yr8_rt
+gen xxx = real(male_unkn_orig_yr6_rt)
+drop male_unkn_orig_yr6_rt
+ren xxx male_unkn_orig_yr6_rt
+gen xxx = real(male_unkn_orig_yr4_rt)
+drop male_unkn_orig_yr4_rt
+ren xxx male_unkn_orig_yr4_rt
+gen xxx = real(male_unkn_orig_yr3_rt)
+drop male_unkn_orig_yr3_rt
+ren xxx male_unkn_orig_yr3_rt
+gen xxx = real(male_unkn_orig_yr2_rt)
+drop male_unkn_orig_yr2_rt
+ren xxx male_unkn_orig_yr2_rt
+gen xxx = real(male_unkn_4yr_trans_yr8_rt)
+drop male_unkn_4yr_trans_yr8_rt
+ren xxx male_unkn_4yr_trans_yr8_rt
+gen xxx = real(male_unkn_4yr_trans_yr6_rt)
+drop male_unkn_4yr_trans_yr6_rt
+ren xxx male_unkn_4yr_trans_yr6_rt
+gen xxx = real(male_unkn_4yr_trans_yr4_rt)
+drop male_unkn_4yr_trans_yr4_rt
+ren xxx male_unkn_4yr_trans_yr4_rt
+gen xxx = real(male_unkn_4yr_trans_yr3_rt)
+drop male_unkn_4yr_trans_yr3_rt
+ren xxx male_unkn_4yr_trans_yr3_rt
+gen xxx = real(male_unkn_4yr_trans_yr2_rt)
+drop male_unkn_4yr_trans_yr2_rt
+ren xxx male_unkn_4yr_trans_yr2_rt
+gen xxx = real(male_unkn_2yr_trans_yr8_rt)
+drop male_unkn_2yr_trans_yr8_rt
+ren xxx male_unkn_2yr_trans_yr8_rt
+gen xxx = real(male_unkn_2yr_trans_yr6_rt)
+drop male_unkn_2yr_trans_yr6_rt
+ren xxx male_unkn_2yr_trans_yr6_rt
+gen xxx = real(male_unkn_2yr_trans_yr4_rt)
+drop male_unkn_2yr_trans_yr4_rt
+ren xxx male_unkn_2yr_trans_yr4_rt
+gen xxx = real(male_unkn_2yr_trans_yr3_rt)
+drop male_unkn_2yr_trans_yr3_rt
+ren xxx male_unkn_2yr_trans_yr3_rt
+gen xxx = real(male_unkn_2yr_trans_yr2_rt)
+drop male_unkn_2yr_trans_yr2_rt
+ren xxx male_unkn_2yr_trans_yr2_rt
+gen xxx = real(male_rpy_7yr_rt)
+drop male_rpy_7yr_rt
+ren xxx male_rpy_7yr_rt
+gen xxx = real(male_rpy_7yr_n)
+drop male_rpy_7yr_n
+ren xxx male_rpy_7yr_n
+gen xxx = real(male_rpy_5yr_rt)
+drop male_rpy_5yr_rt
+ren xxx male_rpy_5yr_rt
+gen xxx = real(male_rpy_5yr_n)
+drop male_rpy_5yr_n
+ren xxx male_rpy_5yr_n
+gen xxx = real(male_rpy_3yr_rt_supp)
+drop male_rpy_3yr_rt_supp
+ren xxx male_rpy_3yr_rt_supp
+gen xxx = real(male_rpy_3yr_rt)
+drop male_rpy_3yr_rt
+ren xxx male_rpy_3yr_rt
+gen xxx = real(male_rpy_3yr_n)
+drop male_rpy_3yr_n
+ren xxx male_rpy_3yr_n
+gen xxx = real(male_rpy_1yr_rt)
+drop male_rpy_1yr_rt
+ren xxx male_rpy_1yr_rt
+gen xxx = real(male_rpy_1yr_n)
+drop male_rpy_1yr_n
+ren xxx male_rpy_1yr_n
+gen xxx = real(male_enrl_orig_yr8_rt)
+drop male_enrl_orig_yr8_rt
+ren xxx male_enrl_orig_yr8_rt
+gen xxx = real(male_enrl_orig_yr6_rt)
+drop male_enrl_orig_yr6_rt
+ren xxx male_enrl_orig_yr6_rt
+gen xxx = real(male_enrl_orig_yr4_rt)
+drop male_enrl_orig_yr4_rt
+ren xxx male_enrl_orig_yr4_rt
+gen xxx = real(male_enrl_orig_yr3_rt)
+drop male_enrl_orig_yr3_rt
+ren xxx male_enrl_orig_yr3_rt
+gen xxx = real(male_enrl_orig_yr2_rt)
+drop male_enrl_orig_yr2_rt
+ren xxx male_enrl_orig_yr2_rt
+gen xxx = real(male_enrl_4yr_trans_yr8_rt)
+drop male_enrl_4yr_trans_yr8_rt
+ren xxx male_enrl_4yr_trans_yr8_rt
+gen xxx = real(male_enrl_4yr_trans_yr6_rt)
+drop male_enrl_4yr_trans_yr6_rt
+ren xxx male_enrl_4yr_trans_yr6_rt
+gen xxx = real(male_enrl_4yr_trans_yr4_rt)
+drop male_enrl_4yr_trans_yr4_rt
+ren xxx male_enrl_4yr_trans_yr4_rt
+gen xxx = real(male_enrl_4yr_trans_yr3_rt)
+drop male_enrl_4yr_trans_yr3_rt
+ren xxx male_enrl_4yr_trans_yr3_rt
+gen xxx = real(male_enrl_4yr_trans_yr2_rt)
+drop male_enrl_4yr_trans_yr2_rt
+ren xxx male_enrl_4yr_trans_yr2_rt
+gen xxx = real(male_enrl_2yr_trans_yr8_rt)
+drop male_enrl_2yr_trans_yr8_rt
+ren xxx male_enrl_2yr_trans_yr8_rt
+gen xxx = real(male_enrl_2yr_trans_yr6_rt)
+drop male_enrl_2yr_trans_yr6_rt
+ren xxx male_enrl_2yr_trans_yr6_rt
+gen xxx = real(male_enrl_2yr_trans_yr4_rt)
+drop male_enrl_2yr_trans_yr4_rt
+ren xxx male_enrl_2yr_trans_yr4_rt
+gen xxx = real(male_enrl_2yr_trans_yr3_rt)
+drop male_enrl_2yr_trans_yr3_rt
+ren xxx male_enrl_2yr_trans_yr3_rt
+gen xxx = real(male_enrl_2yr_trans_yr2_rt)
+drop male_enrl_2yr_trans_yr2_rt
+ren xxx male_enrl_2yr_trans_yr2_rt
+gen xxx = real(male_debt_n)
+drop male_debt_n
+ren xxx male_debt_n
+gen xxx = real(male_debt_mdn)
+drop male_debt_mdn
+ren xxx male_debt_mdn
+gen xxx = real(male_death_yr8_rt)
+drop male_death_yr8_rt
+ren xxx male_death_yr8_rt
+gen xxx = real(male_death_yr6_rt)
+drop male_death_yr6_rt
+ren xxx male_death_yr6_rt
+gen xxx = real(male_death_yr4_rt)
+drop male_death_yr4_rt
+ren xxx male_death_yr4_rt
+gen xxx = real(male_death_yr3_rt)
+drop male_death_yr3_rt
+ren xxx male_death_yr3_rt
+gen xxx = real(male_death_yr2_rt)
+drop male_death_yr2_rt
+ren xxx male_death_yr2_rt
+gen xxx = real(male_comp_orig_yr8_rt)
+drop male_comp_orig_yr8_rt
+ren xxx male_comp_orig_yr8_rt
+gen xxx = real(male_comp_orig_yr6_rt)
+drop male_comp_orig_yr6_rt
+ren xxx male_comp_orig_yr6_rt
+gen xxx = real(male_comp_orig_yr4_rt)
+drop male_comp_orig_yr4_rt
+ren xxx male_comp_orig_yr4_rt
+gen xxx = real(male_comp_orig_yr3_rt)
+drop male_comp_orig_yr3_rt
+ren xxx male_comp_orig_yr3_rt
+gen xxx = real(male_comp_orig_yr2_rt)
+drop male_comp_orig_yr2_rt
+ren xxx male_comp_orig_yr2_rt
+gen xxx = real(male_comp_4yr_trans_yr8_rt)
+drop male_comp_4yr_trans_yr8_rt
+ren xxx male_comp_4yr_trans_yr8_rt
+gen xxx = real(male_comp_4yr_trans_yr6_rt)
+drop male_comp_4yr_trans_yr6_rt
+ren xxx male_comp_4yr_trans_yr6_rt
+gen xxx = real(male_comp_4yr_trans_yr4_rt)
+drop male_comp_4yr_trans_yr4_rt
+ren xxx male_comp_4yr_trans_yr4_rt
+gen xxx = real(male_comp_4yr_trans_yr3_rt)
+drop male_comp_4yr_trans_yr3_rt
+ren xxx male_comp_4yr_trans_yr3_rt
+gen xxx = real(male_comp_4yr_trans_yr2_rt)
+drop male_comp_4yr_trans_yr2_rt
+ren xxx male_comp_4yr_trans_yr2_rt
+gen xxx = real(male_comp_2yr_trans_yr8_rt)
+drop male_comp_2yr_trans_yr8_rt
+ren xxx male_comp_2yr_trans_yr8_rt
+gen xxx = real(male_comp_2yr_trans_yr6_rt)
+drop male_comp_2yr_trans_yr6_rt
+ren xxx male_comp_2yr_trans_yr6_rt
+gen xxx = real(male_comp_2yr_trans_yr4_rt)
+drop male_comp_2yr_trans_yr4_rt
+ren xxx male_comp_2yr_trans_yr4_rt
+gen xxx = real(male_comp_2yr_trans_yr3_rt)
+drop male_comp_2yr_trans_yr3_rt
+ren xxx male_comp_2yr_trans_yr3_rt
+gen xxx = real(male_comp_2yr_trans_yr2_rt)
+drop male_comp_2yr_trans_yr2_rt
+ren xxx male_comp_2yr_trans_yr2_rt
+*gen xxx = real(main)
+*drop main
+*ren xxx main
+gen xxx = real(longitude)
+drop longitude
+ren xxx longitude
+gen xxx = real(locale2)
+drop locale2
+ren xxx locale2
+gen xxx = real(locale)
+drop locale
+ren xxx locale
+gen xxx = real(loan_yr8_n)
+drop loan_yr8_n
+ren xxx loan_yr8_n
+gen xxx = real(loan_yr6_n)
+drop loan_yr6_n
+ren xxx loan_yr6_n
+gen xxx = real(loan_yr4_n)
+drop loan_yr4_n
+ren xxx loan_yr4_n
+gen xxx = real(loan_yr3_n)
+drop loan_yr3_n
+ren xxx loan_yr3_n
+gen xxx = real(loan_yr2_n)
+drop loan_yr2_n
+ren xxx loan_yr2_n
+gen xxx = real(loan_wdraw_orig_yr8_rt)
+drop loan_wdraw_orig_yr8_rt
+ren xxx loan_wdraw_orig_yr8_rt
+gen xxx = real(loan_wdraw_orig_yr6_rt)
+drop loan_wdraw_orig_yr6_rt
+ren xxx loan_wdraw_orig_yr6_rt
+gen xxx = real(loan_wdraw_orig_yr4_rt)
+drop loan_wdraw_orig_yr4_rt
+ren xxx loan_wdraw_orig_yr4_rt
+gen xxx = real(loan_wdraw_orig_yr3_rt)
+drop loan_wdraw_orig_yr3_rt
+ren xxx loan_wdraw_orig_yr3_rt
+gen xxx = real(loan_wdraw_orig_yr2_rt)
+drop loan_wdraw_orig_yr2_rt
+ren xxx loan_wdraw_orig_yr2_rt
+gen xxx = real(loan_wdraw_4yr_trans_yr8_rt)
+drop loan_wdraw_4yr_trans_yr8_rt
+ren xxx loan_wdraw_4yr_trans_yr8_rt
+gen xxx = real(loan_wdraw_4yr_trans_yr6_rt)
+drop loan_wdraw_4yr_trans_yr6_rt
+ren xxx loan_wdraw_4yr_trans_yr6_rt
+gen xxx = real(loan_wdraw_4yr_trans_yr4_rt)
+drop loan_wdraw_4yr_trans_yr4_rt
+ren xxx loan_wdraw_4yr_trans_yr4_rt
+gen xxx = real(loan_wdraw_4yr_trans_yr3_rt)
+drop loan_wdraw_4yr_trans_yr3_rt
+ren xxx loan_wdraw_4yr_trans_yr3_rt
+gen xxx = real(loan_wdraw_4yr_trans_yr2_rt)
+drop loan_wdraw_4yr_trans_yr2_rt
+ren xxx loan_wdraw_4yr_trans_yr2_rt
+gen xxx = real(loan_wdraw_2yr_trans_yr8_rt)
+drop loan_wdraw_2yr_trans_yr8_rt
+ren xxx loan_wdraw_2yr_trans_yr8_rt
+gen xxx = real(loan_wdraw_2yr_trans_yr6_rt)
+drop loan_wdraw_2yr_trans_yr6_rt
+ren xxx loan_wdraw_2yr_trans_yr6_rt
+gen xxx = real(loan_wdraw_2yr_trans_yr4_rt)
+drop loan_wdraw_2yr_trans_yr4_rt
+ren xxx loan_wdraw_2yr_trans_yr4_rt
+gen xxx = real(loan_wdraw_2yr_trans_yr3_rt)
+drop loan_wdraw_2yr_trans_yr3_rt
+ren xxx loan_wdraw_2yr_trans_yr3_rt
+gen xxx = real(loan_wdraw_2yr_trans_yr2_rt)
+drop loan_wdraw_2yr_trans_yr2_rt
+ren xxx loan_wdraw_2yr_trans_yr2_rt
+gen xxx = real(loan_unkn_orig_yr8_rt)
+drop loan_unkn_orig_yr8_rt
+ren xxx loan_unkn_orig_yr8_rt
+gen xxx = real(loan_unkn_orig_yr6_rt)
+drop loan_unkn_orig_yr6_rt
+ren xxx loan_unkn_orig_yr6_rt
+gen xxx = real(loan_unkn_orig_yr4_rt)
+drop loan_unkn_orig_yr4_rt
+ren xxx loan_unkn_orig_yr4_rt
+gen xxx = real(loan_unkn_orig_yr3_rt)
+drop loan_unkn_orig_yr3_rt
+ren xxx loan_unkn_orig_yr3_rt
+gen xxx = real(loan_unkn_orig_yr2_rt)
+drop loan_unkn_orig_yr2_rt
+ren xxx loan_unkn_orig_yr2_rt
+gen xxx = real(loan_unkn_4yr_trans_yr8_rt)
+drop loan_unkn_4yr_trans_yr8_rt
+ren xxx loan_unkn_4yr_trans_yr8_rt
+gen xxx = real(loan_unkn_4yr_trans_yr6_rt)
+drop loan_unkn_4yr_trans_yr6_rt
+ren xxx loan_unkn_4yr_trans_yr6_rt
+gen xxx = real(loan_unkn_4yr_trans_yr4_rt)
+drop loan_unkn_4yr_trans_yr4_rt
+ren xxx loan_unkn_4yr_trans_yr4_rt
+gen xxx = real(loan_unkn_4yr_trans_yr3_rt)
+drop loan_unkn_4yr_trans_yr3_rt
+ren xxx loan_unkn_4yr_trans_yr3_rt
+gen xxx = real(loan_unkn_4yr_trans_yr2_rt)
+drop loan_unkn_4yr_trans_yr2_rt
+ren xxx loan_unkn_4yr_trans_yr2_rt
+gen xxx = real(loan_unkn_2yr_trans_yr8_rt)
+drop loan_unkn_2yr_trans_yr8_rt
+ren xxx loan_unkn_2yr_trans_yr8_rt
+gen xxx = real(loan_unkn_2yr_trans_yr6_rt)
+drop loan_unkn_2yr_trans_yr6_rt
+ren xxx loan_unkn_2yr_trans_yr6_rt
+gen xxx = real(loan_unkn_2yr_trans_yr4_rt)
+drop loan_unkn_2yr_trans_yr4_rt
+ren xxx loan_unkn_2yr_trans_yr4_rt
+gen xxx = real(loan_unkn_2yr_trans_yr3_rt)
+drop loan_unkn_2yr_trans_yr3_rt
+ren xxx loan_unkn_2yr_trans_yr3_rt
+gen xxx = real(loan_unkn_2yr_trans_yr2_rt)
+drop loan_unkn_2yr_trans_yr2_rt
+ren xxx loan_unkn_2yr_trans_yr2_rt
+gen xxx = real(loan_ever)
+drop loan_ever
+ren xxx loan_ever
+gen xxx = real(loan_enrl_orig_yr8_rt)
+drop loan_enrl_orig_yr8_rt
+ren xxx loan_enrl_orig_yr8_rt
+gen xxx = real(loan_enrl_orig_yr6_rt)
+drop loan_enrl_orig_yr6_rt
+ren xxx loan_enrl_orig_yr6_rt
+gen xxx = real(loan_enrl_orig_yr4_rt)
+drop loan_enrl_orig_yr4_rt
+ren xxx loan_enrl_orig_yr4_rt
+gen xxx = real(loan_enrl_orig_yr3_rt)
+drop loan_enrl_orig_yr3_rt
+ren xxx loan_enrl_orig_yr3_rt
+gen xxx = real(loan_enrl_orig_yr2_rt)
+drop loan_enrl_orig_yr2_rt
+ren xxx loan_enrl_orig_yr2_rt
+gen xxx = real(loan_enrl_4yr_trans_yr8_rt)
+drop loan_enrl_4yr_trans_yr8_rt
+ren xxx loan_enrl_4yr_trans_yr8_rt
+gen xxx = real(loan_enrl_4yr_trans_yr6_rt)
+drop loan_enrl_4yr_trans_yr6_rt
+ren xxx loan_enrl_4yr_trans_yr6_rt
+gen xxx = real(loan_enrl_4yr_trans_yr4_rt)
+drop loan_enrl_4yr_trans_yr4_rt
+ren xxx loan_enrl_4yr_trans_yr4_rt
+gen xxx = real(loan_enrl_4yr_trans_yr3_rt)
+drop loan_enrl_4yr_trans_yr3_rt
+ren xxx loan_enrl_4yr_trans_yr3_rt
+gen xxx = real(loan_enrl_4yr_trans_yr2_rt)
+drop loan_enrl_4yr_trans_yr2_rt
+ren xxx loan_enrl_4yr_trans_yr2_rt
+gen xxx = real(loan_enrl_2yr_trans_yr8_rt)
+drop loan_enrl_2yr_trans_yr8_rt
+ren xxx loan_enrl_2yr_trans_yr8_rt
+gen xxx = real(loan_enrl_2yr_trans_yr6_rt)
+drop loan_enrl_2yr_trans_yr6_rt
+ren xxx loan_enrl_2yr_trans_yr6_rt
+gen xxx = real(loan_enrl_2yr_trans_yr4_rt)
+drop loan_enrl_2yr_trans_yr4_rt
+ren xxx loan_enrl_2yr_trans_yr4_rt
+gen xxx = real(loan_enrl_2yr_trans_yr3_rt)
+drop loan_enrl_2yr_trans_yr3_rt
+ren xxx loan_enrl_2yr_trans_yr3_rt
+gen xxx = real(loan_enrl_2yr_trans_yr2_rt)
+drop loan_enrl_2yr_trans_yr2_rt
+ren xxx loan_enrl_2yr_trans_yr2_rt
+gen xxx = real(loan_death_yr8_rt)
+drop loan_death_yr8_rt
+ren xxx loan_death_yr8_rt
+gen xxx = real(loan_death_yr6_rt)
+drop loan_death_yr6_rt
+ren xxx loan_death_yr6_rt
+gen xxx = real(loan_death_yr4_rt)
+drop loan_death_yr4_rt
+ren xxx loan_death_yr4_rt
+gen xxx = real(loan_death_yr3_rt)
+drop loan_death_yr3_rt
+ren xxx loan_death_yr3_rt
+gen xxx = real(loan_death_yr2_rt)
+drop loan_death_yr2_rt
+ren xxx loan_death_yr2_rt
+gen xxx = real(loan_comp_orig_yr8_rt)
+drop loan_comp_orig_yr8_rt
+ren xxx loan_comp_orig_yr8_rt
+gen xxx = real(loan_comp_orig_yr6_rt)
+drop loan_comp_orig_yr6_rt
+ren xxx loan_comp_orig_yr6_rt
+gen xxx = real(loan_comp_orig_yr4_rt)
+drop loan_comp_orig_yr4_rt
+ren xxx loan_comp_orig_yr4_rt
+gen xxx = real(loan_comp_orig_yr3_rt)
+drop loan_comp_orig_yr3_rt
+ren xxx loan_comp_orig_yr3_rt
+gen xxx = real(loan_comp_orig_yr2_rt)
+drop loan_comp_orig_yr2_rt
+ren xxx loan_comp_orig_yr2_rt
+gen xxx = real(loan_comp_4yr_trans_yr8_rt)
+drop loan_comp_4yr_trans_yr8_rt
+ren xxx loan_comp_4yr_trans_yr8_rt
+gen xxx = real(loan_comp_4yr_trans_yr6_rt)
+drop loan_comp_4yr_trans_yr6_rt
+ren xxx loan_comp_4yr_trans_yr6_rt
+gen xxx = real(loan_comp_4yr_trans_yr4_rt)
+drop loan_comp_4yr_trans_yr4_rt
+ren xxx loan_comp_4yr_trans_yr4_rt
+gen xxx = real(loan_comp_4yr_trans_yr3_rt)
+drop loan_comp_4yr_trans_yr3_rt
+ren xxx loan_comp_4yr_trans_yr3_rt
+gen xxx = real(loan_comp_4yr_trans_yr2_rt)
+drop loan_comp_4yr_trans_yr2_rt
+ren xxx loan_comp_4yr_trans_yr2_rt
+gen xxx = real(loan_comp_2yr_trans_yr8_rt)
+drop loan_comp_2yr_trans_yr8_rt
+ren xxx loan_comp_2yr_trans_yr8_rt
+gen xxx = real(loan_comp_2yr_trans_yr6_rt)
+drop loan_comp_2yr_trans_yr6_rt
+ren xxx loan_comp_2yr_trans_yr6_rt
+gen xxx = real(loan_comp_2yr_trans_yr4_rt)
+drop loan_comp_2yr_trans_yr4_rt
+ren xxx loan_comp_2yr_trans_yr4_rt
+gen xxx = real(loan_comp_2yr_trans_yr3_rt)
+drop loan_comp_2yr_trans_yr3_rt
+ren xxx loan_comp_2yr_trans_yr3_rt
+gen xxx = real(loan_comp_2yr_trans_yr2_rt)
+drop loan_comp_2yr_trans_yr2_rt
+ren xxx loan_comp_2yr_trans_yr2_rt
+gen xxx = real(lo_inc_yr8_n)
+drop lo_inc_yr8_n
+ren xxx lo_inc_yr8_n
+gen xxx = real(lo_inc_yr6_n)
+drop lo_inc_yr6_n
+ren xxx lo_inc_yr6_n
+gen xxx = real(lo_inc_yr4_n)
+drop lo_inc_yr4_n
+ren xxx lo_inc_yr4_n
+gen xxx = real(lo_inc_yr3_n)
+drop lo_inc_yr3_n
+ren xxx lo_inc_yr3_n
+gen xxx = real(lo_inc_yr2_n)
+drop lo_inc_yr2_n
+ren xxx lo_inc_yr2_n
+gen xxx = real(lo_inc_wdraw_orig_yr8_rt)
+drop lo_inc_wdraw_orig_yr8_rt
+ren xxx lo_inc_wdraw_orig_yr8_rt
+gen xxx = real(lo_inc_wdraw_orig_yr6_rt)
+drop lo_inc_wdraw_orig_yr6_rt
+ren xxx lo_inc_wdraw_orig_yr6_rt
+gen xxx = real(lo_inc_wdraw_orig_yr4_rt)
+drop lo_inc_wdraw_orig_yr4_rt
+ren xxx lo_inc_wdraw_orig_yr4_rt
+gen xxx = real(lo_inc_wdraw_orig_yr3_rt)
+drop lo_inc_wdraw_orig_yr3_rt
+ren xxx lo_inc_wdraw_orig_yr3_rt
+gen xxx = real(lo_inc_wdraw_orig_yr2_rt)
+drop lo_inc_wdraw_orig_yr2_rt
+ren xxx lo_inc_wdraw_orig_yr2_rt
+gen xxx = real(lo_inc_wdraw_4yr_trans_yr8_rt)
+drop lo_inc_wdraw_4yr_trans_yr8_rt
+ren xxx lo_inc_wdraw_4yr_trans_yr8_rt
+gen xxx = real(lo_inc_wdraw_4yr_trans_yr6_rt)
+drop lo_inc_wdraw_4yr_trans_yr6_rt
+ren xxx lo_inc_wdraw_4yr_trans_yr6_rt
+gen xxx = real(lo_inc_wdraw_4yr_trans_yr4_rt)
+drop lo_inc_wdraw_4yr_trans_yr4_rt
+ren xxx lo_inc_wdraw_4yr_trans_yr4_rt
+gen xxx = real(lo_inc_wdraw_4yr_trans_yr3_rt)
+drop lo_inc_wdraw_4yr_trans_yr3_rt
+ren xxx lo_inc_wdraw_4yr_trans_yr3_rt
+gen xxx = real(lo_inc_wdraw_4yr_trans_yr2_rt)
+drop lo_inc_wdraw_4yr_trans_yr2_rt
+ren xxx lo_inc_wdraw_4yr_trans_yr2_rt
+gen xxx = real(lo_inc_wdraw_2yr_trans_yr8_rt)
+drop lo_inc_wdraw_2yr_trans_yr8_rt
+ren xxx lo_inc_wdraw_2yr_trans_yr8_rt
+gen xxx = real(lo_inc_wdraw_2yr_trans_yr6_rt)
+drop lo_inc_wdraw_2yr_trans_yr6_rt
+ren xxx lo_inc_wdraw_2yr_trans_yr6_rt
+gen xxx = real(lo_inc_wdraw_2yr_trans_yr4_rt)
+drop lo_inc_wdraw_2yr_trans_yr4_rt
+ren xxx lo_inc_wdraw_2yr_trans_yr4_rt
+gen xxx = real(lo_inc_wdraw_2yr_trans_yr3_rt)
+drop lo_inc_wdraw_2yr_trans_yr3_rt
+ren xxx lo_inc_wdraw_2yr_trans_yr3_rt
+gen xxx = real(lo_inc_wdraw_2yr_trans_yr2_rt)
+drop lo_inc_wdraw_2yr_trans_yr2_rt
+ren xxx lo_inc_wdraw_2yr_trans_yr2_rt
+gen xxx = real(lo_inc_unkn_orig_yr8_rt)
+drop lo_inc_unkn_orig_yr8_rt
+ren xxx lo_inc_unkn_orig_yr8_rt
+gen xxx = real(lo_inc_unkn_orig_yr6_rt)
+drop lo_inc_unkn_orig_yr6_rt
+ren xxx lo_inc_unkn_orig_yr6_rt
+gen xxx = real(lo_inc_unkn_orig_yr4_rt)
+drop lo_inc_unkn_orig_yr4_rt
+ren xxx lo_inc_unkn_orig_yr4_rt
+gen xxx = real(lo_inc_unkn_orig_yr3_rt)
+drop lo_inc_unkn_orig_yr3_rt
+ren xxx lo_inc_unkn_orig_yr3_rt
+gen xxx = real(lo_inc_unkn_orig_yr2_rt)
+drop lo_inc_unkn_orig_yr2_rt
+ren xxx lo_inc_unkn_orig_yr2_rt
+gen xxx = real(lo_inc_unkn_4yr_trans_yr8_rt)
+drop lo_inc_unkn_4yr_trans_yr8_rt
+ren xxx lo_inc_unkn_4yr_trans_yr8_rt
+gen xxx = real(lo_inc_unkn_4yr_trans_yr6_rt)
+drop lo_inc_unkn_4yr_trans_yr6_rt
+ren xxx lo_inc_unkn_4yr_trans_yr6_rt
+gen xxx = real(lo_inc_unkn_4yr_trans_yr4_rt)
+drop lo_inc_unkn_4yr_trans_yr4_rt
+ren xxx lo_inc_unkn_4yr_trans_yr4_rt
+gen xxx = real(lo_inc_unkn_4yr_trans_yr3_rt)
+drop lo_inc_unkn_4yr_trans_yr3_rt
+ren xxx lo_inc_unkn_4yr_trans_yr3_rt
+gen xxx = real(lo_inc_unkn_4yr_trans_yr2_rt)
+drop lo_inc_unkn_4yr_trans_yr2_rt
+ren xxx lo_inc_unkn_4yr_trans_yr2_rt
+gen xxx = real(lo_inc_unkn_2yr_trans_yr8_rt)
+drop lo_inc_unkn_2yr_trans_yr8_rt
+ren xxx lo_inc_unkn_2yr_trans_yr8_rt
+gen xxx = real(lo_inc_unkn_2yr_trans_yr6_rt)
+drop lo_inc_unkn_2yr_trans_yr6_rt
+ren xxx lo_inc_unkn_2yr_trans_yr6_rt
+gen xxx = real(lo_inc_unkn_2yr_trans_yr4_rt)
+drop lo_inc_unkn_2yr_trans_yr4_rt
+ren xxx lo_inc_unkn_2yr_trans_yr4_rt
+gen xxx = real(lo_inc_unkn_2yr_trans_yr3_rt)
+drop lo_inc_unkn_2yr_trans_yr3_rt
+ren xxx lo_inc_unkn_2yr_trans_yr3_rt
+gen xxx = real(lo_inc_unkn_2yr_trans_yr2_rt)
+drop lo_inc_unkn_2yr_trans_yr2_rt
+ren xxx lo_inc_unkn_2yr_trans_yr2_rt
+gen xxx = real(lo_inc_rpy_7yr_rt)
+drop lo_inc_rpy_7yr_rt
+ren xxx lo_inc_rpy_7yr_rt
+gen xxx = real(lo_inc_rpy_7yr_n)
+drop lo_inc_rpy_7yr_n
+ren xxx lo_inc_rpy_7yr_n
+gen xxx = real(lo_inc_rpy_5yr_rt)
+drop lo_inc_rpy_5yr_rt
+ren xxx lo_inc_rpy_5yr_rt
+gen xxx = real(lo_inc_rpy_5yr_n)
+drop lo_inc_rpy_5yr_n
+ren xxx lo_inc_rpy_5yr_n
+gen xxx = real(lo_inc_rpy_3yr_rt_supp)
+drop lo_inc_rpy_3yr_rt_supp
+ren xxx lo_inc_rpy_3yr_rt_supp
+gen xxx = real(lo_inc_rpy_3yr_rt)
+drop lo_inc_rpy_3yr_rt
+ren xxx lo_inc_rpy_3yr_rt
+gen xxx = real(lo_inc_rpy_3yr_n)
+drop lo_inc_rpy_3yr_n
+ren xxx lo_inc_rpy_3yr_n
+gen xxx = real(lo_inc_rpy_1yr_rt)
+drop lo_inc_rpy_1yr_rt
+ren xxx lo_inc_rpy_1yr_rt
+gen xxx = real(lo_inc_rpy_1yr_n)
+drop lo_inc_rpy_1yr_n
+ren xxx lo_inc_rpy_1yr_n
+gen xxx = real(lo_inc_enrl_orig_yr8_rt)
+drop lo_inc_enrl_orig_yr8_rt
+ren xxx lo_inc_enrl_orig_yr8_rt
+gen xxx = real(lo_inc_enrl_orig_yr6_rt)
+drop lo_inc_enrl_orig_yr6_rt
+ren xxx lo_inc_enrl_orig_yr6_rt
+gen xxx = real(lo_inc_enrl_orig_yr4_rt)
+drop lo_inc_enrl_orig_yr4_rt
+ren xxx lo_inc_enrl_orig_yr4_rt
+gen xxx = real(lo_inc_enrl_orig_yr3_rt)
+drop lo_inc_enrl_orig_yr3_rt
+ren xxx lo_inc_enrl_orig_yr3_rt
+gen xxx = real(lo_inc_enrl_orig_yr2_rt)
+drop lo_inc_enrl_orig_yr2_rt
+ren xxx lo_inc_enrl_orig_yr2_rt
+gen xxx = real(lo_inc_enrl_4yr_trans_yr8_rt)
+drop lo_inc_enrl_4yr_trans_yr8_rt
+ren xxx lo_inc_enrl_4yr_trans_yr8_rt
+gen xxx = real(lo_inc_enrl_4yr_trans_yr6_rt)
+drop lo_inc_enrl_4yr_trans_yr6_rt
+ren xxx lo_inc_enrl_4yr_trans_yr6_rt
+gen xxx = real(lo_inc_enrl_4yr_trans_yr4_rt)
+drop lo_inc_enrl_4yr_trans_yr4_rt
+ren xxx lo_inc_enrl_4yr_trans_yr4_rt
+gen xxx = real(lo_inc_enrl_4yr_trans_yr3_rt)
+drop lo_inc_enrl_4yr_trans_yr3_rt
+ren xxx lo_inc_enrl_4yr_trans_yr3_rt
+gen xxx = real(lo_inc_enrl_4yr_trans_yr2_rt)
+drop lo_inc_enrl_4yr_trans_yr2_rt
+ren xxx lo_inc_enrl_4yr_trans_yr2_rt
+gen xxx = real(lo_inc_enrl_2yr_trans_yr8_rt)
+drop lo_inc_enrl_2yr_trans_yr8_rt
+ren xxx lo_inc_enrl_2yr_trans_yr8_rt
+gen xxx = real(lo_inc_enrl_2yr_trans_yr6_rt)
+drop lo_inc_enrl_2yr_trans_yr6_rt
+ren xxx lo_inc_enrl_2yr_trans_yr6_rt
+gen xxx = real(lo_inc_enrl_2yr_trans_yr4_rt)
+drop lo_inc_enrl_2yr_trans_yr4_rt
+ren xxx lo_inc_enrl_2yr_trans_yr4_rt
+gen xxx = real(lo_inc_enrl_2yr_trans_yr3_rt)
+drop lo_inc_enrl_2yr_trans_yr3_rt
+ren xxx lo_inc_enrl_2yr_trans_yr3_rt
+gen xxx = real(lo_inc_enrl_2yr_trans_yr2_rt)
+drop lo_inc_enrl_2yr_trans_yr2_rt
+ren xxx lo_inc_enrl_2yr_trans_yr2_rt
+gen xxx = real(lo_inc_debt_n)
+drop lo_inc_debt_n
+ren xxx lo_inc_debt_n
+gen xxx = real(lo_inc_debt_mdn)
+drop lo_inc_debt_mdn
+ren xxx lo_inc_debt_mdn
+gen xxx = real(lo_inc_death_yr8_rt)
+drop lo_inc_death_yr8_rt
+ren xxx lo_inc_death_yr8_rt
+gen xxx = real(lo_inc_death_yr6_rt)
+drop lo_inc_death_yr6_rt
+ren xxx lo_inc_death_yr6_rt
+gen xxx = real(lo_inc_death_yr4_rt)
+drop lo_inc_death_yr4_rt
+ren xxx lo_inc_death_yr4_rt
+gen xxx = real(lo_inc_death_yr3_rt)
+drop lo_inc_death_yr3_rt
+ren xxx lo_inc_death_yr3_rt
+gen xxx = real(lo_inc_death_yr2_rt)
+drop lo_inc_death_yr2_rt
+ren xxx lo_inc_death_yr2_rt
+gen xxx = real(lo_inc_comp_orig_yr8_rt)
+drop lo_inc_comp_orig_yr8_rt
+ren xxx lo_inc_comp_orig_yr8_rt
+gen xxx = real(lo_inc_comp_orig_yr6_rt)
+drop lo_inc_comp_orig_yr6_rt
+ren xxx lo_inc_comp_orig_yr6_rt
+gen xxx = real(lo_inc_comp_orig_yr4_rt)
+drop lo_inc_comp_orig_yr4_rt
+ren xxx lo_inc_comp_orig_yr4_rt
+gen xxx = real(lo_inc_comp_orig_yr3_rt)
+drop lo_inc_comp_orig_yr3_rt
+ren xxx lo_inc_comp_orig_yr3_rt
+gen xxx = real(lo_inc_comp_orig_yr2_rt)
+drop lo_inc_comp_orig_yr2_rt
+ren xxx lo_inc_comp_orig_yr2_rt
+gen xxx = real(lo_inc_comp_4yr_trans_yr8_rt)
+drop lo_inc_comp_4yr_trans_yr8_rt
+ren xxx lo_inc_comp_4yr_trans_yr8_rt
+gen xxx = real(lo_inc_comp_4yr_trans_yr6_rt)
+drop lo_inc_comp_4yr_trans_yr6_rt
+ren xxx lo_inc_comp_4yr_trans_yr6_rt
+gen xxx = real(lo_inc_comp_4yr_trans_yr4_rt)
+drop lo_inc_comp_4yr_trans_yr4_rt
+ren xxx lo_inc_comp_4yr_trans_yr4_rt
+gen xxx = real(lo_inc_comp_4yr_trans_yr3_rt)
+drop lo_inc_comp_4yr_trans_yr3_rt
+ren xxx lo_inc_comp_4yr_trans_yr3_rt
+gen xxx = real(lo_inc_comp_4yr_trans_yr2_rt)
+drop lo_inc_comp_4yr_trans_yr2_rt
+ren xxx lo_inc_comp_4yr_trans_yr2_rt
+gen xxx = real(lo_inc_comp_2yr_trans_yr8_rt)
+drop lo_inc_comp_2yr_trans_yr8_rt
+ren xxx lo_inc_comp_2yr_trans_yr8_rt
+gen xxx = real(lo_inc_comp_2yr_trans_yr6_rt)
+drop lo_inc_comp_2yr_trans_yr6_rt
+ren xxx lo_inc_comp_2yr_trans_yr6_rt
+gen xxx = real(lo_inc_comp_2yr_trans_yr4_rt)
+drop lo_inc_comp_2yr_trans_yr4_rt
+ren xxx lo_inc_comp_2yr_trans_yr4_rt
+gen xxx = real(lo_inc_comp_2yr_trans_yr3_rt)
+drop lo_inc_comp_2yr_trans_yr3_rt
+ren xxx lo_inc_comp_2yr_trans_yr3_rt
+gen xxx = real(lo_inc_comp_2yr_trans_yr2_rt)
+drop lo_inc_comp_2yr_trans_yr2_rt
+ren xxx lo_inc_comp_2yr_trans_yr2_rt
+gen xxx = real(lnfaminc_ind)
+drop lnfaminc_ind
+ren xxx lnfaminc_ind
+gen xxx = real(lnfaminc)
+drop lnfaminc
+ren xxx lnfaminc
+gen xxx = real(ln_median_hh_inc)
+drop ln_median_hh_inc
+ren xxx ln_median_hh_inc
+gen xxx = real(latitude)
+drop latitude
+ren xxx latitude
+gen xxx = real(insturl)
+drop insturl
+ren xxx insturl
+*gen xxx = real(instnm)
+*drop instnm
+*ren xxx instnm
+gen xxx = real(inexpfte)
+drop inexpfte
+ren xxx inexpfte
+gen xxx = real(ind_yr8_n)
+drop ind_yr8_n
+ren xxx ind_yr8_n
+gen xxx = real(ind_yr6_n)
+drop ind_yr6_n
+ren xxx ind_yr6_n
+gen xxx = real(ind_yr4_n)
+drop ind_yr4_n
+ren xxx ind_yr4_n
+gen xxx = real(ind_yr3_n)
+drop ind_yr3_n
+ren xxx ind_yr3_n
+gen xxx = real(ind_yr2_n)
+drop ind_yr2_n
+ren xxx ind_yr2_n
+gen xxx = real(ind_wdraw_orig_yr8_rt)
+drop ind_wdraw_orig_yr8_rt
+ren xxx ind_wdraw_orig_yr8_rt
+gen xxx = real(ind_wdraw_orig_yr6_rt)
+drop ind_wdraw_orig_yr6_rt
+ren xxx ind_wdraw_orig_yr6_rt
+gen xxx = real(ind_wdraw_orig_yr4_rt)
+drop ind_wdraw_orig_yr4_rt
+ren xxx ind_wdraw_orig_yr4_rt
+gen xxx = real(ind_wdraw_orig_yr3_rt)
+drop ind_wdraw_orig_yr3_rt
+ren xxx ind_wdraw_orig_yr3_rt
+gen xxx = real(ind_wdraw_orig_yr2_rt)
+drop ind_wdraw_orig_yr2_rt
+ren xxx ind_wdraw_orig_yr2_rt
+gen xxx = real(ind_wdraw_4yr_trans_yr8_rt)
+drop ind_wdraw_4yr_trans_yr8_rt
+ren xxx ind_wdraw_4yr_trans_yr8_rt
+gen xxx = real(ind_wdraw_4yr_trans_yr6_rt)
+drop ind_wdraw_4yr_trans_yr6_rt
+ren xxx ind_wdraw_4yr_trans_yr6_rt
+gen xxx = real(ind_wdraw_4yr_trans_yr4_rt)
+drop ind_wdraw_4yr_trans_yr4_rt
+ren xxx ind_wdraw_4yr_trans_yr4_rt
+gen xxx = real(ind_wdraw_4yr_trans_yr3_rt)
+drop ind_wdraw_4yr_trans_yr3_rt
+ren xxx ind_wdraw_4yr_trans_yr3_rt
+gen xxx = real(ind_wdraw_4yr_trans_yr2_rt)
+drop ind_wdraw_4yr_trans_yr2_rt
+ren xxx ind_wdraw_4yr_trans_yr2_rt
+gen xxx = real(ind_wdraw_2yr_trans_yr8_rt)
+drop ind_wdraw_2yr_trans_yr8_rt
+ren xxx ind_wdraw_2yr_trans_yr8_rt
+gen xxx = real(ind_wdraw_2yr_trans_yr6_rt)
+drop ind_wdraw_2yr_trans_yr6_rt
+ren xxx ind_wdraw_2yr_trans_yr6_rt
+gen xxx = real(ind_wdraw_2yr_trans_yr4_rt)
+drop ind_wdraw_2yr_trans_yr4_rt
+ren xxx ind_wdraw_2yr_trans_yr4_rt
+gen xxx = real(ind_wdraw_2yr_trans_yr3_rt)
+drop ind_wdraw_2yr_trans_yr3_rt
+ren xxx ind_wdraw_2yr_trans_yr3_rt
+gen xxx = real(ind_wdraw_2yr_trans_yr2_rt)
+drop ind_wdraw_2yr_trans_yr2_rt
+ren xxx ind_wdraw_2yr_trans_yr2_rt
+gen xxx = real(ind_unkn_orig_yr8_rt)
+drop ind_unkn_orig_yr8_rt
+ren xxx ind_unkn_orig_yr8_rt
+gen xxx = real(ind_unkn_orig_yr6_rt)
+drop ind_unkn_orig_yr6_rt
+ren xxx ind_unkn_orig_yr6_rt
+gen xxx = real(ind_unkn_orig_yr4_rt)
+drop ind_unkn_orig_yr4_rt
+ren xxx ind_unkn_orig_yr4_rt
+gen xxx = real(ind_unkn_orig_yr3_rt)
+drop ind_unkn_orig_yr3_rt
+ren xxx ind_unkn_orig_yr3_rt
+gen xxx = real(ind_unkn_orig_yr2_rt)
+drop ind_unkn_orig_yr2_rt
+ren xxx ind_unkn_orig_yr2_rt
+gen xxx = real(ind_unkn_4yr_trans_yr8_rt)
+drop ind_unkn_4yr_trans_yr8_rt
+ren xxx ind_unkn_4yr_trans_yr8_rt
+gen xxx = real(ind_unkn_4yr_trans_yr6_rt)
+drop ind_unkn_4yr_trans_yr6_rt
+ren xxx ind_unkn_4yr_trans_yr6_rt
+gen xxx = real(ind_unkn_4yr_trans_yr4_rt)
+drop ind_unkn_4yr_trans_yr4_rt
+ren xxx ind_unkn_4yr_trans_yr4_rt
+gen xxx = real(ind_unkn_4yr_trans_yr3_rt)
+drop ind_unkn_4yr_trans_yr3_rt
+ren xxx ind_unkn_4yr_trans_yr3_rt
+gen xxx = real(ind_unkn_4yr_trans_yr2_rt)
+drop ind_unkn_4yr_trans_yr2_rt
+ren xxx ind_unkn_4yr_trans_yr2_rt
+gen xxx = real(ind_unkn_2yr_trans_yr8_rt)
+drop ind_unkn_2yr_trans_yr8_rt
+ren xxx ind_unkn_2yr_trans_yr8_rt
+gen xxx = real(ind_unkn_2yr_trans_yr6_rt)
+drop ind_unkn_2yr_trans_yr6_rt
+ren xxx ind_unkn_2yr_trans_yr6_rt
+gen xxx = real(ind_unkn_2yr_trans_yr4_rt)
+drop ind_unkn_2yr_trans_yr4_rt
+ren xxx ind_unkn_2yr_trans_yr4_rt
+gen xxx = real(ind_unkn_2yr_trans_yr3_rt)
+drop ind_unkn_2yr_trans_yr3_rt
+ren xxx ind_unkn_2yr_trans_yr3_rt
+gen xxx = real(ind_unkn_2yr_trans_yr2_rt)
+drop ind_unkn_2yr_trans_yr2_rt
+ren xxx ind_unkn_2yr_trans_yr2_rt
+gen xxx = real(ind_rpy_7yr_rt)
+drop ind_rpy_7yr_rt
+ren xxx ind_rpy_7yr_rt
+gen xxx = real(ind_rpy_7yr_n)
+drop ind_rpy_7yr_n
+ren xxx ind_rpy_7yr_n
+gen xxx = real(ind_rpy_5yr_rt)
+drop ind_rpy_5yr_rt
+ren xxx ind_rpy_5yr_rt
+gen xxx = real(ind_rpy_5yr_n)
+drop ind_rpy_5yr_n
+ren xxx ind_rpy_5yr_n
+gen xxx = real(ind_rpy_3yr_rt_supp)
+drop ind_rpy_3yr_rt_supp
+ren xxx ind_rpy_3yr_rt_supp
+gen xxx = real(ind_rpy_3yr_rt)
+drop ind_rpy_3yr_rt
+ren xxx ind_rpy_3yr_rt
+gen xxx = real(ind_rpy_3yr_n)
+drop ind_rpy_3yr_n
+ren xxx ind_rpy_3yr_n
+gen xxx = real(ind_rpy_1yr_rt)
+drop ind_rpy_1yr_rt
+ren xxx ind_rpy_1yr_rt
+gen xxx = real(ind_rpy_1yr_n)
+drop ind_rpy_1yr_n
+ren xxx ind_rpy_1yr_n
+gen xxx = real(ind_inc_pct_m2)
+drop ind_inc_pct_m2
+ren xxx ind_inc_pct_m2
+gen xxx = real(ind_inc_pct_m1)
+drop ind_inc_pct_m1
+ren xxx ind_inc_pct_m1
+gen xxx = real(ind_inc_pct_lo)
+drop ind_inc_pct_lo
+ren xxx ind_inc_pct_lo
+gen xxx = real(ind_inc_pct_h2)
+drop ind_inc_pct_h2
+ren xxx ind_inc_pct_h2
+gen xxx = real(ind_inc_pct_h1)
+drop ind_inc_pct_h1
+ren xxx ind_inc_pct_h1
+gen xxx = real(ind_inc_n)
+drop ind_inc_n
+ren xxx ind_inc_n
+gen xxx = real(ind_inc_avg)
+drop ind_inc_avg
+ren xxx ind_inc_avg
+gen xxx = real(ind_enrl_orig_yr8_rt)
+drop ind_enrl_orig_yr8_rt
+ren xxx ind_enrl_orig_yr8_rt
+gen xxx = real(ind_enrl_orig_yr6_rt)
+drop ind_enrl_orig_yr6_rt
+ren xxx ind_enrl_orig_yr6_rt
+gen xxx = real(ind_enrl_orig_yr4_rt)
+drop ind_enrl_orig_yr4_rt
+ren xxx ind_enrl_orig_yr4_rt
+gen xxx = real(ind_enrl_orig_yr3_rt)
+drop ind_enrl_orig_yr3_rt
+ren xxx ind_enrl_orig_yr3_rt
+gen xxx = real(ind_enrl_orig_yr2_rt)
+drop ind_enrl_orig_yr2_rt
+ren xxx ind_enrl_orig_yr2_rt
+gen xxx = real(ind_enrl_4yr_trans_yr8_rt)
+drop ind_enrl_4yr_trans_yr8_rt
+ren xxx ind_enrl_4yr_trans_yr8_rt
+gen xxx = real(ind_enrl_4yr_trans_yr6_rt)
+drop ind_enrl_4yr_trans_yr6_rt
+ren xxx ind_enrl_4yr_trans_yr6_rt
+gen xxx = real(ind_enrl_4yr_trans_yr4_rt)
+drop ind_enrl_4yr_trans_yr4_rt
+ren xxx ind_enrl_4yr_trans_yr4_rt
+gen xxx = real(ind_enrl_4yr_trans_yr3_rt)
+drop ind_enrl_4yr_trans_yr3_rt
+ren xxx ind_enrl_4yr_trans_yr3_rt
+gen xxx = real(ind_enrl_4yr_trans_yr2_rt)
+drop ind_enrl_4yr_trans_yr2_rt
+ren xxx ind_enrl_4yr_trans_yr2_rt
+gen xxx = real(ind_enrl_2yr_trans_yr8_rt)
+drop ind_enrl_2yr_trans_yr8_rt
+ren xxx ind_enrl_2yr_trans_yr8_rt
+gen xxx = real(ind_enrl_2yr_trans_yr6_rt)
+drop ind_enrl_2yr_trans_yr6_rt
+ren xxx ind_enrl_2yr_trans_yr6_rt
+gen xxx = real(ind_enrl_2yr_trans_yr4_rt)
+drop ind_enrl_2yr_trans_yr4_rt
+ren xxx ind_enrl_2yr_trans_yr4_rt
+gen xxx = real(ind_enrl_2yr_trans_yr3_rt)
+drop ind_enrl_2yr_trans_yr3_rt
+ren xxx ind_enrl_2yr_trans_yr3_rt
+gen xxx = real(ind_enrl_2yr_trans_yr2_rt)
+drop ind_enrl_2yr_trans_yr2_rt
+ren xxx ind_enrl_2yr_trans_yr2_rt
+gen xxx = real(ind_debt_n)
+drop ind_debt_n
+ren xxx ind_debt_n
+gen xxx = real(ind_debt_mdn)
+drop ind_debt_mdn
+ren xxx ind_debt_mdn
+gen xxx = real(ind_death_yr8_rt)
+drop ind_death_yr8_rt
+ren xxx ind_death_yr8_rt
+gen xxx = real(ind_death_yr6_rt)
+drop ind_death_yr6_rt
+ren xxx ind_death_yr6_rt
+gen xxx = real(ind_death_yr4_rt)
+drop ind_death_yr4_rt
+ren xxx ind_death_yr4_rt
+gen xxx = real(ind_death_yr3_rt)
+drop ind_death_yr3_rt
+ren xxx ind_death_yr3_rt
+gen xxx = real(ind_death_yr2_rt)
+drop ind_death_yr2_rt
+ren xxx ind_death_yr2_rt
+gen xxx = real(ind_comp_orig_yr8_rt)
+drop ind_comp_orig_yr8_rt
+ren xxx ind_comp_orig_yr8_rt
+gen xxx = real(ind_comp_orig_yr6_rt)
+drop ind_comp_orig_yr6_rt
+ren xxx ind_comp_orig_yr6_rt
+gen xxx = real(ind_comp_orig_yr4_rt)
+drop ind_comp_orig_yr4_rt
+ren xxx ind_comp_orig_yr4_rt
+gen xxx = real(ind_comp_orig_yr3_rt)
+drop ind_comp_orig_yr3_rt
+ren xxx ind_comp_orig_yr3_rt
+gen xxx = real(ind_comp_orig_yr2_rt)
+drop ind_comp_orig_yr2_rt
+ren xxx ind_comp_orig_yr2_rt
+gen xxx = real(ind_comp_4yr_trans_yr8_rt)
+drop ind_comp_4yr_trans_yr8_rt
+ren xxx ind_comp_4yr_trans_yr8_rt
+gen xxx = real(ind_comp_4yr_trans_yr6_rt)
+drop ind_comp_4yr_trans_yr6_rt
+ren xxx ind_comp_4yr_trans_yr6_rt
+gen xxx = real(ind_comp_4yr_trans_yr4_rt)
+drop ind_comp_4yr_trans_yr4_rt
+ren xxx ind_comp_4yr_trans_yr4_rt
+gen xxx = real(ind_comp_4yr_trans_yr3_rt)
+drop ind_comp_4yr_trans_yr3_rt
+ren xxx ind_comp_4yr_trans_yr3_rt
+gen xxx = real(ind_comp_4yr_trans_yr2_rt)
+drop ind_comp_4yr_trans_yr2_rt
+ren xxx ind_comp_4yr_trans_yr2_rt
+gen xxx = real(ind_comp_2yr_trans_yr8_rt)
+drop ind_comp_2yr_trans_yr8_rt
+ren xxx ind_comp_2yr_trans_yr8_rt
+gen xxx = real(ind_comp_2yr_trans_yr6_rt)
+drop ind_comp_2yr_trans_yr6_rt
+ren xxx ind_comp_2yr_trans_yr6_rt
+gen xxx = real(ind_comp_2yr_trans_yr4_rt)
+drop ind_comp_2yr_trans_yr4_rt
+ren xxx ind_comp_2yr_trans_yr4_rt
+gen xxx = real(ind_comp_2yr_trans_yr3_rt)
+drop ind_comp_2yr_trans_yr3_rt
+ren xxx ind_comp_2yr_trans_yr3_rt
+gen xxx = real(ind_comp_2yr_trans_yr2_rt)
+drop ind_comp_2yr_trans_yr2_rt
+ren xxx ind_comp_2yr_trans_yr2_rt
+gen xxx = real(inc_pct_m2)
+drop inc_pct_m2
+ren xxx inc_pct_m2
+gen xxx = real(inc_pct_m1)
+drop inc_pct_m1
+ren xxx inc_pct_m1
+gen xxx = real(inc_pct_lo)
+drop inc_pct_lo
+ren xxx inc_pct_lo
+gen xxx = real(inc_pct_h2)
+drop inc_pct_h2
+ren xxx inc_pct_h2
+gen xxx = real(inc_pct_h1)
+drop inc_pct_h1
+ren xxx inc_pct_h1
+gen xxx = real(inc_n)
+drop inc_n
+ren xxx inc_n
+*gen xxx = real(iclevel)
+*drop iclevel
+*ren xxx iclevel
+gen xxx = real(hsi)
+drop hsi
+ren xxx hsi
+*gen xxx = real(highdeg)
+*drop highdeg
+*ren xxx highdeg
+gen xxx = real(hi_inc_yr8_n)
+drop hi_inc_yr8_n
+ren xxx hi_inc_yr8_n
+gen xxx = real(hi_inc_yr6_n)
+drop hi_inc_yr6_n
+ren xxx hi_inc_yr6_n
+gen xxx = real(hi_inc_yr4_n)
+drop hi_inc_yr4_n
+ren xxx hi_inc_yr4_n
+gen xxx = real(hi_inc_yr3_n)
+drop hi_inc_yr3_n
+ren xxx hi_inc_yr3_n
+gen xxx = real(hi_inc_yr2_n)
+drop hi_inc_yr2_n
+ren xxx hi_inc_yr2_n
+gen xxx = real(hi_inc_wdraw_orig_yr8_rt)
+drop hi_inc_wdraw_orig_yr8_rt
+ren xxx hi_inc_wdraw_orig_yr8_rt
+gen xxx = real(hi_inc_wdraw_orig_yr6_rt)
+drop hi_inc_wdraw_orig_yr6_rt
+ren xxx hi_inc_wdraw_orig_yr6_rt
+gen xxx = real(hi_inc_wdraw_orig_yr4_rt)
+drop hi_inc_wdraw_orig_yr4_rt
+ren xxx hi_inc_wdraw_orig_yr4_rt
+gen xxx = real(hi_inc_wdraw_orig_yr3_rt)
+drop hi_inc_wdraw_orig_yr3_rt
+ren xxx hi_inc_wdraw_orig_yr3_rt
+gen xxx = real(hi_inc_wdraw_orig_yr2_rt)
+drop hi_inc_wdraw_orig_yr2_rt
+ren xxx hi_inc_wdraw_orig_yr2_rt
+gen xxx = real(hi_inc_wdraw_4yr_trans_yr8_rt)
+drop hi_inc_wdraw_4yr_trans_yr8_rt
+ren xxx hi_inc_wdraw_4yr_trans_yr8_rt
+gen xxx = real(hi_inc_wdraw_4yr_trans_yr6_rt)
+drop hi_inc_wdraw_4yr_trans_yr6_rt
+ren xxx hi_inc_wdraw_4yr_trans_yr6_rt
+gen xxx = real(hi_inc_wdraw_4yr_trans_yr4_rt)
+drop hi_inc_wdraw_4yr_trans_yr4_rt
+ren xxx hi_inc_wdraw_4yr_trans_yr4_rt
+gen xxx = real(hi_inc_wdraw_4yr_trans_yr3_rt)
+drop hi_inc_wdraw_4yr_trans_yr3_rt
+ren xxx hi_inc_wdraw_4yr_trans_yr3_rt
+gen xxx = real(hi_inc_wdraw_4yr_trans_yr2_rt)
+drop hi_inc_wdraw_4yr_trans_yr2_rt
+ren xxx hi_inc_wdraw_4yr_trans_yr2_rt
+gen xxx = real(hi_inc_wdraw_2yr_trans_yr8_rt)
+drop hi_inc_wdraw_2yr_trans_yr8_rt
+ren xxx hi_inc_wdraw_2yr_trans_yr8_rt
+gen xxx = real(hi_inc_wdraw_2yr_trans_yr6_rt)
+drop hi_inc_wdraw_2yr_trans_yr6_rt
+ren xxx hi_inc_wdraw_2yr_trans_yr6_rt
+gen xxx = real(hi_inc_wdraw_2yr_trans_yr4_rt)
+drop hi_inc_wdraw_2yr_trans_yr4_rt
+ren xxx hi_inc_wdraw_2yr_trans_yr4_rt
+gen xxx = real(hi_inc_wdraw_2yr_trans_yr3_rt)
+drop hi_inc_wdraw_2yr_trans_yr3_rt
+ren xxx hi_inc_wdraw_2yr_trans_yr3_rt
+gen xxx = real(hi_inc_wdraw_2yr_trans_yr2_rt)
+drop hi_inc_wdraw_2yr_trans_yr2_rt
+ren xxx hi_inc_wdraw_2yr_trans_yr2_rt
+gen xxx = real(hi_inc_unkn_orig_yr8_rt)
+drop hi_inc_unkn_orig_yr8_rt
+ren xxx hi_inc_unkn_orig_yr8_rt
+gen xxx = real(hi_inc_unkn_orig_yr6_rt)
+drop hi_inc_unkn_orig_yr6_rt
+ren xxx hi_inc_unkn_orig_yr6_rt
+gen xxx = real(hi_inc_unkn_orig_yr4_rt)
+drop hi_inc_unkn_orig_yr4_rt
+ren xxx hi_inc_unkn_orig_yr4_rt
+gen xxx = real(hi_inc_unkn_orig_yr3_rt)
+drop hi_inc_unkn_orig_yr3_rt
+ren xxx hi_inc_unkn_orig_yr3_rt
+gen xxx = real(hi_inc_unkn_orig_yr2_rt)
+drop hi_inc_unkn_orig_yr2_rt
+ren xxx hi_inc_unkn_orig_yr2_rt
+gen xxx = real(hi_inc_unkn_4yr_trans_yr8_rt)
+drop hi_inc_unkn_4yr_trans_yr8_rt
+ren xxx hi_inc_unkn_4yr_trans_yr8_rt
+gen xxx = real(hi_inc_unkn_4yr_trans_yr6_rt)
+drop hi_inc_unkn_4yr_trans_yr6_rt
+ren xxx hi_inc_unkn_4yr_trans_yr6_rt
+gen xxx = real(hi_inc_unkn_4yr_trans_yr4_rt)
+drop hi_inc_unkn_4yr_trans_yr4_rt
+ren xxx hi_inc_unkn_4yr_trans_yr4_rt
+gen xxx = real(hi_inc_unkn_4yr_trans_yr3_rt)
+drop hi_inc_unkn_4yr_trans_yr3_rt
+ren xxx hi_inc_unkn_4yr_trans_yr3_rt
+gen xxx = real(hi_inc_unkn_4yr_trans_yr2_rt)
+drop hi_inc_unkn_4yr_trans_yr2_rt
+ren xxx hi_inc_unkn_4yr_trans_yr2_rt
+gen xxx = real(hi_inc_unkn_2yr_trans_yr8_rt)
+drop hi_inc_unkn_2yr_trans_yr8_rt
+ren xxx hi_inc_unkn_2yr_trans_yr8_rt
+gen xxx = real(hi_inc_unkn_2yr_trans_yr6_rt)
+drop hi_inc_unkn_2yr_trans_yr6_rt
+ren xxx hi_inc_unkn_2yr_trans_yr6_rt
+gen xxx = real(hi_inc_unkn_2yr_trans_yr4_rt)
+drop hi_inc_unkn_2yr_trans_yr4_rt
+ren xxx hi_inc_unkn_2yr_trans_yr4_rt
+gen xxx = real(hi_inc_unkn_2yr_trans_yr3_rt)
+drop hi_inc_unkn_2yr_trans_yr3_rt
+ren xxx hi_inc_unkn_2yr_trans_yr3_rt
+gen xxx = real(hi_inc_unkn_2yr_trans_yr2_rt)
+drop hi_inc_unkn_2yr_trans_yr2_rt
+ren xxx hi_inc_unkn_2yr_trans_yr2_rt
+gen xxx = real(hi_inc_rpy_7yr_rt)
+drop hi_inc_rpy_7yr_rt
+ren xxx hi_inc_rpy_7yr_rt
+gen xxx = real(hi_inc_rpy_7yr_n)
+drop hi_inc_rpy_7yr_n
+ren xxx hi_inc_rpy_7yr_n
+gen xxx = real(hi_inc_rpy_5yr_rt)
+drop hi_inc_rpy_5yr_rt
+ren xxx hi_inc_rpy_5yr_rt
+gen xxx = real(hi_inc_rpy_5yr_n)
+drop hi_inc_rpy_5yr_n
+ren xxx hi_inc_rpy_5yr_n
+gen xxx = real(hi_inc_rpy_3yr_rt_supp)
+drop hi_inc_rpy_3yr_rt_supp
+ren xxx hi_inc_rpy_3yr_rt_supp
+gen xxx = real(hi_inc_rpy_3yr_rt)
+drop hi_inc_rpy_3yr_rt
+ren xxx hi_inc_rpy_3yr_rt
+gen xxx = real(hi_inc_rpy_3yr_n)
+drop hi_inc_rpy_3yr_n
+ren xxx hi_inc_rpy_3yr_n
+gen xxx = real(hi_inc_rpy_1yr_rt)
+drop hi_inc_rpy_1yr_rt
+ren xxx hi_inc_rpy_1yr_rt
+gen xxx = real(hi_inc_rpy_1yr_n)
+drop hi_inc_rpy_1yr_n
+ren xxx hi_inc_rpy_1yr_n
+gen xxx = real(hi_inc_enrl_orig_yr8_rt)
+drop hi_inc_enrl_orig_yr8_rt
+ren xxx hi_inc_enrl_orig_yr8_rt
+gen xxx = real(hi_inc_enrl_orig_yr6_rt)
+drop hi_inc_enrl_orig_yr6_rt
+ren xxx hi_inc_enrl_orig_yr6_rt
+gen xxx = real(hi_inc_enrl_orig_yr4_rt)
+drop hi_inc_enrl_orig_yr4_rt
+ren xxx hi_inc_enrl_orig_yr4_rt
+gen xxx = real(hi_inc_enrl_orig_yr3_rt)
+drop hi_inc_enrl_orig_yr3_rt
+ren xxx hi_inc_enrl_orig_yr3_rt
+gen xxx = real(hi_inc_enrl_orig_yr2_rt)
+drop hi_inc_enrl_orig_yr2_rt
+ren xxx hi_inc_enrl_orig_yr2_rt
+gen xxx = real(hi_inc_enrl_4yr_trans_yr8_rt)
+drop hi_inc_enrl_4yr_trans_yr8_rt
+ren xxx hi_inc_enrl_4yr_trans_yr8_rt
+gen xxx = real(hi_inc_enrl_4yr_trans_yr6_rt)
+drop hi_inc_enrl_4yr_trans_yr6_rt
+ren xxx hi_inc_enrl_4yr_trans_yr6_rt
+gen xxx = real(hi_inc_enrl_4yr_trans_yr4_rt)
+drop hi_inc_enrl_4yr_trans_yr4_rt
+ren xxx hi_inc_enrl_4yr_trans_yr4_rt
+gen xxx = real(hi_inc_enrl_4yr_trans_yr3_rt)
+drop hi_inc_enrl_4yr_trans_yr3_rt
+ren xxx hi_inc_enrl_4yr_trans_yr3_rt
+gen xxx = real(hi_inc_enrl_4yr_trans_yr2_rt)
+drop hi_inc_enrl_4yr_trans_yr2_rt
+ren xxx hi_inc_enrl_4yr_trans_yr2_rt
+gen xxx = real(hi_inc_enrl_2yr_trans_yr8_rt)
+drop hi_inc_enrl_2yr_trans_yr8_rt
+ren xxx hi_inc_enrl_2yr_trans_yr8_rt
+gen xxx = real(hi_inc_enrl_2yr_trans_yr6_rt)
+drop hi_inc_enrl_2yr_trans_yr6_rt
+ren xxx hi_inc_enrl_2yr_trans_yr6_rt
+gen xxx = real(hi_inc_enrl_2yr_trans_yr4_rt)
+drop hi_inc_enrl_2yr_trans_yr4_rt
+ren xxx hi_inc_enrl_2yr_trans_yr4_rt
+gen xxx = real(hi_inc_enrl_2yr_trans_yr3_rt)
+drop hi_inc_enrl_2yr_trans_yr3_rt
+ren xxx hi_inc_enrl_2yr_trans_yr3_rt
+gen xxx = real(hi_inc_enrl_2yr_trans_yr2_rt)
+drop hi_inc_enrl_2yr_trans_yr2_rt
+ren xxx hi_inc_enrl_2yr_trans_yr2_rt
+gen xxx = real(hi_inc_debt_n)
+drop hi_inc_debt_n
+ren xxx hi_inc_debt_n
+gen xxx = real(hi_inc_debt_mdn)
+drop hi_inc_debt_mdn
+ren xxx hi_inc_debt_mdn
+gen xxx = real(hi_inc_death_yr8_rt)
+drop hi_inc_death_yr8_rt
+ren xxx hi_inc_death_yr8_rt
+gen xxx = real(hi_inc_death_yr6_rt)
+drop hi_inc_death_yr6_rt
+ren xxx hi_inc_death_yr6_rt
+gen xxx = real(hi_inc_death_yr4_rt)
+drop hi_inc_death_yr4_rt
+ren xxx hi_inc_death_yr4_rt
+gen xxx = real(hi_inc_death_yr3_rt)
+drop hi_inc_death_yr3_rt
+ren xxx hi_inc_death_yr3_rt
+gen xxx = real(hi_inc_death_yr2_rt)
+drop hi_inc_death_yr2_rt
+ren xxx hi_inc_death_yr2_rt
+gen xxx = real(hi_inc_comp_orig_yr8_rt)
+drop hi_inc_comp_orig_yr8_rt
+ren xxx hi_inc_comp_orig_yr8_rt
+gen xxx = real(hi_inc_comp_orig_yr6_rt)
+drop hi_inc_comp_orig_yr6_rt
+ren xxx hi_inc_comp_orig_yr6_rt
+gen xxx = real(hi_inc_comp_orig_yr4_rt)
+drop hi_inc_comp_orig_yr4_rt
+ren xxx hi_inc_comp_orig_yr4_rt
+gen xxx = real(hi_inc_comp_orig_yr3_rt)
+drop hi_inc_comp_orig_yr3_rt
+ren xxx hi_inc_comp_orig_yr3_rt
+gen xxx = real(hi_inc_comp_orig_yr2_rt)
+drop hi_inc_comp_orig_yr2_rt
+ren xxx hi_inc_comp_orig_yr2_rt
+gen xxx = real(hi_inc_comp_4yr_trans_yr8_rt)
+drop hi_inc_comp_4yr_trans_yr8_rt
+ren xxx hi_inc_comp_4yr_trans_yr8_rt
+gen xxx = real(hi_inc_comp_4yr_trans_yr6_rt)
+drop hi_inc_comp_4yr_trans_yr6_rt
+ren xxx hi_inc_comp_4yr_trans_yr6_rt
+gen xxx = real(hi_inc_comp_4yr_trans_yr4_rt)
+drop hi_inc_comp_4yr_trans_yr4_rt
+ren xxx hi_inc_comp_4yr_trans_yr4_rt
+gen xxx = real(hi_inc_comp_4yr_trans_yr3_rt)
+drop hi_inc_comp_4yr_trans_yr3_rt
+ren xxx hi_inc_comp_4yr_trans_yr3_rt
+gen xxx = real(hi_inc_comp_4yr_trans_yr2_rt)
+drop hi_inc_comp_4yr_trans_yr2_rt
+ren xxx hi_inc_comp_4yr_trans_yr2_rt
+gen xxx = real(hi_inc_comp_2yr_trans_yr8_rt)
+drop hi_inc_comp_2yr_trans_yr8_rt
+ren xxx hi_inc_comp_2yr_trans_yr8_rt
+gen xxx = real(hi_inc_comp_2yr_trans_yr6_rt)
+drop hi_inc_comp_2yr_trans_yr6_rt
+ren xxx hi_inc_comp_2yr_trans_yr6_rt
+gen xxx = real(hi_inc_comp_2yr_trans_yr4_rt)
+drop hi_inc_comp_2yr_trans_yr4_rt
+ren xxx hi_inc_comp_2yr_trans_yr4_rt
+gen xxx = real(hi_inc_comp_2yr_trans_yr3_rt)
+drop hi_inc_comp_2yr_trans_yr3_rt
+ren xxx hi_inc_comp_2yr_trans_yr3_rt
+gen xxx = real(hi_inc_comp_2yr_trans_yr2_rt)
+drop hi_inc_comp_2yr_trans_yr2_rt
+ren xxx hi_inc_comp_2yr_trans_yr2_rt
+gen xxx = real(hcm2)
+drop hcm2
+ren xxx hcm2
+gen xxx = real(hbcu)
+drop hbcu
+ren xxx hbcu
+gen xxx = real(gt_28k_p8)
+drop gt_28k_p8
+ren xxx gt_28k_p8
+gen xxx = real(gt_28k_p6)
+drop gt_28k_p6
+ren xxx gt_28k_p6
+gen xxx = real(gt_28k_p10)
+drop gt_28k_p10
+ren xxx gt_28k_p10
+gen xxx = real(gt_25k_p9)
+drop gt_25k_p9
+ren xxx gt_25k_p9
+gen xxx = real(gt_25k_p8)
+drop gt_25k_p8
+ren xxx gt_25k_p8
+gen xxx = real(gt_25k_p7)
+drop gt_25k_p7
+ren xxx gt_25k_p7
+gen xxx = real(gt_25k_p6)
+drop gt_25k_p6
+ren xxx gt_25k_p6
+gen xxx = real(gt_25k_p10)
+drop gt_25k_p10
+ren xxx gt_25k_p10
+gen xxx = real(grads)
+drop grads
+ren xxx grads
+gen xxx = real(grad_debt_n)
+drop grad_debt_n
+ren xxx grad_debt_n
+gen xxx = real(grad_debt_mdn10yr_supp)
+drop grad_debt_mdn10yr_supp
+ren xxx grad_debt_mdn10yr_supp
+gen xxx = real(grad_debt_mdn10yr)
+drop grad_debt_mdn10yr
+ren xxx grad_debt_mdn10yr
+gen xxx = real(grad_debt_mdn_supp)
+drop grad_debt_mdn_supp
+ren xxx grad_debt_mdn_supp
+gen xxx = real(grad_debt_mdn)
+drop grad_debt_mdn
+ren xxx grad_debt_mdn
+gen xxx = real(fsend_count)
+drop fsend_count
+ren xxx fsend_count
+gen xxx = real(fsend_5)
+drop fsend_5
+ren xxx fsend_5
+gen xxx = real(fsend_4)
+drop fsend_4
+ren xxx fsend_4
+gen xxx = real(fsend_3)
+drop fsend_3
+ren xxx fsend_3
+gen xxx = real(fsend_2)
+drop fsend_2
+ren xxx fsend_2
+gen xxx = real(fsend_1)
+drop fsend_1
+ren xxx fsend_1
+gen xxx = real(firstgen_yr8_n)
+drop firstgen_yr8_n
+ren xxx firstgen_yr8_n
+gen xxx = real(firstgen_yr6_n)
+drop firstgen_yr6_n
+ren xxx firstgen_yr6_n
+gen xxx = real(firstgen_yr4_n)
+drop firstgen_yr4_n
+ren xxx firstgen_yr4_n
+gen xxx = real(firstgen_yr3_n)
+drop firstgen_yr3_n
+ren xxx firstgen_yr3_n
+gen xxx = real(firstgen_yr2_n)
+drop firstgen_yr2_n
+ren xxx firstgen_yr2_n
+gen xxx = real(firstgen_wdraw_orig_yr8_rt)
+drop firstgen_wdraw_orig_yr8_rt
+ren xxx firstgen_wdraw_orig_yr8_rt
+gen xxx = real(firstgen_wdraw_orig_yr6_rt)
+drop firstgen_wdraw_orig_yr6_rt
+ren xxx firstgen_wdraw_orig_yr6_rt
+gen xxx = real(firstgen_wdraw_orig_yr4_rt)
+drop firstgen_wdraw_orig_yr4_rt
+ren xxx firstgen_wdraw_orig_yr4_rt
+gen xxx = real(firstgen_wdraw_orig_yr3_rt)
+drop firstgen_wdraw_orig_yr3_rt
+ren xxx firstgen_wdraw_orig_yr3_rt
+gen xxx = real(firstgen_wdraw_orig_yr2_rt)
+drop firstgen_wdraw_orig_yr2_rt
+ren xxx firstgen_wdraw_orig_yr2_rt
+gen xxx = real(firstgen_wdraw_4yr_trans_yr8_rt)
+drop firstgen_wdraw_4yr_trans_yr8_rt
+ren xxx firstgen_wdraw_4yr_trans_yr8_rt
+gen xxx = real(firstgen_wdraw_4yr_trans_yr6_rt)
+drop firstgen_wdraw_4yr_trans_yr6_rt
+ren xxx firstgen_wdraw_4yr_trans_yr6_rt
+gen xxx = real(firstgen_wdraw_4yr_trans_yr4_rt)
+drop firstgen_wdraw_4yr_trans_yr4_rt
+ren xxx firstgen_wdraw_4yr_trans_yr4_rt
+gen xxx = real(firstgen_wdraw_4yr_trans_yr3_rt)
+drop firstgen_wdraw_4yr_trans_yr3_rt
+ren xxx firstgen_wdraw_4yr_trans_yr3_rt
+gen xxx = real(firstgen_wdraw_4yr_trans_yr2_rt)
+drop firstgen_wdraw_4yr_trans_yr2_rt
+ren xxx firstgen_wdraw_4yr_trans_yr2_rt
+gen xxx = real(firstgen_wdraw_2yr_trans_yr8_rt)
+drop firstgen_wdraw_2yr_trans_yr8_rt
+ren xxx firstgen_wdraw_2yr_trans_yr8_rt
+gen xxx = real(firstgen_wdraw_2yr_trans_yr6_rt)
+drop firstgen_wdraw_2yr_trans_yr6_rt
+ren xxx firstgen_wdraw_2yr_trans_yr6_rt
+gen xxx = real(firstgen_wdraw_2yr_trans_yr4_rt)
+drop firstgen_wdraw_2yr_trans_yr4_rt
+ren xxx firstgen_wdraw_2yr_trans_yr4_rt
+gen xxx = real(firstgen_wdraw_2yr_trans_yr3_rt)
+drop firstgen_wdraw_2yr_trans_yr3_rt
+ren xxx firstgen_wdraw_2yr_trans_yr3_rt
+gen xxx = real(firstgen_wdraw_2yr_trans_yr2_rt)
+drop firstgen_wdraw_2yr_trans_yr2_rt
+ren xxx firstgen_wdraw_2yr_trans_yr2_rt
+gen xxx = real(firstgen_unkn_orig_yr8_rt)
+drop firstgen_unkn_orig_yr8_rt
+ren xxx firstgen_unkn_orig_yr8_rt
+gen xxx = real(firstgen_unkn_orig_yr6_rt)
+drop firstgen_unkn_orig_yr6_rt
+ren xxx firstgen_unkn_orig_yr6_rt
+gen xxx = real(firstgen_unkn_orig_yr4_rt)
+drop firstgen_unkn_orig_yr4_rt
+ren xxx firstgen_unkn_orig_yr4_rt
+gen xxx = real(firstgen_unkn_orig_yr3_rt)
+drop firstgen_unkn_orig_yr3_rt
+ren xxx firstgen_unkn_orig_yr3_rt
+gen xxx = real(firstgen_unkn_orig_yr2_rt)
+drop firstgen_unkn_orig_yr2_rt
+ren xxx firstgen_unkn_orig_yr2_rt
+gen xxx = real(firstgen_unkn_4yr_trans_yr8_rt)
+drop firstgen_unkn_4yr_trans_yr8_rt
+ren xxx firstgen_unkn_4yr_trans_yr8_rt
+gen xxx = real(firstgen_unkn_4yr_trans_yr6_rt)
+drop firstgen_unkn_4yr_trans_yr6_rt
+ren xxx firstgen_unkn_4yr_trans_yr6_rt
+gen xxx = real(firstgen_unkn_4yr_trans_yr4_rt)
+drop firstgen_unkn_4yr_trans_yr4_rt
+ren xxx firstgen_unkn_4yr_trans_yr4_rt
+gen xxx = real(firstgen_unkn_4yr_trans_yr3_rt)
+drop firstgen_unkn_4yr_trans_yr3_rt
+ren xxx firstgen_unkn_4yr_trans_yr3_rt
+gen xxx = real(firstgen_unkn_4yr_trans_yr2_rt)
+drop firstgen_unkn_4yr_trans_yr2_rt
+ren xxx firstgen_unkn_4yr_trans_yr2_rt
+gen xxx = real(firstgen_unkn_2yr_trans_yr8_rt)
+drop firstgen_unkn_2yr_trans_yr8_rt
+ren xxx firstgen_unkn_2yr_trans_yr8_rt
+gen xxx = real(firstgen_unkn_2yr_trans_yr6_rt)
+drop firstgen_unkn_2yr_trans_yr6_rt
+ren xxx firstgen_unkn_2yr_trans_yr6_rt
+gen xxx = real(firstgen_unkn_2yr_trans_yr4_rt)
+drop firstgen_unkn_2yr_trans_yr4_rt
+ren xxx firstgen_unkn_2yr_trans_yr4_rt
+gen xxx = real(firstgen_unkn_2yr_trans_yr3_rt)
+drop firstgen_unkn_2yr_trans_yr3_rt
+ren xxx firstgen_unkn_2yr_trans_yr3_rt
+gen xxx = real(firstgen_unkn_2yr_trans_yr2_rt)
+drop firstgen_unkn_2yr_trans_yr2_rt
+ren xxx firstgen_unkn_2yr_trans_yr2_rt
+gen xxx = real(firstgen_rpy_7yr_rt)
+drop firstgen_rpy_7yr_rt
+ren xxx firstgen_rpy_7yr_rt
+gen xxx = real(firstgen_rpy_7yr_n)
+drop firstgen_rpy_7yr_n
+ren xxx firstgen_rpy_7yr_n
+gen xxx = real(firstgen_rpy_5yr_rt)
+drop firstgen_rpy_5yr_rt
+ren xxx firstgen_rpy_5yr_rt
+gen xxx = real(firstgen_rpy_5yr_n)
+drop firstgen_rpy_5yr_n
+ren xxx firstgen_rpy_5yr_n
+gen xxx = real(firstgen_rpy_3yr_rt_supp)
+drop firstgen_rpy_3yr_rt_supp
+ren xxx firstgen_rpy_3yr_rt_supp
+gen xxx = real(firstgen_rpy_3yr_rt)
+drop firstgen_rpy_3yr_rt
+ren xxx firstgen_rpy_3yr_rt
+gen xxx = real(firstgen_rpy_3yr_n)
+drop firstgen_rpy_3yr_n
+ren xxx firstgen_rpy_3yr_n
+gen xxx = real(firstgen_rpy_1yr_rt)
+drop firstgen_rpy_1yr_rt
+ren xxx firstgen_rpy_1yr_rt
+gen xxx = real(firstgen_rpy_1yr_n)
+drop firstgen_rpy_1yr_n
+ren xxx firstgen_rpy_1yr_n
+gen xxx = real(firstgen_enrl_orig_yr8_rt)
+drop firstgen_enrl_orig_yr8_rt
+ren xxx firstgen_enrl_orig_yr8_rt
+gen xxx = real(firstgen_enrl_orig_yr6_rt)
+drop firstgen_enrl_orig_yr6_rt
+ren xxx firstgen_enrl_orig_yr6_rt
+gen xxx = real(firstgen_enrl_orig_yr4_rt)
+drop firstgen_enrl_orig_yr4_rt
+ren xxx firstgen_enrl_orig_yr4_rt
+gen xxx = real(firstgen_enrl_orig_yr3_rt)
+drop firstgen_enrl_orig_yr3_rt
+ren xxx firstgen_enrl_orig_yr3_rt
+gen xxx = real(firstgen_enrl_orig_yr2_rt)
+drop firstgen_enrl_orig_yr2_rt
+ren xxx firstgen_enrl_orig_yr2_rt
+gen xxx = real(firstgen_enrl_4yr_trans_yr8_rt)
+drop firstgen_enrl_4yr_trans_yr8_rt
+ren xxx firstgen_enrl_4yr_trans_yr8_rt
+gen xxx = real(firstgen_enrl_4yr_trans_yr6_rt)
+drop firstgen_enrl_4yr_trans_yr6_rt
+ren xxx firstgen_enrl_4yr_trans_yr6_rt
+gen xxx = real(firstgen_enrl_4yr_trans_yr4_rt)
+drop firstgen_enrl_4yr_trans_yr4_rt
+ren xxx firstgen_enrl_4yr_trans_yr4_rt
+gen xxx = real(firstgen_enrl_4yr_trans_yr3_rt)
+drop firstgen_enrl_4yr_trans_yr3_rt
+ren xxx firstgen_enrl_4yr_trans_yr3_rt
+gen xxx = real(firstgen_enrl_4yr_trans_yr2_rt)
+drop firstgen_enrl_4yr_trans_yr2_rt
+ren xxx firstgen_enrl_4yr_trans_yr2_rt
+gen xxx = real(firstgen_enrl_2yr_trans_yr8_rt)
+drop firstgen_enrl_2yr_trans_yr8_rt
+ren xxx firstgen_enrl_2yr_trans_yr8_rt
+gen xxx = real(firstgen_enrl_2yr_trans_yr6_rt)
+drop firstgen_enrl_2yr_trans_yr6_rt
+ren xxx firstgen_enrl_2yr_trans_yr6_rt
+gen xxx = real(firstgen_enrl_2yr_trans_yr4_rt)
+drop firstgen_enrl_2yr_trans_yr4_rt
+ren xxx firstgen_enrl_2yr_trans_yr4_rt
+gen xxx = real(firstgen_enrl_2yr_trans_yr3_rt)
+drop firstgen_enrl_2yr_trans_yr3_rt
+ren xxx firstgen_enrl_2yr_trans_yr3_rt
+gen xxx = real(firstgen_enrl_2yr_trans_yr2_rt)
+drop firstgen_enrl_2yr_trans_yr2_rt
+ren xxx firstgen_enrl_2yr_trans_yr2_rt
+gen xxx = real(firstgen_debt_n)
+drop firstgen_debt_n
+ren xxx firstgen_debt_n
+gen xxx = real(firstgen_debt_mdn)
+drop firstgen_debt_mdn
+ren xxx firstgen_debt_mdn
+gen xxx = real(firstgen_death_yr8_rt)
+drop firstgen_death_yr8_rt
+ren xxx firstgen_death_yr8_rt
+gen xxx = real(firstgen_death_yr6_rt)
+drop firstgen_death_yr6_rt
+ren xxx firstgen_death_yr6_rt
+gen xxx = real(firstgen_death_yr4_rt)
+drop firstgen_death_yr4_rt
+ren xxx firstgen_death_yr4_rt
+gen xxx = real(firstgen_death_yr3_rt)
+drop firstgen_death_yr3_rt
+ren xxx firstgen_death_yr3_rt
+gen xxx = real(firstgen_death_yr2_rt)
+drop firstgen_death_yr2_rt
+ren xxx firstgen_death_yr2_rt
+gen xxx = real(firstgen_comp_orig_yr8_rt)
+drop firstgen_comp_orig_yr8_rt
+ren xxx firstgen_comp_orig_yr8_rt
+gen xxx = real(firstgen_comp_orig_yr6_rt)
+drop firstgen_comp_orig_yr6_rt
+ren xxx firstgen_comp_orig_yr6_rt
+gen xxx = real(firstgen_comp_orig_yr4_rt)
+drop firstgen_comp_orig_yr4_rt
+ren xxx firstgen_comp_orig_yr4_rt
+gen xxx = real(firstgen_comp_orig_yr3_rt)
+drop firstgen_comp_orig_yr3_rt
+ren xxx firstgen_comp_orig_yr3_rt
+gen xxx = real(firstgen_comp_orig_yr2_rt)
+drop firstgen_comp_orig_yr2_rt
+ren xxx firstgen_comp_orig_yr2_rt
+gen xxx = real(firstgen_comp_4yr_trans_yr8_rt)
+drop firstgen_comp_4yr_trans_yr8_rt
+ren xxx firstgen_comp_4yr_trans_yr8_rt
+gen xxx = real(firstgen_comp_4yr_trans_yr6_rt)
+drop firstgen_comp_4yr_trans_yr6_rt
+ren xxx firstgen_comp_4yr_trans_yr6_rt
+gen xxx = real(firstgen_comp_4yr_trans_yr4_rt)
+drop firstgen_comp_4yr_trans_yr4_rt
+ren xxx firstgen_comp_4yr_trans_yr4_rt
+gen xxx = real(firstgen_comp_4yr_trans_yr3_rt)
+drop firstgen_comp_4yr_trans_yr3_rt
+ren xxx firstgen_comp_4yr_trans_yr3_rt
+gen xxx = real(firstgen_comp_4yr_trans_yr2_rt)
+drop firstgen_comp_4yr_trans_yr2_rt
+ren xxx firstgen_comp_4yr_trans_yr2_rt
+gen xxx = real(firstgen_comp_2yr_trans_yr8_rt)
+drop firstgen_comp_2yr_trans_yr8_rt
+ren xxx firstgen_comp_2yr_trans_yr8_rt
+gen xxx = real(firstgen_comp_2yr_trans_yr6_rt)
+drop firstgen_comp_2yr_trans_yr6_rt
+ren xxx firstgen_comp_2yr_trans_yr6_rt
+gen xxx = real(firstgen_comp_2yr_trans_yr4_rt)
+drop firstgen_comp_2yr_trans_yr4_rt
+ren xxx firstgen_comp_2yr_trans_yr4_rt
+gen xxx = real(firstgen_comp_2yr_trans_yr3_rt)
+drop firstgen_comp_2yr_trans_yr3_rt
+ren xxx firstgen_comp_2yr_trans_yr3_rt
+gen xxx = real(firstgen_comp_2yr_trans_yr2_rt)
+drop firstgen_comp_2yr_trans_yr2_rt
+ren xxx firstgen_comp_2yr_trans_yr2_rt
+gen xxx = real(first_gen)
+drop first_gen
+ren xxx first_gen
+gen xxx = real(female_yr8_n)
+drop female_yr8_n
+ren xxx female_yr8_n
+gen xxx = real(female_yr6_n)
+drop female_yr6_n
+ren xxx female_yr6_n
+gen xxx = real(female_yr4_n)
+drop female_yr4_n
+ren xxx female_yr4_n
+gen xxx = real(female_yr3_n)
+drop female_yr3_n
+ren xxx female_yr3_n
+gen xxx = real(female_yr2_n)
+drop female_yr2_n
+ren xxx female_yr2_n
+gen xxx = real(female_wdraw_orig_yr8_rt)
+drop female_wdraw_orig_yr8_rt
+ren xxx female_wdraw_orig_yr8_rt
+gen xxx = real(female_wdraw_orig_yr6_rt)
+drop female_wdraw_orig_yr6_rt
+ren xxx female_wdraw_orig_yr6_rt
+gen xxx = real(female_wdraw_orig_yr4_rt)
+drop female_wdraw_orig_yr4_rt
+ren xxx female_wdraw_orig_yr4_rt
+gen xxx = real(female_wdraw_orig_yr3_rt)
+drop female_wdraw_orig_yr3_rt
+ren xxx female_wdraw_orig_yr3_rt
+gen xxx = real(female_wdraw_orig_yr2_rt)
+drop female_wdraw_orig_yr2_rt
+ren xxx female_wdraw_orig_yr2_rt
+gen xxx = real(female_wdraw_4yr_trans_yr8_rt)
+drop female_wdraw_4yr_trans_yr8_rt
+ren xxx female_wdraw_4yr_trans_yr8_rt
+gen xxx = real(female_wdraw_4yr_trans_yr6_rt)
+drop female_wdraw_4yr_trans_yr6_rt
+ren xxx female_wdraw_4yr_trans_yr6_rt
+gen xxx = real(female_wdraw_4yr_trans_yr4_rt)
+drop female_wdraw_4yr_trans_yr4_rt
+ren xxx female_wdraw_4yr_trans_yr4_rt
+gen xxx = real(female_wdraw_4yr_trans_yr3_rt)
+drop female_wdraw_4yr_trans_yr3_rt
+ren xxx female_wdraw_4yr_trans_yr3_rt
+gen xxx = real(female_wdraw_4yr_trans_yr2_rt)
+drop female_wdraw_4yr_trans_yr2_rt
+ren xxx female_wdraw_4yr_trans_yr2_rt
+gen xxx = real(female_wdraw_2yr_trans_yr8_rt)
+drop female_wdraw_2yr_trans_yr8_rt
+ren xxx female_wdraw_2yr_trans_yr8_rt
+gen xxx = real(female_wdraw_2yr_trans_yr6_rt)
+drop female_wdraw_2yr_trans_yr6_rt
+ren xxx female_wdraw_2yr_trans_yr6_rt
+gen xxx = real(female_wdraw_2yr_trans_yr4_rt)
+drop female_wdraw_2yr_trans_yr4_rt
+ren xxx female_wdraw_2yr_trans_yr4_rt
+gen xxx = real(female_wdraw_2yr_trans_yr3_rt)
+drop female_wdraw_2yr_trans_yr3_rt
+ren xxx female_wdraw_2yr_trans_yr3_rt
+gen xxx = real(female_wdraw_2yr_trans_yr2_rt)
+drop female_wdraw_2yr_trans_yr2_rt
+ren xxx female_wdraw_2yr_trans_yr2_rt
+gen xxx = real(female_unkn_orig_yr8_rt)
+drop female_unkn_orig_yr8_rt
+ren xxx female_unkn_orig_yr8_rt
+gen xxx = real(female_unkn_orig_yr6_rt)
+drop female_unkn_orig_yr6_rt
+ren xxx female_unkn_orig_yr6_rt
+gen xxx = real(female_unkn_orig_yr4_rt)
+drop female_unkn_orig_yr4_rt
+ren xxx female_unkn_orig_yr4_rt
+gen xxx = real(female_unkn_orig_yr3_rt)
+drop female_unkn_orig_yr3_rt
+ren xxx female_unkn_orig_yr3_rt
+gen xxx = real(female_unkn_orig_yr2_rt)
+drop female_unkn_orig_yr2_rt
+ren xxx female_unkn_orig_yr2_rt
+gen xxx = real(female_unkn_4yr_trans_yr8_rt)
+drop female_unkn_4yr_trans_yr8_rt
+ren xxx female_unkn_4yr_trans_yr8_rt
+gen xxx = real(female_unkn_4yr_trans_yr6_rt)
+drop female_unkn_4yr_trans_yr6_rt
+ren xxx female_unkn_4yr_trans_yr6_rt
+gen xxx = real(female_unkn_4yr_trans_yr4_rt)
+drop female_unkn_4yr_trans_yr4_rt
+ren xxx female_unkn_4yr_trans_yr4_rt
+gen xxx = real(female_unkn_4yr_trans_yr3_rt)
+drop female_unkn_4yr_trans_yr3_rt
+ren xxx female_unkn_4yr_trans_yr3_rt
+gen xxx = real(female_unkn_4yr_trans_yr2_rt)
+drop female_unkn_4yr_trans_yr2_rt
+ren xxx female_unkn_4yr_trans_yr2_rt
+gen xxx = real(female_unkn_2yr_trans_yr8_rt)
+drop female_unkn_2yr_trans_yr8_rt
+ren xxx female_unkn_2yr_trans_yr8_rt
+gen xxx = real(female_unkn_2yr_trans_yr6_rt)
+drop female_unkn_2yr_trans_yr6_rt
+ren xxx female_unkn_2yr_trans_yr6_rt
+gen xxx = real(female_unkn_2yr_trans_yr4_rt)
+drop female_unkn_2yr_trans_yr4_rt
+ren xxx female_unkn_2yr_trans_yr4_rt
+gen xxx = real(female_unkn_2yr_trans_yr3_rt)
+drop female_unkn_2yr_trans_yr3_rt
+ren xxx female_unkn_2yr_trans_yr3_rt
+gen xxx = real(female_unkn_2yr_trans_yr2_rt)
+drop female_unkn_2yr_trans_yr2_rt
+ren xxx female_unkn_2yr_trans_yr2_rt
+gen xxx = real(female_rpy_7yr_rt)
+drop female_rpy_7yr_rt
+ren xxx female_rpy_7yr_rt
+gen xxx = real(female_rpy_7yr_n)
+drop female_rpy_7yr_n
+ren xxx female_rpy_7yr_n
+gen xxx = real(female_rpy_5yr_rt)
+drop female_rpy_5yr_rt
+ren xxx female_rpy_5yr_rt
+gen xxx = real(female_rpy_5yr_n)
+drop female_rpy_5yr_n
+ren xxx female_rpy_5yr_n
+gen xxx = real(female_rpy_3yr_rt_supp)
+drop female_rpy_3yr_rt_supp
+ren xxx female_rpy_3yr_rt_supp
+gen xxx = real(female_rpy_3yr_rt)
+drop female_rpy_3yr_rt
+ren xxx female_rpy_3yr_rt
+gen xxx = real(female_rpy_3yr_n)
+drop female_rpy_3yr_n
+ren xxx female_rpy_3yr_n
+gen xxx = real(female_rpy_1yr_rt)
+drop female_rpy_1yr_rt
+ren xxx female_rpy_1yr_rt
+gen xxx = real(female_rpy_1yr_n)
+drop female_rpy_1yr_n
+ren xxx female_rpy_1yr_n
+gen xxx = real(female_enrl_orig_yr8_rt)
+drop female_enrl_orig_yr8_rt
+ren xxx female_enrl_orig_yr8_rt
+gen xxx = real(female_enrl_orig_yr6_rt)
+drop female_enrl_orig_yr6_rt
+ren xxx female_enrl_orig_yr6_rt
+gen xxx = real(female_enrl_orig_yr4_rt)
+drop female_enrl_orig_yr4_rt
+ren xxx female_enrl_orig_yr4_rt
+gen xxx = real(female_enrl_orig_yr3_rt)
+drop female_enrl_orig_yr3_rt
+ren xxx female_enrl_orig_yr3_rt
+gen xxx = real(female_enrl_orig_yr2_rt)
+drop female_enrl_orig_yr2_rt
+ren xxx female_enrl_orig_yr2_rt
+gen xxx = real(female_enrl_4yr_trans_yr8_rt)
+drop female_enrl_4yr_trans_yr8_rt
+ren xxx female_enrl_4yr_trans_yr8_rt
+gen xxx = real(female_enrl_4yr_trans_yr6_rt)
+drop female_enrl_4yr_trans_yr6_rt
+ren xxx female_enrl_4yr_trans_yr6_rt
+gen xxx = real(female_enrl_4yr_trans_yr4_rt)
+drop female_enrl_4yr_trans_yr4_rt
+ren xxx female_enrl_4yr_trans_yr4_rt
+gen xxx = real(female_enrl_4yr_trans_yr3_rt)
+drop female_enrl_4yr_trans_yr3_rt
+ren xxx female_enrl_4yr_trans_yr3_rt
+gen xxx = real(female_enrl_4yr_trans_yr2_rt)
+drop female_enrl_4yr_trans_yr2_rt
+ren xxx female_enrl_4yr_trans_yr2_rt
+gen xxx = real(female_enrl_2yr_trans_yr8_rt)
+drop female_enrl_2yr_trans_yr8_rt
+ren xxx female_enrl_2yr_trans_yr8_rt
+gen xxx = real(female_enrl_2yr_trans_yr6_rt)
+drop female_enrl_2yr_trans_yr6_rt
+ren xxx female_enrl_2yr_trans_yr6_rt
+gen xxx = real(female_enrl_2yr_trans_yr4_rt)
+drop female_enrl_2yr_trans_yr4_rt
+ren xxx female_enrl_2yr_trans_yr4_rt
+gen xxx = real(female_enrl_2yr_trans_yr3_rt)
+drop female_enrl_2yr_trans_yr3_rt
+ren xxx female_enrl_2yr_trans_yr3_rt
+gen xxx = real(female_enrl_2yr_trans_yr2_rt)
+drop female_enrl_2yr_trans_yr2_rt
+ren xxx female_enrl_2yr_trans_yr2_rt
+gen xxx = real(female_debt_n)
+drop female_debt_n
+ren xxx female_debt_n
+gen xxx = real(female_debt_mdn)
+drop female_debt_mdn
+ren xxx female_debt_mdn
+gen xxx = real(female_death_yr8_rt)
+drop female_death_yr8_rt
+ren xxx female_death_yr8_rt
+gen xxx = real(female_death_yr6_rt)
+drop female_death_yr6_rt
+ren xxx female_death_yr6_rt
+gen xxx = real(female_death_yr4_rt)
+drop female_death_yr4_rt
+ren xxx female_death_yr4_rt
+gen xxx = real(female_death_yr3_rt)
+drop female_death_yr3_rt
+ren xxx female_death_yr3_rt
+gen xxx = real(female_death_yr2_rt)
+drop female_death_yr2_rt
+ren xxx female_death_yr2_rt
+gen xxx = real(female_comp_orig_yr8_rt)
+drop female_comp_orig_yr8_rt
+ren xxx female_comp_orig_yr8_rt
+gen xxx = real(female_comp_orig_yr6_rt)
+drop female_comp_orig_yr6_rt
+ren xxx female_comp_orig_yr6_rt
+gen xxx = real(female_comp_orig_yr4_rt)
+drop female_comp_orig_yr4_rt
+ren xxx female_comp_orig_yr4_rt
+gen xxx = real(female_comp_orig_yr3_rt)
+drop female_comp_orig_yr3_rt
+ren xxx female_comp_orig_yr3_rt
+gen xxx = real(female_comp_orig_yr2_rt)
+drop female_comp_orig_yr2_rt
+ren xxx female_comp_orig_yr2_rt
+gen xxx = real(female_comp_4yr_trans_yr8_rt)
+drop female_comp_4yr_trans_yr8_rt
+ren xxx female_comp_4yr_trans_yr8_rt
+gen xxx = real(female_comp_4yr_trans_yr6_rt)
+drop female_comp_4yr_trans_yr6_rt
+ren xxx female_comp_4yr_trans_yr6_rt
+gen xxx = real(female_comp_4yr_trans_yr4_rt)
+drop female_comp_4yr_trans_yr4_rt
+ren xxx female_comp_4yr_trans_yr4_rt
+gen xxx = real(female_comp_4yr_trans_yr3_rt)
+drop female_comp_4yr_trans_yr3_rt
+ren xxx female_comp_4yr_trans_yr3_rt
+gen xxx = real(female_comp_4yr_trans_yr2_rt)
+drop female_comp_4yr_trans_yr2_rt
+ren xxx female_comp_4yr_trans_yr2_rt
+gen xxx = real(female_comp_2yr_trans_yr8_rt)
+drop female_comp_2yr_trans_yr8_rt
+ren xxx female_comp_2yr_trans_yr8_rt
+gen xxx = real(female_comp_2yr_trans_yr6_rt)
+drop female_comp_2yr_trans_yr6_rt
+ren xxx female_comp_2yr_trans_yr6_rt
+gen xxx = real(female_comp_2yr_trans_yr4_rt)
+drop female_comp_2yr_trans_yr4_rt
+ren xxx female_comp_2yr_trans_yr4_rt
+gen xxx = real(female_comp_2yr_trans_yr3_rt)
+drop female_comp_2yr_trans_yr3_rt
+ren xxx female_comp_2yr_trans_yr3_rt
+gen xxx = real(female_comp_2yr_trans_yr2_rt)
+drop female_comp_2yr_trans_yr2_rt
+ren xxx female_comp_2yr_trans_yr2_rt
+gen xxx = real(female)
+drop female
+ren xxx female
+gen xxx = real(faminc_ind)
+drop faminc_ind
+ren xxx faminc_ind
+gen xxx = real(faminc)
+drop faminc
+ren xxx faminc
+gen xxx = real(enrl_orig_yr8_rt)
+drop enrl_orig_yr8_rt
+ren xxx enrl_orig_yr8_rt
+gen xxx = real(enrl_orig_yr6_rt)
+drop enrl_orig_yr6_rt
+ren xxx enrl_orig_yr6_rt
+gen xxx = real(enrl_orig_yr4_rt)
+drop enrl_orig_yr4_rt
+ren xxx enrl_orig_yr4_rt
+gen xxx = real(enrl_orig_yr3_rt)
+drop enrl_orig_yr3_rt
+ren xxx enrl_orig_yr3_rt
+gen xxx = real(enrl_orig_yr2_rt)
+drop enrl_orig_yr2_rt
+ren xxx enrl_orig_yr2_rt
+gen xxx = real(enrl_4yr_trans_yr8_rt)
+drop enrl_4yr_trans_yr8_rt
+ren xxx enrl_4yr_trans_yr8_rt
+gen xxx = real(enrl_4yr_trans_yr6_rt)
+drop enrl_4yr_trans_yr6_rt
+ren xxx enrl_4yr_trans_yr6_rt
+gen xxx = real(enrl_4yr_trans_yr4_rt)
+drop enrl_4yr_trans_yr4_rt
+ren xxx enrl_4yr_trans_yr4_rt
+gen xxx = real(enrl_4yr_trans_yr3_rt)
+drop enrl_4yr_trans_yr3_rt
+ren xxx enrl_4yr_trans_yr3_rt
+gen xxx = real(enrl_4yr_trans_yr2_rt)
+drop enrl_4yr_trans_yr2_rt
+ren xxx enrl_4yr_trans_yr2_rt
+gen xxx = real(enrl_2yr_trans_yr8_rt)
+drop enrl_2yr_trans_yr8_rt
+ren xxx enrl_2yr_trans_yr8_rt
+gen xxx = real(enrl_2yr_trans_yr6_rt)
+drop enrl_2yr_trans_yr6_rt
+ren xxx enrl_2yr_trans_yr6_rt
+gen xxx = real(enrl_2yr_trans_yr4_rt)
+drop enrl_2yr_trans_yr4_rt
+ren xxx enrl_2yr_trans_yr4_rt
+gen xxx = real(enrl_2yr_trans_yr3_rt)
+drop enrl_2yr_trans_yr3_rt
+ren xxx enrl_2yr_trans_yr3_rt
+gen xxx = real(enrl_2yr_trans_yr2_rt)
+drop enrl_2yr_trans_yr2_rt
+ren xxx enrl_2yr_trans_yr2_rt
+gen xxx = real(dtrans_l4_pooled)
+drop dtrans_l4_pooled
+ren xxx dtrans_l4_pooled
+gen xxx = real(dtrans_l4)
+drop dtrans_l4
+ren xxx dtrans_l4
+gen xxx = real(dtrans_4_pooled)
+drop dtrans_4_pooled
+ren xxx dtrans_4_pooled
+gen xxx = real(dtrans_4)
+drop dtrans_4
+ren xxx dtrans_4
+gen xxx = real(distanceonly)
+drop distanceonly
+ren xxx distanceonly
+gen xxx = real(dependent)
+drop dependent
+ren xxx dependent
+gen xxx = real(dep_yr8_n)
+drop dep_yr8_n
+ren xxx dep_yr8_n
+gen xxx = real(dep_yr6_n)
+drop dep_yr6_n
+ren xxx dep_yr6_n
+gen xxx = real(dep_yr4_n)
+drop dep_yr4_n
+ren xxx dep_yr4_n
+gen xxx = real(dep_yr3_n)
+drop dep_yr3_n
+ren xxx dep_yr3_n
+gen xxx = real(dep_yr2_n)
+drop dep_yr2_n
+ren xxx dep_yr2_n
+gen xxx = real(dep_wdraw_orig_yr8_rt)
+drop dep_wdraw_orig_yr8_rt
+ren xxx dep_wdraw_orig_yr8_rt
+gen xxx = real(dep_wdraw_orig_yr6_rt)
+drop dep_wdraw_orig_yr6_rt
+ren xxx dep_wdraw_orig_yr6_rt
+gen xxx = real(dep_wdraw_orig_yr4_rt)
+drop dep_wdraw_orig_yr4_rt
+ren xxx dep_wdraw_orig_yr4_rt
+gen xxx = real(dep_wdraw_orig_yr3_rt)
+drop dep_wdraw_orig_yr3_rt
+ren xxx dep_wdraw_orig_yr3_rt
+gen xxx = real(dep_wdraw_orig_yr2_rt)
+drop dep_wdraw_orig_yr2_rt
+ren xxx dep_wdraw_orig_yr2_rt
+gen xxx = real(dep_wdraw_4yr_trans_yr8_rt)
+drop dep_wdraw_4yr_trans_yr8_rt
+ren xxx dep_wdraw_4yr_trans_yr8_rt
+gen xxx = real(dep_wdraw_4yr_trans_yr6_rt)
+drop dep_wdraw_4yr_trans_yr6_rt
+ren xxx dep_wdraw_4yr_trans_yr6_rt
+gen xxx = real(dep_wdraw_4yr_trans_yr4_rt)
+drop dep_wdraw_4yr_trans_yr4_rt
+ren xxx dep_wdraw_4yr_trans_yr4_rt
+gen xxx = real(dep_wdraw_4yr_trans_yr3_rt)
+drop dep_wdraw_4yr_trans_yr3_rt
+ren xxx dep_wdraw_4yr_trans_yr3_rt
+gen xxx = real(dep_wdraw_4yr_trans_yr2_rt)
+drop dep_wdraw_4yr_trans_yr2_rt
+ren xxx dep_wdraw_4yr_trans_yr2_rt
+gen xxx = real(dep_wdraw_2yr_trans_yr8_rt)
+drop dep_wdraw_2yr_trans_yr8_rt
+ren xxx dep_wdraw_2yr_trans_yr8_rt
+gen xxx = real(dep_wdraw_2yr_trans_yr6_rt)
+drop dep_wdraw_2yr_trans_yr6_rt
+ren xxx dep_wdraw_2yr_trans_yr6_rt
+gen xxx = real(dep_wdraw_2yr_trans_yr4_rt)
+drop dep_wdraw_2yr_trans_yr4_rt
+ren xxx dep_wdraw_2yr_trans_yr4_rt
+gen xxx = real(dep_wdraw_2yr_trans_yr3_rt)
+drop dep_wdraw_2yr_trans_yr3_rt
+ren xxx dep_wdraw_2yr_trans_yr3_rt
+gen xxx = real(dep_wdraw_2yr_trans_yr2_rt)
+drop dep_wdraw_2yr_trans_yr2_rt
+ren xxx dep_wdraw_2yr_trans_yr2_rt
+gen xxx = real(dep_unkn_orig_yr8_rt)
+drop dep_unkn_orig_yr8_rt
+ren xxx dep_unkn_orig_yr8_rt
+gen xxx = real(dep_unkn_orig_yr6_rt)
+drop dep_unkn_orig_yr6_rt
+ren xxx dep_unkn_orig_yr6_rt
+gen xxx = real(dep_unkn_orig_yr4_rt)
+drop dep_unkn_orig_yr4_rt
+ren xxx dep_unkn_orig_yr4_rt
+gen xxx = real(dep_unkn_orig_yr3_rt)
+drop dep_unkn_orig_yr3_rt
+ren xxx dep_unkn_orig_yr3_rt
+gen xxx = real(dep_unkn_orig_yr2_rt)
+drop dep_unkn_orig_yr2_rt
+ren xxx dep_unkn_orig_yr2_rt
+gen xxx = real(dep_unkn_4yr_trans_yr8_rt)
+drop dep_unkn_4yr_trans_yr8_rt
+ren xxx dep_unkn_4yr_trans_yr8_rt
+gen xxx = real(dep_unkn_4yr_trans_yr6_rt)
+drop dep_unkn_4yr_trans_yr6_rt
+ren xxx dep_unkn_4yr_trans_yr6_rt
+gen xxx = real(dep_unkn_4yr_trans_yr4_rt)
+drop dep_unkn_4yr_trans_yr4_rt
+ren xxx dep_unkn_4yr_trans_yr4_rt
+gen xxx = real(dep_unkn_4yr_trans_yr3_rt)
+drop dep_unkn_4yr_trans_yr3_rt
+ren xxx dep_unkn_4yr_trans_yr3_rt
+gen xxx = real(dep_unkn_4yr_trans_yr2_rt)
+drop dep_unkn_4yr_trans_yr2_rt
+ren xxx dep_unkn_4yr_trans_yr2_rt
+gen xxx = real(dep_unkn_2yr_trans_yr8_rt)
+drop dep_unkn_2yr_trans_yr8_rt
+ren xxx dep_unkn_2yr_trans_yr8_rt
+gen xxx = real(dep_unkn_2yr_trans_yr6_rt)
+drop dep_unkn_2yr_trans_yr6_rt
+ren xxx dep_unkn_2yr_trans_yr6_rt
+gen xxx = real(dep_unkn_2yr_trans_yr4_rt)
+drop dep_unkn_2yr_trans_yr4_rt
+ren xxx dep_unkn_2yr_trans_yr4_rt
+gen xxx = real(dep_unkn_2yr_trans_yr3_rt)
+drop dep_unkn_2yr_trans_yr3_rt
+ren xxx dep_unkn_2yr_trans_yr3_rt
+gen xxx = real(dep_unkn_2yr_trans_yr2_rt)
+drop dep_unkn_2yr_trans_yr2_rt
+ren xxx dep_unkn_2yr_trans_yr2_rt
+gen xxx = real(dep_stat_pct_ind)
+drop dep_stat_pct_ind
+ren xxx dep_stat_pct_ind
+gen xxx = real(dep_stat_n)
+drop dep_stat_n
+ren xxx dep_stat_n
+gen xxx = real(dep_rpy_7yr_rt)
+drop dep_rpy_7yr_rt
+ren xxx dep_rpy_7yr_rt
+gen xxx = real(dep_rpy_7yr_n)
+drop dep_rpy_7yr_n
+ren xxx dep_rpy_7yr_n
+gen xxx = real(dep_rpy_5yr_rt)
+drop dep_rpy_5yr_rt
+ren xxx dep_rpy_5yr_rt
+gen xxx = real(dep_rpy_5yr_n)
+drop dep_rpy_5yr_n
+ren xxx dep_rpy_5yr_n
+gen xxx = real(dep_rpy_3yr_rt_supp)
+drop dep_rpy_3yr_rt_supp
+ren xxx dep_rpy_3yr_rt_supp
+gen xxx = real(dep_rpy_3yr_rt)
+drop dep_rpy_3yr_rt
+ren xxx dep_rpy_3yr_rt
+gen xxx = real(dep_rpy_3yr_n)
+drop dep_rpy_3yr_n
+ren xxx dep_rpy_3yr_n
+gen xxx = real(dep_rpy_1yr_rt)
+drop dep_rpy_1yr_rt
+ren xxx dep_rpy_1yr_rt
+gen xxx = real(dep_rpy_1yr_n)
+drop dep_rpy_1yr_n
+ren xxx dep_rpy_1yr_n
+gen xxx = real(dep_inc_pct_m2)
+drop dep_inc_pct_m2
+ren xxx dep_inc_pct_m2
+gen xxx = real(dep_inc_pct_m1)
+drop dep_inc_pct_m1
+ren xxx dep_inc_pct_m1
+gen xxx = real(dep_inc_pct_lo)
+drop dep_inc_pct_lo
+ren xxx dep_inc_pct_lo
+gen xxx = real(dep_inc_pct_h2)
+drop dep_inc_pct_h2
+ren xxx dep_inc_pct_h2
+gen xxx = real(dep_inc_pct_h1)
+drop dep_inc_pct_h1
+ren xxx dep_inc_pct_h1
+gen xxx = real(dep_inc_n)
+drop dep_inc_n
+ren xxx dep_inc_n
+gen xxx = real(dep_inc_avg)
+drop dep_inc_avg
+ren xxx dep_inc_avg
+gen xxx = real(dep_enrl_orig_yr8_rt)
+drop dep_enrl_orig_yr8_rt
+ren xxx dep_enrl_orig_yr8_rt
+gen xxx = real(dep_enrl_orig_yr6_rt)
+drop dep_enrl_orig_yr6_rt
+ren xxx dep_enrl_orig_yr6_rt
+gen xxx = real(dep_enrl_orig_yr4_rt)
+drop dep_enrl_orig_yr4_rt
+ren xxx dep_enrl_orig_yr4_rt
+gen xxx = real(dep_enrl_orig_yr3_rt)
+drop dep_enrl_orig_yr3_rt
+ren xxx dep_enrl_orig_yr3_rt
+gen xxx = real(dep_enrl_orig_yr2_rt)
+drop dep_enrl_orig_yr2_rt
+ren xxx dep_enrl_orig_yr2_rt
+gen xxx = real(dep_enrl_4yr_trans_yr8_rt)
+drop dep_enrl_4yr_trans_yr8_rt
+ren xxx dep_enrl_4yr_trans_yr8_rt
+gen xxx = real(dep_enrl_4yr_trans_yr6_rt)
+drop dep_enrl_4yr_trans_yr6_rt
+ren xxx dep_enrl_4yr_trans_yr6_rt
+gen xxx = real(dep_enrl_4yr_trans_yr4_rt)
+drop dep_enrl_4yr_trans_yr4_rt
+ren xxx dep_enrl_4yr_trans_yr4_rt
+gen xxx = real(dep_enrl_4yr_trans_yr3_rt)
+drop dep_enrl_4yr_trans_yr3_rt
+ren xxx dep_enrl_4yr_trans_yr3_rt
+gen xxx = real(dep_enrl_4yr_trans_yr2_rt)
+drop dep_enrl_4yr_trans_yr2_rt
+ren xxx dep_enrl_4yr_trans_yr2_rt
+gen xxx = real(dep_enrl_2yr_trans_yr8_rt)
+drop dep_enrl_2yr_trans_yr8_rt
+ren xxx dep_enrl_2yr_trans_yr8_rt
+gen xxx = real(dep_enrl_2yr_trans_yr6_rt)
+drop dep_enrl_2yr_trans_yr6_rt
+ren xxx dep_enrl_2yr_trans_yr6_rt
+gen xxx = real(dep_enrl_2yr_trans_yr4_rt)
+drop dep_enrl_2yr_trans_yr4_rt
+ren xxx dep_enrl_2yr_trans_yr4_rt
+gen xxx = real(dep_enrl_2yr_trans_yr3_rt)
+drop dep_enrl_2yr_trans_yr3_rt
+ren xxx dep_enrl_2yr_trans_yr3_rt
+gen xxx = real(dep_enrl_2yr_trans_yr2_rt)
+drop dep_enrl_2yr_trans_yr2_rt
+ren xxx dep_enrl_2yr_trans_yr2_rt
+gen xxx = real(dep_debt_n)
+drop dep_debt_n
+ren xxx dep_debt_n
+gen xxx = real(dep_debt_mdn)
+drop dep_debt_mdn
+ren xxx dep_debt_mdn
+gen xxx = real(dep_death_yr8_rt)
+drop dep_death_yr8_rt
+ren xxx dep_death_yr8_rt
+gen xxx = real(dep_death_yr6_rt)
+drop dep_death_yr6_rt
+ren xxx dep_death_yr6_rt
+gen xxx = real(dep_death_yr4_rt)
+drop dep_death_yr4_rt
+ren xxx dep_death_yr4_rt
+gen xxx = real(dep_death_yr3_rt)
+drop dep_death_yr3_rt
+ren xxx dep_death_yr3_rt
+gen xxx = real(dep_death_yr2_rt)
+drop dep_death_yr2_rt
+ren xxx dep_death_yr2_rt
+gen xxx = real(dep_comp_orig_yr8_rt)
+drop dep_comp_orig_yr8_rt
+ren xxx dep_comp_orig_yr8_rt
+gen xxx = real(dep_comp_orig_yr6_rt)
+drop dep_comp_orig_yr6_rt
+ren xxx dep_comp_orig_yr6_rt
+gen xxx = real(dep_comp_orig_yr4_rt)
+drop dep_comp_orig_yr4_rt
+ren xxx dep_comp_orig_yr4_rt
+gen xxx = real(dep_comp_orig_yr3_rt)
+drop dep_comp_orig_yr3_rt
+ren xxx dep_comp_orig_yr3_rt
+gen xxx = real(dep_comp_orig_yr2_rt)
+drop dep_comp_orig_yr2_rt
+ren xxx dep_comp_orig_yr2_rt
+gen xxx = real(dep_comp_4yr_trans_yr8_rt)
+drop dep_comp_4yr_trans_yr8_rt
+ren xxx dep_comp_4yr_trans_yr8_rt
+gen xxx = real(dep_comp_4yr_trans_yr6_rt)
+drop dep_comp_4yr_trans_yr6_rt
+ren xxx dep_comp_4yr_trans_yr6_rt
+gen xxx = real(dep_comp_4yr_trans_yr4_rt)
+drop dep_comp_4yr_trans_yr4_rt
+ren xxx dep_comp_4yr_trans_yr4_rt
+gen xxx = real(dep_comp_4yr_trans_yr3_rt)
+drop dep_comp_4yr_trans_yr3_rt
+ren xxx dep_comp_4yr_trans_yr3_rt
+gen xxx = real(dep_comp_4yr_trans_yr2_rt)
+drop dep_comp_4yr_trans_yr2_rt
+ren xxx dep_comp_4yr_trans_yr2_rt
+gen xxx = real(dep_comp_2yr_trans_yr8_rt)
+drop dep_comp_2yr_trans_yr8_rt
+ren xxx dep_comp_2yr_trans_yr8_rt
+gen xxx = real(dep_comp_2yr_trans_yr6_rt)
+drop dep_comp_2yr_trans_yr6_rt
+ren xxx dep_comp_2yr_trans_yr6_rt
+gen xxx = real(dep_comp_2yr_trans_yr4_rt)
+drop dep_comp_2yr_trans_yr4_rt
+ren xxx dep_comp_2yr_trans_yr4_rt
+gen xxx = real(dep_comp_2yr_trans_yr3_rt)
+drop dep_comp_2yr_trans_yr3_rt
+ren xxx dep_comp_2yr_trans_yr3_rt
+gen xxx = real(dep_comp_2yr_trans_yr2_rt)
+drop dep_comp_2yr_trans_yr2_rt
+ren xxx dep_comp_2yr_trans_yr2_rt
+gen xxx = real(debt_n)
+drop debt_n
+ren xxx debt_n
+gen xxx = real(debt_mdn_supp)
+drop debt_mdn_supp
+ren xxx debt_mdn_supp
+gen xxx = real(debt_mdn)
+drop debt_mdn
+ren xxx debt_mdn
+gen xxx = real(death_yr8_rt)
+drop death_yr8_rt
+ren xxx death_yr8_rt
+gen xxx = real(death_yr6_rt)
+drop death_yr6_rt
+ren xxx death_yr6_rt
+gen xxx = real(death_yr4_rt)
+drop death_yr4_rt
+ren xxx death_yr4_rt
+gen xxx = real(death_yr3_rt)
+drop death_yr3_rt
+ren xxx death_yr3_rt
+gen xxx = real(death_yr2_rt)
+drop death_yr2_rt
+ren xxx death_yr2_rt
+gen xxx = real(d200_l4_pooled)
+drop d200_l4_pooled
+ren xxx d200_l4_pooled
+gen xxx = real(d200_l4)
+drop d200_l4
+ren xxx d200_l4
+gen xxx = real(d200_4_pooled)
+drop d200_4_pooled
+ren xxx d200_4_pooled
+gen xxx = real(d200_4)
+drop d200_4
+ren xxx d200_4
+gen xxx = real(d150_l4_whitenh)
+drop d150_l4_whitenh
+ren xxx d150_l4_whitenh
+gen xxx = real(d150_l4_white)
+drop d150_l4_white
+ren xxx d150_l4_white
+gen xxx = real(d150_l4_unkn)
+drop d150_l4_unkn
+ren xxx d150_l4_unkn
+gen xxx = real(d150_l4_pooled)
+drop d150_l4_pooled
+ren xxx d150_l4_pooled
+gen xxx = real(d150_l4_pell)
+drop d150_l4_pell
+ren xxx d150_l4_pell
+gen xxx = real(d150_l4_nra)
+drop d150_l4_nra
+ren xxx d150_l4_nra
+gen xxx = real(d150_l4_noloannopell)
+drop d150_l4_noloannopell
+ren xxx d150_l4_noloannopell
+gen xxx = real(d150_l4_nhpi)
+drop d150_l4_nhpi
+ren xxx d150_l4_nhpi
+gen xxx = real(d150_l4_loannopell)
+drop d150_l4_loannopell
+ren xxx d150_l4_loannopell
+gen xxx = real(d150_l4_hispold)
+drop d150_l4_hispold
+ren xxx d150_l4_hispold
+gen xxx = real(d150_l4_hisp)
+drop d150_l4_hisp
+ren xxx d150_l4_hisp
+gen xxx = real(d150_l4_blacknh)
+drop d150_l4_blacknh
+ren xxx d150_l4_blacknh
+gen xxx = real(d150_l4_black)
+drop d150_l4_black
+ren xxx d150_l4_black
+gen xxx = real(d150_l4_asian)
+drop d150_l4_asian
+ren xxx d150_l4_asian
+gen xxx = real(d150_l4_api)
+drop d150_l4_api
+ren xxx d150_l4_api
+gen xxx = real(d150_l4_aianold)
+drop d150_l4_aianold
+ren xxx d150_l4_aianold
+gen xxx = real(d150_l4_aian)
+drop d150_l4_aian
+ren xxx d150_l4_aian
+gen xxx = real(d150_l4_2mor)
+drop d150_l4_2mor
+ren xxx d150_l4_2mor
+gen xxx = real(d150_l4)
+drop d150_l4
+ren xxx d150_l4
+gen xxx = real(d150_4_whitenh)
+drop d150_4_whitenh
+ren xxx d150_4_whitenh
+gen xxx = real(d150_4_white)
+drop d150_4_white
+ren xxx d150_4_white
+gen xxx = real(d150_4_unkn)
+drop d150_4_unkn
+ren xxx d150_4_unkn
+gen xxx = real(d150_4_pooled)
+drop d150_4_pooled
+ren xxx d150_4_pooled
+gen xxx = real(d150_4_pell)
+drop d150_4_pell
+ren xxx d150_4_pell
+gen xxx = real(d150_4_nra)
+drop d150_4_nra
+ren xxx d150_4_nra
+gen xxx = real(d150_4_noloannopell)
+drop d150_4_noloannopell
+ren xxx d150_4_noloannopell
+gen xxx = real(d150_4_nhpi)
+drop d150_4_nhpi
+ren xxx d150_4_nhpi
+gen xxx = real(d150_4_loannopell)
+drop d150_4_loannopell
+ren xxx d150_4_loannopell
+gen xxx = real(d150_4_hispold)
+drop d150_4_hispold
+ren xxx d150_4_hispold
+gen xxx = real(d150_4_hisp)
+drop d150_4_hisp
+ren xxx d150_4_hisp
+gen xxx = real(d150_4_blacknh)
+drop d150_4_blacknh
+ren xxx d150_4_blacknh
+gen xxx = real(d150_4_black)
+drop d150_4_black
+ren xxx d150_4_black
+gen xxx = real(d150_4_asian)
+drop d150_4_asian
+ren xxx d150_4_asian
+gen xxx = real(d150_4_api)
+drop d150_4_api
+ren xxx d150_4_api
+gen xxx = real(d150_4_aianold)
+drop d150_4_aianold
+ren xxx d150_4_aianold
+gen xxx = real(d150_4_aian)
+drop d150_4_aian
+ren xxx d150_4_aian
+gen xxx = real(d150_4_2mor)
+drop d150_4_2mor
+ren xxx d150_4_2mor
+gen xxx = real(d150_4)
+drop d150_4
+ren xxx d150_4
+gen xxx = real(d100_l4_pooled)
+drop d100_l4_pooled
+ren xxx d100_l4_pooled
+gen xxx = real(d100_l4)
+drop d100_l4
+ren xxx d100_l4
+gen xxx = real(d100_4_pooled)
+drop d100_4_pooled
+ren xxx d100_4_pooled
+gen xxx = real(d100_4)
+drop d100_4
+ren xxx d100_4
+gen xxx = real(d_pctpell_pctfloan)
+drop d_pctpell_pctfloan
+ren xxx d_pctpell_pctfloan
+gen xxx = real(curroper)
+drop curroper
+ren xxx curroper
+gen xxx = real(cuml_debt_p90)
+drop cuml_debt_p90
+ren xxx cuml_debt_p90
+gen xxx = real(cuml_debt_p75)
+drop cuml_debt_p75
+ren xxx cuml_debt_p75
+gen xxx = real(cuml_debt_p25)
+drop cuml_debt_p25
+ren xxx cuml_debt_p25
+gen xxx = real(cuml_debt_p10)
+drop cuml_debt_p10
+ren xxx cuml_debt_p10
+gen xxx = real(cuml_debt_n)
+drop cuml_debt_n
+ren xxx cuml_debt_n
+gen xxx = real(count_wne_p9)
+drop count_wne_p9
+ren xxx count_wne_p9
+gen xxx = real(count_wne_p8)
+drop count_wne_p8
+ren xxx count_wne_p8
+gen xxx = real(count_wne_p7)
+drop count_wne_p7
+ren xxx count_wne_p7
+gen xxx = real(count_wne_p6)
+drop count_wne_p6
+ren xxx count_wne_p6
+gen xxx = real(count_wne_p10)
+drop count_wne_p10
+ren xxx count_wne_p10
+gen xxx = real(count_wne_male1_p6)
+drop count_wne_male1_p6
+ren xxx count_wne_male1_p6
+gen xxx = real(count_wne_male1_p10)
+drop count_wne_male1_p10
+ren xxx count_wne_male1_p10
+gen xxx = real(count_wne_male0_p6)
+drop count_wne_male0_p6
+ren xxx count_wne_male0_p6
+gen xxx = real(count_wne_male0_p10)
+drop count_wne_male0_p10
+ren xxx count_wne_male0_p10
+gen xxx = real(count_wne_indep1_p6)
+drop count_wne_indep1_p6
+ren xxx count_wne_indep1_p6
+gen xxx = real(count_wne_indep1_p10)
+drop count_wne_indep1_p10
+ren xxx count_wne_indep1_p10
+gen xxx = real(count_wne_indep0_p6)
+drop count_wne_indep0_p6
+ren xxx count_wne_indep0_p6
+gen xxx = real(count_wne_indep0_p10)
+drop count_wne_indep0_p10
+ren xxx count_wne_indep0_p10
+gen xxx = real(count_wne_indep0_inc1_p6)
+drop count_wne_indep0_inc1_p6
+ren xxx count_wne_indep0_inc1_p6
+gen xxx = real(count_wne_indep0_inc1_p10)
+drop count_wne_indep0_inc1_p10
+ren xxx count_wne_indep0_inc1_p10
+gen xxx = real(count_wne_inc3_p6)
+drop count_wne_inc3_p6
+ren xxx count_wne_inc3_p6
+gen xxx = real(count_wne_inc3_p10)
+drop count_wne_inc3_p10
+ren xxx count_wne_inc3_p10
+gen xxx = real(count_wne_inc2_p6)
+drop count_wne_inc2_p6
+ren xxx count_wne_inc2_p6
+gen xxx = real(count_wne_inc2_p10)
+drop count_wne_inc2_p10
+ren xxx count_wne_inc2_p10
+gen xxx = real(count_wne_inc1_p6)
+drop count_wne_inc1_p6
+ren xxx count_wne_inc1_p6
+gen xxx = real(count_wne_inc1_p10)
+drop count_wne_inc1_p10
+ren xxx count_wne_inc1_p10
+gen xxx = real(count_nwne_p9)
+drop count_nwne_p9
+ren xxx count_nwne_p9
+gen xxx = real(count_nwne_p8)
+drop count_nwne_p8
+ren xxx count_nwne_p8
+gen xxx = real(count_nwne_p7)
+drop count_nwne_p7
+ren xxx count_nwne_p7
+gen xxx = real(count_nwne_p6)
+drop count_nwne_p6
+ren xxx count_nwne_p6
+gen xxx = real(count_nwne_p10)
+drop count_nwne_p10
+ren xxx count_nwne_p10
+gen xxx = real(count_ed)
+drop count_ed
+ren xxx count_ed
+gen xxx = real(costt4_p)
+drop costt4_p
+ren xxx costt4_p
+gen xxx = real(costt4_a)
+drop costt4_a
+ren xxx costt4_a
+*gen xxx = real(control)
+*drop control
+*ren xxx control
+gen xxx = real(compl_rpy_7yr_rt)
+drop compl_rpy_7yr_rt
+ren xxx compl_rpy_7yr_rt
+gen xxx = real(compl_rpy_7yr_n)
+drop compl_rpy_7yr_n
+ren xxx compl_rpy_7yr_n
+gen xxx = real(compl_rpy_5yr_rt)
+drop compl_rpy_5yr_rt
+ren xxx compl_rpy_5yr_rt
+gen xxx = real(compl_rpy_5yr_n)
+drop compl_rpy_5yr_n
+ren xxx compl_rpy_5yr_n
+gen xxx = real(compl_rpy_3yr_rt_supp)
+drop compl_rpy_3yr_rt_supp
+ren xxx compl_rpy_3yr_rt_supp
+gen xxx = real(compl_rpy_3yr_rt)
+drop compl_rpy_3yr_rt
+ren xxx compl_rpy_3yr_rt
+gen xxx = real(compl_rpy_3yr_n)
+drop compl_rpy_3yr_n
+ren xxx compl_rpy_3yr_n
+gen xxx = real(compl_rpy_1yr_rt)
+drop compl_rpy_1yr_rt
+ren xxx compl_rpy_1yr_rt
+gen xxx = real(compl_rpy_1yr_n)
+drop compl_rpy_1yr_n
+ren xxx compl_rpy_1yr_n
+gen xxx = real(comp_orig_yr8_rt)
+drop comp_orig_yr8_rt
+ren xxx comp_orig_yr8_rt
+gen xxx = real(comp_orig_yr6_rt)
+drop comp_orig_yr6_rt
+ren xxx comp_orig_yr6_rt
+gen xxx = real(comp_orig_yr4_rt)
+drop comp_orig_yr4_rt
+ren xxx comp_orig_yr4_rt
+gen xxx = real(comp_orig_yr3_rt)
+drop comp_orig_yr3_rt
+ren xxx comp_orig_yr3_rt
+gen xxx = real(comp_orig_yr2_rt)
+drop comp_orig_yr2_rt
+ren xxx comp_orig_yr2_rt
+gen xxx = real(comp_4yr_trans_yr8_rt)
+drop comp_4yr_trans_yr8_rt
+ren xxx comp_4yr_trans_yr8_rt
+gen xxx = real(comp_4yr_trans_yr6_rt)
+drop comp_4yr_trans_yr6_rt
+ren xxx comp_4yr_trans_yr6_rt
+gen xxx = real(comp_4yr_trans_yr4_rt)
+drop comp_4yr_trans_yr4_rt
+ren xxx comp_4yr_trans_yr4_rt
+gen xxx = real(comp_4yr_trans_yr3_rt)
+drop comp_4yr_trans_yr3_rt
+ren xxx comp_4yr_trans_yr3_rt
+gen xxx = real(comp_4yr_trans_yr2_rt)
+drop comp_4yr_trans_yr2_rt
+ren xxx comp_4yr_trans_yr2_rt
+gen xxx = real(comp_2yr_trans_yr8_rt)
+drop comp_2yr_trans_yr8_rt
+ren xxx comp_2yr_trans_yr8_rt
+gen xxx = real(comp_2yr_trans_yr6_rt)
+drop comp_2yr_trans_yr6_rt
+ren xxx comp_2yr_trans_yr6_rt
+gen xxx = real(comp_2yr_trans_yr4_rt)
+drop comp_2yr_trans_yr4_rt
+ren xxx comp_2yr_trans_yr4_rt
+gen xxx = real(comp_2yr_trans_yr3_rt)
+drop comp_2yr_trans_yr3_rt
+ren xxx comp_2yr_trans_yr3_rt
+gen xxx = real(comp_2yr_trans_yr2_rt)
+drop comp_2yr_trans_yr2_rt
+ren xxx comp_2yr_trans_yr2_rt
+*gen xxx = real(city)
+*drop city
+*ren xxx city
+gen xxx = real(cip54cert4)
+drop cip54cert4
+ren xxx cip54cert4
+gen xxx = real(cip54cert2)
+drop cip54cert2
+ren xxx cip54cert2
+gen xxx = real(cip54cert1)
+drop cip54cert1
+ren xxx cip54cert1
+gen xxx = real(cip54bachl)
+drop cip54bachl
+ren xxx cip54bachl
+gen xxx = real(cip54assoc)
+drop cip54assoc
+ren xxx cip54assoc
+gen xxx = real(cip52cert4)
+drop cip52cert4
+ren xxx cip52cert4
+gen xxx = real(cip52cert2)
+drop cip52cert2
+ren xxx cip52cert2
+gen xxx = real(cip52cert1)
+drop cip52cert1
+ren xxx cip52cert1
+gen xxx = real(cip52bachl)
+drop cip52bachl
+ren xxx cip52bachl
+gen xxx = real(cip52assoc)
+drop cip52assoc
+ren xxx cip52assoc
+gen xxx = real(cip51cert4)
+drop cip51cert4
+ren xxx cip51cert4
+gen xxx = real(cip51cert2)
+drop cip51cert2
+ren xxx cip51cert2
+gen xxx = real(cip51cert1)
+drop cip51cert1
+ren xxx cip51cert1
+gen xxx = real(cip51bachl)
+drop cip51bachl
+ren xxx cip51bachl
+gen xxx = real(cip51assoc)
+drop cip51assoc
+ren xxx cip51assoc
+gen xxx = real(cip50cert4)
+drop cip50cert4
+ren xxx cip50cert4
+gen xxx = real(cip50cert2)
+drop cip50cert2
+ren xxx cip50cert2
+gen xxx = real(cip50cert1)
+drop cip50cert1
+ren xxx cip50cert1
+gen xxx = real(cip50bachl)
+drop cip50bachl
+ren xxx cip50bachl
+gen xxx = real(cip50assoc)
+drop cip50assoc
+ren xxx cip50assoc
+gen xxx = real(cip49cert4)
+drop cip49cert4
+ren xxx cip49cert4
+gen xxx = real(cip49cert2)
+drop cip49cert2
+ren xxx cip49cert2
+gen xxx = real(cip49cert1)
+drop cip49cert1
+ren xxx cip49cert1
+gen xxx = real(cip49bachl)
+drop cip49bachl
+ren xxx cip49bachl
+gen xxx = real(cip49assoc)
+drop cip49assoc
+ren xxx cip49assoc
+gen xxx = real(cip48cert4)
+drop cip48cert4
+ren xxx cip48cert4
+gen xxx = real(cip48cert2)
+drop cip48cert2
+ren xxx cip48cert2
+gen xxx = real(cip48cert1)
+drop cip48cert1
+ren xxx cip48cert1
+gen xxx = real(cip48bachl)
+drop cip48bachl
+ren xxx cip48bachl
+gen xxx = real(cip48assoc)
+drop cip48assoc
+ren xxx cip48assoc
+gen xxx = real(cip47cert4)
+drop cip47cert4
+ren xxx cip47cert4
+gen xxx = real(cip47cert2)
+drop cip47cert2
+ren xxx cip47cert2
+gen xxx = real(cip47cert1)
+drop cip47cert1
+ren xxx cip47cert1
+gen xxx = real(cip47bachl)
+drop cip47bachl
+ren xxx cip47bachl
+gen xxx = real(cip47assoc)
+drop cip47assoc
+ren xxx cip47assoc
+gen xxx = real(cip46cert4)
+drop cip46cert4
+ren xxx cip46cert4
+gen xxx = real(cip46cert2)
+drop cip46cert2
+ren xxx cip46cert2
+gen xxx = real(cip46cert1)
+drop cip46cert1
+ren xxx cip46cert1
+gen xxx = real(cip46bachl)
+drop cip46bachl
+ren xxx cip46bachl
+gen xxx = real(cip46assoc)
+drop cip46assoc
+ren xxx cip46assoc
+gen xxx = real(cip45cert4)
+drop cip45cert4
+ren xxx cip45cert4
+gen xxx = real(cip45cert2)
+drop cip45cert2
+ren xxx cip45cert2
+gen xxx = real(cip45cert1)
+drop cip45cert1
+ren xxx cip45cert1
+gen xxx = real(cip45bachl)
+drop cip45bachl
+ren xxx cip45bachl
+gen xxx = real(cip45assoc)
+drop cip45assoc
+ren xxx cip45assoc
+gen xxx = real(cip44cert4)
+drop cip44cert4
+ren xxx cip44cert4
+gen xxx = real(cip44cert2)
+drop cip44cert2
+ren xxx cip44cert2
+gen xxx = real(cip44cert1)
+drop cip44cert1
+ren xxx cip44cert1
+gen xxx = real(cip44bachl)
+drop cip44bachl
+ren xxx cip44bachl
+gen xxx = real(cip44assoc)
+drop cip44assoc
+ren xxx cip44assoc
+gen xxx = real(cip43cert4)
+drop cip43cert4
+ren xxx cip43cert4
+gen xxx = real(cip43cert2)
+drop cip43cert2
+ren xxx cip43cert2
+gen xxx = real(cip43cert1)
+drop cip43cert1
+ren xxx cip43cert1
+gen xxx = real(cip43bachl)
+drop cip43bachl
+ren xxx cip43bachl
+gen xxx = real(cip43assoc)
+drop cip43assoc
+ren xxx cip43assoc
+gen xxx = real(cip42cert4)
+drop cip42cert4
+ren xxx cip42cert4
+gen xxx = real(cip42cert2)
+drop cip42cert2
+ren xxx cip42cert2
+gen xxx = real(cip42cert1)
+drop cip42cert1
+ren xxx cip42cert1
+gen xxx = real(cip42bachl)
+drop cip42bachl
+ren xxx cip42bachl
+gen xxx = real(cip42assoc)
+drop cip42assoc
+ren xxx cip42assoc
+gen xxx = real(cip41cert4)
+drop cip41cert4
+ren xxx cip41cert4
+gen xxx = real(cip41cert2)
+drop cip41cert2
+ren xxx cip41cert2
+gen xxx = real(cip41cert1)
+drop cip41cert1
+ren xxx cip41cert1
+gen xxx = real(cip41bachl)
+drop cip41bachl
+ren xxx cip41bachl
+gen xxx = real(cip41assoc)
+drop cip41assoc
+ren xxx cip41assoc
+gen xxx = real(cip40cert4)
+drop cip40cert4
+ren xxx cip40cert4
+gen xxx = real(cip40cert2)
+drop cip40cert2
+ren xxx cip40cert2
+gen xxx = real(cip40cert1)
+drop cip40cert1
+ren xxx cip40cert1
+gen xxx = real(cip40bachl)
+drop cip40bachl
+ren xxx cip40bachl
+gen xxx = real(cip40assoc)
+drop cip40assoc
+ren xxx cip40assoc
+gen xxx = real(cip39cert4)
+drop cip39cert4
+ren xxx cip39cert4
+gen xxx = real(cip39cert2)
+drop cip39cert2
+ren xxx cip39cert2
+gen xxx = real(cip39cert1)
+drop cip39cert1
+ren xxx cip39cert1
+gen xxx = real(cip39bachl)
+drop cip39bachl
+ren xxx cip39bachl
+gen xxx = real(cip39assoc)
+drop cip39assoc
+ren xxx cip39assoc
+gen xxx = real(cip38cert4)
+drop cip38cert4
+ren xxx cip38cert4
+gen xxx = real(cip38cert2)
+drop cip38cert2
+ren xxx cip38cert2
+gen xxx = real(cip38cert1)
+drop cip38cert1
+ren xxx cip38cert1
+gen xxx = real(cip38bachl)
+drop cip38bachl
+ren xxx cip38bachl
+gen xxx = real(cip38assoc)
+drop cip38assoc
+ren xxx cip38assoc
+gen xxx = real(cip31cert4)
+drop cip31cert4
+ren xxx cip31cert4
+gen xxx = real(cip31cert2)
+drop cip31cert2
+ren xxx cip31cert2
+gen xxx = real(cip31cert1)
+drop cip31cert1
+ren xxx cip31cert1
+gen xxx = real(cip31bachl)
+drop cip31bachl
+ren xxx cip31bachl
+gen xxx = real(cip31assoc)
+drop cip31assoc
+ren xxx cip31assoc
+gen xxx = real(cip30cert4)
+drop cip30cert4
+ren xxx cip30cert4
+gen xxx = real(cip30cert2)
+drop cip30cert2
+ren xxx cip30cert2
+gen xxx = real(cip30cert1)
+drop cip30cert1
+ren xxx cip30cert1
+gen xxx = real(cip30bachl)
+drop cip30bachl
+ren xxx cip30bachl
+gen xxx = real(cip30assoc)
+drop cip30assoc
+ren xxx cip30assoc
+gen xxx = real(cip29cert4)
+drop cip29cert4
+ren xxx cip29cert4
+gen xxx = real(cip29cert2)
+drop cip29cert2
+ren xxx cip29cert2
+gen xxx = real(cip29cert1)
+drop cip29cert1
+ren xxx cip29cert1
+gen xxx = real(cip29bachl)
+drop cip29bachl
+ren xxx cip29bachl
+gen xxx = real(cip29assoc)
+drop cip29assoc
+ren xxx cip29assoc
+gen xxx = real(cip27cert4)
+drop cip27cert4
+ren xxx cip27cert4
+gen xxx = real(cip27cert2)
+drop cip27cert2
+ren xxx cip27cert2
+gen xxx = real(cip27cert1)
+drop cip27cert1
+ren xxx cip27cert1
+gen xxx = real(cip27bachl)
+drop cip27bachl
+ren xxx cip27bachl
+gen xxx = real(cip27assoc)
+drop cip27assoc
+ren xxx cip27assoc
+gen xxx = real(cip26cert4)
+drop cip26cert4
+ren xxx cip26cert4
+gen xxx = real(cip26cert2)
+drop cip26cert2
+ren xxx cip26cert2
+gen xxx = real(cip26cert1)
+drop cip26cert1
+ren xxx cip26cert1
+gen xxx = real(cip26bachl)
+drop cip26bachl
+ren xxx cip26bachl
+gen xxx = real(cip26assoc)
+drop cip26assoc
+ren xxx cip26assoc
+gen xxx = real(cip25cert4)
+drop cip25cert4
+ren xxx cip25cert4
+gen xxx = real(cip25cert2)
+drop cip25cert2
+ren xxx cip25cert2
+gen xxx = real(cip25cert1)
+drop cip25cert1
+ren xxx cip25cert1
+gen xxx = real(cip25bachl)
+drop cip25bachl
+ren xxx cip25bachl
+gen xxx = real(cip25assoc)
+drop cip25assoc
+ren xxx cip25assoc
+gen xxx = real(cip24cert4)
+drop cip24cert4
+ren xxx cip24cert4
+gen xxx = real(cip24cert2)
+drop cip24cert2
+ren xxx cip24cert2
+gen xxx = real(cip24cert1)
+drop cip24cert1
+ren xxx cip24cert1
+gen xxx = real(cip24bachl)
+drop cip24bachl
+ren xxx cip24bachl
+gen xxx = real(cip24assoc)
+drop cip24assoc
+ren xxx cip24assoc
+gen xxx = real(cip23cert4)
+drop cip23cert4
+ren xxx cip23cert4
+gen xxx = real(cip23cert2)
+drop cip23cert2
+ren xxx cip23cert2
+gen xxx = real(cip23cert1)
+drop cip23cert1
+ren xxx cip23cert1
+gen xxx = real(cip23bachl)
+drop cip23bachl
+ren xxx cip23bachl
+gen xxx = real(cip23assoc)
+drop cip23assoc
+ren xxx cip23assoc
+gen xxx = real(cip22cert4)
+drop cip22cert4
+ren xxx cip22cert4
+gen xxx = real(cip22cert2)
+drop cip22cert2
+ren xxx cip22cert2
+gen xxx = real(cip22cert1)
+drop cip22cert1
+ren xxx cip22cert1
+gen xxx = real(cip22bachl)
+drop cip22bachl
+ren xxx cip22bachl
+gen xxx = real(cip22assoc)
+drop cip22assoc
+ren xxx cip22assoc
+gen xxx = real(cip19cert4)
+drop cip19cert4
+ren xxx cip19cert4
+gen xxx = real(cip19cert2)
+drop cip19cert2
+ren xxx cip19cert2
+gen xxx = real(cip19cert1)
+drop cip19cert1
+ren xxx cip19cert1
+gen xxx = real(cip19bachl)
+drop cip19bachl
+ren xxx cip19bachl
+gen xxx = real(cip19assoc)
+drop cip19assoc
+ren xxx cip19assoc
+gen xxx = real(cip16cert4)
+drop cip16cert4
+ren xxx cip16cert4
+gen xxx = real(cip16cert2)
+drop cip16cert2
+ren xxx cip16cert2
+gen xxx = real(cip16cert1)
+drop cip16cert1
+ren xxx cip16cert1
+gen xxx = real(cip16bachl)
+drop cip16bachl
+ren xxx cip16bachl
+gen xxx = real(cip16assoc)
+drop cip16assoc
+ren xxx cip16assoc
+gen xxx = real(cip15cert4)
+drop cip15cert4
+ren xxx cip15cert4
+gen xxx = real(cip15cert2)
+drop cip15cert2
+ren xxx cip15cert2
+gen xxx = real(cip15cert1)
+drop cip15cert1
+ren xxx cip15cert1
+gen xxx = real(cip15bachl)
+drop cip15bachl
+ren xxx cip15bachl
+gen xxx = real(cip15assoc)
+drop cip15assoc
+ren xxx cip15assoc
+gen xxx = real(cip14cert4)
+drop cip14cert4
+ren xxx cip14cert4
+gen xxx = real(cip14cert2)
+drop cip14cert2
+ren xxx cip14cert2
+gen xxx = real(cip14cert1)
+drop cip14cert1
+ren xxx cip14cert1
+gen xxx = real(cip14bachl)
+drop cip14bachl
+ren xxx cip14bachl
+gen xxx = real(cip14assoc)
+drop cip14assoc
+ren xxx cip14assoc
+gen xxx = real(cip13cert4)
+drop cip13cert4
+ren xxx cip13cert4
+gen xxx = real(cip13cert2)
+drop cip13cert2
+ren xxx cip13cert2
+gen xxx = real(cip13cert1)
+drop cip13cert1
+ren xxx cip13cert1
+gen xxx = real(cip13bachl)
+drop cip13bachl
+ren xxx cip13bachl
+gen xxx = real(cip13assoc)
+drop cip13assoc
+ren xxx cip13assoc
+gen xxx = real(cip12cert4)
+drop cip12cert4
+ren xxx cip12cert4
+gen xxx = real(cip12cert2)
+drop cip12cert2
+ren xxx cip12cert2
+gen xxx = real(cip12cert1)
+drop cip12cert1
+ren xxx cip12cert1
+gen xxx = real(cip12bachl)
+drop cip12bachl
+ren xxx cip12bachl
+gen xxx = real(cip12assoc)
+drop cip12assoc
+ren xxx cip12assoc
+gen xxx = real(cip11cert4)
+drop cip11cert4
+ren xxx cip11cert4
+gen xxx = real(cip11cert2)
+drop cip11cert2
+ren xxx cip11cert2
+gen xxx = real(cip11cert1)
+drop cip11cert1
+ren xxx cip11cert1
+gen xxx = real(cip11bachl)
+drop cip11bachl
+ren xxx cip11bachl
+gen xxx = real(cip11assoc)
+drop cip11assoc
+ren xxx cip11assoc
+gen xxx = real(cip10cert4)
+drop cip10cert4
+ren xxx cip10cert4
+gen xxx = real(cip10cert2)
+drop cip10cert2
+ren xxx cip10cert2
+gen xxx = real(cip10cert1)
+drop cip10cert1
+ren xxx cip10cert1
+gen xxx = real(cip10bachl)
+drop cip10bachl
+ren xxx cip10bachl
+gen xxx = real(cip10assoc)
+drop cip10assoc
+ren xxx cip10assoc
+gen xxx = real(cip09cert4)
+drop cip09cert4
+ren xxx cip09cert4
+gen xxx = real(cip09cert2)
+drop cip09cert2
+ren xxx cip09cert2
+gen xxx = real(cip09cert1)
+drop cip09cert1
+ren xxx cip09cert1
+gen xxx = real(cip09bachl)
+drop cip09bachl
+ren xxx cip09bachl
+gen xxx = real(cip09assoc)
+drop cip09assoc
+ren xxx cip09assoc
+gen xxx = real(cip05cert4)
+drop cip05cert4
+ren xxx cip05cert4
+gen xxx = real(cip05cert2)
+drop cip05cert2
+ren xxx cip05cert2
+gen xxx = real(cip05cert1)
+drop cip05cert1
+ren xxx cip05cert1
+gen xxx = real(cip05bachl)
+drop cip05bachl
+ren xxx cip05bachl
+gen xxx = real(cip05assoc)
+drop cip05assoc
+ren xxx cip05assoc
+gen xxx = real(cip04cert4)
+drop cip04cert4
+ren xxx cip04cert4
+gen xxx = real(cip04cert2)
+drop cip04cert2
+ren xxx cip04cert2
+gen xxx = real(cip04cert1)
+drop cip04cert1
+ren xxx cip04cert1
+gen xxx = real(cip04bachl)
+drop cip04bachl
+ren xxx cip04bachl
+gen xxx = real(cip04assoc)
+drop cip04assoc
+ren xxx cip04assoc
+gen xxx = real(cip03cert4)
+drop cip03cert4
+ren xxx cip03cert4
+gen xxx = real(cip03cert2)
+drop cip03cert2
+ren xxx cip03cert2
+gen xxx = real(cip03cert1)
+drop cip03cert1
+ren xxx cip03cert1
+gen xxx = real(cip03bachl)
+drop cip03bachl
+ren xxx cip03bachl
+gen xxx = real(cip03assoc)
+drop cip03assoc
+ren xxx cip03assoc
+gen xxx = real(cip01cert4)
+drop cip01cert4
+ren xxx cip01cert4
+gen xxx = real(cip01cert2)
+drop cip01cert2
+ren xxx cip01cert2
+gen xxx = real(cip01cert1)
+drop cip01cert1
+ren xxx cip01cert1
+gen xxx = real(cip01bachl)
+drop cip01bachl
+ren xxx cip01bachl
+gen xxx = real(cip01assoc)
+drop cip01assoc
+ren xxx cip01assoc
+gen xxx = real(cdr3_denom)
+drop cdr3_denom
+ren xxx cdr3_denom
+gen xxx = real(cdr3)
+drop cdr3
+ren xxx cdr3
+gen xxx = real(cdr2_denom)
+drop cdr2_denom
+ren xxx cdr2_denom
+gen xxx = real(cdr2)
+drop cdr2
+ren xxx cdr2
+gen xxx = real(ccugprof)
+drop ccugprof
+ren xxx ccugprof
+gen xxx = real(ccsizset)
+drop ccsizset
+ren xxx ccsizset
+gen xxx = real(ccbasic)
+drop ccbasic
+ren xxx ccbasic
+gen xxx = real(c200_l4_pooled_supp)
+drop c200_l4_pooled_supp
+ren xxx c200_l4_pooled_supp
+gen xxx = real(c200_l4_pooled)
+drop c200_l4_pooled
+ren xxx c200_l4_pooled
+gen xxx = real(c200_l4)
+drop c200_l4
+ren xxx c200_l4
+gen xxx = real(c200_4_pooled_supp)
+drop c200_4_pooled_supp
+ren xxx c200_4_pooled_supp
+gen xxx = real(c200_4_pooled)
+drop c200_4_pooled
+ren xxx c200_4_pooled
+gen xxx = real(c200_4)
+drop c200_4
+ren xxx c200_4
+gen xxx = real(c150_l4_whitenh)
+drop c150_l4_whitenh
+ren xxx c150_l4_whitenh
+gen xxx = real(c150_l4_white)
+drop c150_l4_white
+ren xxx c150_l4_white
+gen xxx = real(c150_l4_unkn)
+drop c150_l4_unkn
+ren xxx c150_l4_unkn
+gen xxx = real(c150_l4_pooled_supp)
+drop c150_l4_pooled_supp
+ren xxx c150_l4_pooled_supp
+gen xxx = real(c150_l4_pooled)
+drop c150_l4_pooled
+ren xxx c150_l4_pooled
+gen xxx = real(c150_l4_pell)
+drop c150_l4_pell
+ren xxx c150_l4_pell
+gen xxx = real(c150_l4_nra)
+drop c150_l4_nra
+ren xxx c150_l4_nra
+gen xxx = real(c150_l4_noloannopell)
+drop c150_l4_noloannopell
+ren xxx c150_l4_noloannopell
+gen xxx = real(c150_l4_nhpi)
+drop c150_l4_nhpi
+ren xxx c150_l4_nhpi
+gen xxx = real(c150_l4_loannopell)
+drop c150_l4_loannopell
+ren xxx c150_l4_loannopell
+gen xxx = real(c150_l4_hispold)
+drop c150_l4_hispold
+ren xxx c150_l4_hispold
+gen xxx = real(c150_l4_hisp)
+drop c150_l4_hisp
+ren xxx c150_l4_hisp
+gen xxx = real(c150_l4_blacknh)
+drop c150_l4_blacknh
+ren xxx c150_l4_blacknh
+gen xxx = real(c150_l4_black)
+drop c150_l4_black
+ren xxx c150_l4_black
+gen xxx = real(c150_l4_asian)
+drop c150_l4_asian
+ren xxx c150_l4_asian
+gen xxx = real(c150_l4_api)
+drop c150_l4_api
+ren xxx c150_l4_api
+gen xxx = real(c150_l4_aianold)
+drop c150_l4_aianold
+ren xxx c150_l4_aianold
+gen xxx = real(c150_l4_aian)
+drop c150_l4_aian
+ren xxx c150_l4_aian
+gen xxx = real(c150_l4_2mor)
+drop c150_l4_2mor
+ren xxx c150_l4_2mor
+gen xxx = real(c150_l4)
+drop c150_l4
+ren xxx c150_l4
+gen xxx = real(c150_4_whitenh)
+drop c150_4_whitenh
+ren xxx c150_4_whitenh
+gen xxx = real(c150_4_white)
+drop c150_4_white
+ren xxx c150_4_white
+gen xxx = real(c150_4_unkn)
+drop c150_4_unkn
+ren xxx c150_4_unkn
+gen xxx = real(c150_4_pooled_supp)
+drop c150_4_pooled_supp
+ren xxx c150_4_pooled_supp
+gen xxx = real(c150_4_pooled)
+drop c150_4_pooled
+ren xxx c150_4_pooled
+gen xxx = real(c150_4_pell)
+drop c150_4_pell
+ren xxx c150_4_pell
+gen xxx = real(c150_4_nra)
+drop c150_4_nra
+ren xxx c150_4_nra
+gen xxx = real(c150_4_noloannopell)
+drop c150_4_noloannopell
+ren xxx c150_4_noloannopell
+gen xxx = real(c150_4_nhpi)
+drop c150_4_nhpi
+ren xxx c150_4_nhpi
+gen xxx = real(c150_4_loannopell)
+drop c150_4_loannopell
+ren xxx c150_4_loannopell
+gen xxx = real(c150_4_hispold)
+drop c150_4_hispold
+ren xxx c150_4_hispold
+gen xxx = real(c150_4_hisp)
+drop c150_4_hisp
+ren xxx c150_4_hisp
+gen xxx = real(c150_4_blacknh)
+drop c150_4_blacknh
+ren xxx c150_4_blacknh
+gen xxx = real(c150_4_black)
+drop c150_4_black
+ren xxx c150_4_black
+gen xxx = real(c150_4_asian)
+drop c150_4_asian
+ren xxx c150_4_asian
+gen xxx = real(c150_4_api)
+drop c150_4_api
+ren xxx c150_4_api
+gen xxx = real(c150_4_aianold)
+drop c150_4_aianold
+ren xxx c150_4_aianold
+gen xxx = real(c150_4_aian)
+drop c150_4_aian
+ren xxx c150_4_aian
+gen xxx = real(c150_4_2mor)
+drop c150_4_2mor
+ren xxx c150_4_2mor
+gen xxx = real(c150_4)
+drop c150_4
+ren xxx c150_4
+gen xxx = real(c100_l4_pooled_supp)
+drop c100_l4_pooled_supp
+ren xxx c100_l4_pooled_supp
+gen xxx = real(c100_l4_pooled)
+drop c100_l4_pooled
+ren xxx c100_l4_pooled
+gen xxx = real(c100_l4)
+drop c100_l4
+ren xxx c100_l4
+gen xxx = real(c100_4_pooled_supp)
+drop c100_4_pooled_supp
+ren xxx c100_4_pooled_supp
+gen xxx = real(c100_4_pooled)
+drop c100_4_pooled
+ren xxx c100_4_pooled
+gen xxx = real(c100_4)
+drop c100_4
+ren xxx c100_4
+gen xxx = real(avgfacsal)
+drop avgfacsal
+ren xxx avgfacsal
+gen xxx = real(appl_sch_pct_ge5)
+drop appl_sch_pct_ge5
+ren xxx appl_sch_pct_ge5
+gen xxx = real(appl_sch_pct_ge4)
+drop appl_sch_pct_ge4
+ren xxx appl_sch_pct_ge4
+gen xxx = real(appl_sch_pct_ge3)
+drop appl_sch_pct_ge3
+ren xxx appl_sch_pct_ge3
+gen xxx = real(appl_sch_pct_ge2)
+drop appl_sch_pct_ge2
+ren xxx appl_sch_pct_ge2
+gen xxx = real(appl_sch_n)
+drop appl_sch_n
+ren xxx appl_sch_n
+gen xxx = real(annhi)
+drop annhi
+ren xxx annhi
+gen xxx = real(alias)
+drop alias
+ren xxx alias
+gen xxx = real(agege24)
+drop agege24
+ren xxx agege24
+gen xxx = real(age_entry_sq)
+drop age_entry_sq
+ren xxx age_entry_sq
+gen xxx = real(age_entry)
+drop age_entry
+ren xxx age_entry
+gen xxx = real(adm_rate_all)
+drop adm_rate_all
+ren xxx adm_rate_all
+gen xxx = real(adm_rate)
+drop adm_rate
+ren xxx adm_rate
+gen xxx = real(actwrmid)
+drop actwrmid
+ren xxx actwrmid
+gen xxx = real(actwr75)
+drop actwr75
+ren xxx actwr75
+gen xxx = real(actwr25)
+drop actwr25
+ren xxx actwr25
+gen xxx = real(actmtmid)
+drop actmtmid
+ren xxx actmtmid
+gen xxx = real(actmt75)
+drop actmt75
+ren xxx actmt75
+gen xxx = real(actmt25)
+drop actmt25
+ren xxx actmt25
+gen xxx = real(actenmid)
+drop actenmid
+ren xxx actenmid
+gen xxx = real(acten75)
+drop acten75
+ren xxx acten75
+gen xxx = real(acten25)
+drop acten25
+ren xxx acten25
+gen xxx = real(actcmmid)
+drop actcmmid
+ren xxx actcmmid
+gen xxx = real(actcm75)
+drop actcm75
+ren xxx actcm75
+gen xxx = real(actcm25)
+drop actcm25
+ren xxx actcm25
+gen xxx = real(accredcode)
+drop accredcode
+ren xxx accredcode
+gen xxx = real(accredagency)
+drop accredagency
+ren xxx accredagency
+gen xxx = real(aanapii)
+drop aanapii
+ren xxx aanapii
+
+
+compress
+save step2-create-numeric-values.dta, replace
+
+log close
+clear
+
