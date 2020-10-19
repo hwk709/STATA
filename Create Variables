@@ -1,0 +1,72 @@
+cd "C:\Users\hwk70\OneDrive\stuff\Desktop\stata\CollegeScorecard_Raw_Data"
+set more 1
+
+log using step4-create-variables.log,replace 
+
+use step3-create-variable-labels.dta, clear
+
+* Drop cases before 2001 missing admission rate data.
+* Note that missing 2002 
+
+table year, c(mean adm_rate n adm_rate) row col
+
+drop if year < 2003
+
+* check to see highest degree awarded
+
+table year highdeg, row col
+table year preddeg, row col
+
+* check to see size of undergrade enrollment
+* by highest degree
+
+table year highdeg, c(mean ugds n ugds) row col
+
+* check on default rate
+* appears to be change in variable in 2012-13
+
+table year, c(mean cdr2 n cdr2 mean cdr3 n cdr3) row col
+
+* Check distance only colleges
+
+table highdeg distanceonly, row col
+
+* Check completion rates
+
+table year, c(mean overall_yr4_n n overall_yr4_n mean overall_yr6_n n overall_yr6_n) row col
+
+* Information on full-time faculty and average salary
+
+table year, c(mean avgfacsal n avgfacsal mean pftfac n pftfac) row col
+
+* Tuition public and private
+
+table year, c(mean tuitionfee_in n tuitionfee_in mean tuitionfee_out n tuitionfee_out) row col
+
+* Check median sat test score of individuals
+
+table year highdeg, c(mean satmtmid n satmtmid mean satwrmid n satwrmid) row col
+
+* Sample regression: See if in-state and out-state tuition
+* correlated with student quality measure, average faculty
+* salary for schools with highest degree equal to 3
+
+* Generate variable "diff" to indicate tuition difference
+* between the in-state and out-of-state students
+* If diff = 0, likely indicates private school (no difference)
+* Check determinants of difference between in and out of
+* state tuition fees
+
+gen diff = tuitionfee_out-tuitionfee_in
+sum diff, d
+table highdeg, c(mean diff n diff) row col
+
+reg tuitionfee_in avgfacsal satmtmid satwrmid if highdeg == 3 & diff ~= 0, m
+reg tuitionfee_out avgfacsal satmtmid satwrmid if highdeg == 3 & diff ~= 0, m
+reg  diff avgfacsal satmtmid satwrmid if highdeg == 3 & diff ~= 0, m
+
+
+save step4-create-variables.dta, replace
+log close
+clear
+
