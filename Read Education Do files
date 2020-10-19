@@ -1,0 +1,67 @@
+* Data set downloaded from website 
+* https://collegescorecard.ed.gov/data/
+* provided by the U.S. Department of Education.
+* This website provides a zip file that will be extracted
+* to the folder "CollegeScorecard_Raw_data"
+
+* Adjust the line below to identify the location
+* of the folder that contains the raw data
+
+cd "C:\Users\hwk70\OneDrive\stuff\Desktop\stata\CollegeScorecard_Raw_Data"
+
+* The following commands combine the data
+* for academic years that end in 2008 - 2017
+
+log using step1-read-education-data1.log, replace
+
+import delimited MERGED2016_17_PP.csv, 
+gen year = 2017
+save "step1-read-education-data.dta", replace
+clear
+
+import delimited MERGED2015_16_PP.csv, 
+gen year = 2016
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear
+
+import delimited MERGED2014_15_PP.csv, 
+gen year = 2015
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear
+
+import delimited MERGED2013_14_PP.csv, 
+gen year = 2014
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear 
+
+import delimited MERGED2012_13_PP.csv,
+gen year = 2013
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear
+
+import delimited MERGED2011_12_PP.csv, 
+gen year = 2012
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear
+
+import delimited MERGED2010_11_PP.csv, 
+gen year = 2011
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear
+
+import delimited MERGED2009_10_PP.csv, 
+gen year = 2010
+append using "step1-read-education-data.dta", force
+save "step1-read-education-data.dta", replace
+clear 
+
+
+log close
+
+
